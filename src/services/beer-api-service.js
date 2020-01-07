@@ -1,9 +1,9 @@
 import config from '../config'
 import TokenService from "./token-service";
 
-const GoalApiService = {
-    getAllGoals() {
-        return fetch(`${config.API_ENDPOINT}/goals`, {
+const BeerApiService = {
+    getAllBeers() {
+        return fetch(`${config.API_ENDPOINT}/beers`, {
             headers: {
                 'authorization': `bearer ${TokenService.getAuthToken()}`,
             },
@@ -14,8 +14,8 @@ const GoalApiService = {
                     : res.json()
             )
     },
-    getGoal(goalId) {
-        return fetch(`${config.API_ENDPOINT}/goals/${goalId}`, {
+    getBeer(beerId) {
+        return fetch(`${config.API_ENDPOINT}/beers/${beerId}`, {
             headers: {
                 'authorization': `bearer ${TokenService.getAuthToken()}`,
             },
@@ -26,32 +26,41 @@ const GoalApiService = {
                     : res.json()
             )
     },
-    patchGoal(goal, id) {
-        return fetch(`${config.API_ENDPOINT}/goals/${id}`, {
+    patchBeer(beer, id) {
+        return fetch(`${config.API_ENDPOINT}/beers/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
                 'authorization': `bearer ${TokenService.getAuthToken()}`,
             },
             body: JSON.stringify({
-                type: goal.type,
-                date: goal.date,
-                checkedamt: goal.checkedamt
+                name: beer.name,
+                type: beer.type,
+                date: beer.date,
+                description: beer.description,
+                rating: beer.rating,
+                location: beer.location,
+                color: beer.color,
+                heaviness: beer.heaviness
             }),
         })
     },
-    postGoal(goal) {
-        return fetch(`${config.API_ENDPOINT}/goals`, {
+    postBeer(beer) {
+        return fetch(`${config.API_ENDPOINT}/beers`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
                 'authorization': `bearer ${TokenService.getAuthToken()}`,
             },
             body: JSON.stringify({
-                type: goal.type,
-                goals: goal.goals,
-                date: goal.date,
-                checkedamt: 0
+                name: beer.name,
+                type: beer.type,
+                date: beer.date,
+                description: beer.description,
+                rating: beer.rating,
+                location: beer.location,
+                color: beer.color,
+                heaviness: beer.heaviness
             }),
         })
             .then(res =>
@@ -60,12 +69,12 @@ const GoalApiService = {
                     : res.json()
             )
     },
-    deleteGoal(id) {
-        return fetch(`${config.API_ENDPOINT}/goals/${id}`, {
+    deleteBeer(id) {
+        return fetch(`${config.API_ENDPOINT}/beers/${id}`, {
             method: 'DELETE',
             headers: {'authorization': `bearer ${TokenService.getAuthToken()}`}
         })
     }
 };
 
-export default GoalApiService
+export default BeerApiService
