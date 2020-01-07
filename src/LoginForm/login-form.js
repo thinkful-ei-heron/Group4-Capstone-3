@@ -23,7 +23,7 @@ export default class LoginForm extends Component {
     this.setState({ error: null });
 
     AuthApiService.postLogin({
-      username: username.value,
+      user_name: username.value,
       password: password.value,
     })
       .then(res => {
@@ -55,7 +55,7 @@ export default class LoginForm extends Component {
                 <input 
                   type='text'
                   id='login-username'
-                  name='login-username'
+                  name='username'
                   required/>
               </div>
               <div>
@@ -65,7 +65,7 @@ export default class LoginForm extends Component {
                 <input 
                   type='password'
                   id='login-password'
-                  name='login-password'
+                  name='password'
                   required/>
               </div>
               <div>
