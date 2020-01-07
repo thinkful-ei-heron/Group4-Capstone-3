@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import UserContext from "../contexts/UserContext";
 import AuthApiService from "../services/auth-api-service";
 
 export default class LoginForm extends Component {
-  static defaultProps = {
-    onLoginSuccess: () => {},
-  };
+  // handleLoginSuccess = () => {
+  //   const { location, history } = this.props;
+  //   const destination = (location.state || {}).from || "/";
+  //   history.push(destination);
+  // };
 
   static contextType = UserContext;
 
@@ -27,7 +30,7 @@ export default class LoginForm extends Component {
         username.value = "";
         password.value = "";
         this.context.processLogin(res.authToken);
-        this.props.onLoginSuccess();
+        // this.handleLoginSuccess();
       })
       .catch(res => {
         this.setState({ error: res.error });
@@ -67,7 +70,7 @@ export default class LoginForm extends Component {
                 type='submit'>
                   Login
               </button>
-              {/* <Link 
+              <Link 
                 to='/'>
                   <button>
                       Back
@@ -78,7 +81,7 @@ export default class LoginForm extends Component {
                   <button>
                       New user?
                   </button>
-              </Link> */}
+              </Link>
             </div>
           </section>
       </form>
