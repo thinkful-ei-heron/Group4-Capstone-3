@@ -34,9 +34,14 @@ const BeerApiService = {
                 'authorization': `bearer ${TokenService.getAuthToken()}`,
             },
             body: JSON.stringify({
+                name: beer.name,
                 type: beer.type,
                 date: beer.date,
-                checkedamt: beer.checkedamt
+                description: beer.description,
+                rating: beer.rating,
+                location: beer.location,
+                color: beer.color,
+                heaviness: beer.heaviness
             }),
         })
     },
@@ -48,10 +53,14 @@ const BeerApiService = {
                 'authorization': `bearer ${TokenService.getAuthToken()}`,
             },
             body: JSON.stringify({
+                name: beer.name,
                 type: beer.type,
-                beers: beer.beers,
                 date: beer.date,
-                checkedamt: 0
+                description: beer.description,
+                rating: beer.rating,
+                location: beer.location,
+                color: beer.color,
+                heaviness: beer.heaviness
             }),
         })
             .then(res =>
