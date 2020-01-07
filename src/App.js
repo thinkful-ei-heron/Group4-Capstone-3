@@ -5,12 +5,16 @@ import PublicOnlyRoute from "./PublicOnlyRoute/PublicOnlyRoute";
 import LandingPage from "./LandingPage/LandingPage";
 import './App.css'
 import LoginForm from "./LoginForm/login-form";
+import TokenService from "./services/token-service";
 
 export default class App extends Component {
     state = { hasError: false };
 
+
+
     render(){
         const { hasError } = this.state;
+        TokenService.clearAuthToken();
         return (
             <div className='App'>
                 {hasError && (
