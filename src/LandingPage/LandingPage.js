@@ -1,5 +1,5 @@
 import React from "react";
-import deerBear from "/assets/img/deerbear.png"
+import {Link} from "react-router-dom";
 
 class LandingPage extends React.Component {
     constructor(props){
@@ -17,11 +17,7 @@ class LandingPage extends React.Component {
                     <Link to={'/login'}>Log-in</Link>
                     <Link to={'/register'}>Register</Link>
                 </nav>
-                <p>Tomato</p>
-                <p>Tomato</p>
-                <p>Tomato</p>
-                <p>Tomato</p>
-                <img src={deerBear} width={'100px'}/>
+                <img src={require("../assets/img/deerbear.png")} width={'100px'}/>
 
             </main>
         )

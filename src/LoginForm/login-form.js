@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-// import TokenService from '../../services/token-service';
-// import AuthApiService from '../../services/auth-api-service';
-// import { Link } from 'react-router-dom';
-import './LoginForm.css';
+import UserContext from "../contexts/UserContext";
+import AuthApiService from "../services/auth-api-service";
 
 export default class LoginForm extends Component {
-  state = { error: null }
-
   static defaultProps = {
     onLoginSuccess: () => {},
   };
@@ -38,12 +34,8 @@ export default class LoginForm extends Component {
       });
   };
 
-  componentDidMount() {
-    this.firstInput.current.focus();
-  }
-
   render() {
-    const { error } = this.state
+    const { error } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
         <div role='alert'>

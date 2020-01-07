@@ -1,20 +1,28 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Register from "./Register/Register";
-import {Route, Switch} from "react-router-dom";
+import {Switch} from "react-router-dom";
 import PublicOnlyRoute from "./PublicOnlyRoute/PublicOnlyRoute";
 import LandingPage from "./LandingPage/LandingPage";
+import './App.css'
+import LoginForm from "./LoginForm/login-form";
 
-function App() {
-  return (
-    <main className='App'>
-      {/* content goes here */}
-      <Switch>
-          <PublicOnlyRoute exact to={'/register'}><Register/></PublicOnlyRoute>
-          <PublicOnlyRoute exact to={'/landing-page'}><LandingPage/></PublicOnlyRoute>
-      </Switch>
+export default class App extends Component {
+    state = { hasError: false };
 
-    </main>
-  );
+    render(){
+        const { hasError } = this.state;
+        return (
+            <div className='App'>
+                {hasError && (
+                    <p>There was an error! Oh no!</p>
+                )}
+                <Switch>
+                    <PublicOnlyRoute path={'/register'} component={Register}/>
+                    <PublicOnlyRoute path={'/landing-page'} component={LandingPage}/>
+                    <PublicOnlyRoute path={'/login'} component={LoginForm}/>
+                </Switch>
+
+            </div>
+        );
+    }
 }
-
-export default App;
