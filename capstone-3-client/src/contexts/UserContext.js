@@ -34,21 +34,6 @@ export class UserProvider extends Component {
       };
 
     this.state = state;
-    IdleService.setIdleCallback(this.logoutBecauseIdle)
-  }
-
-  componentDidMount() {
-    if (TokenService.hasAuthToken()) {
-      IdleService.registerIdleTimerResets();
-      TokenService.queueCallbackBeforeExpiry(() => {
-        this.fetchRefreshToken()
-      })
-    }
-  }
-
-  componentWillUnmount() {
-    IdleService.unRegisterIdleResets();
-    TokenService.clearCallbackBeforeExpiry()
   }
 
   setError = error => {
@@ -78,17 +63,6 @@ export class UserProvider extends Component {
     TokenService.clearAuthToken();
     this.setUser({})
   };
-
-  fetchRefreshToken = () => {
-    AuthApiService.refreshToken()
-      .then(res => {
-        TokenService.saveAuthToken(res.authToken)
-      })
-      .catch(err => {
-        this.setError(err)
-      })
-  };
-
 
   setLanguage = (obj) => {
     this.setState({language: obj})

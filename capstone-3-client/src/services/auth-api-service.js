@@ -17,19 +17,6 @@ const AuthApiService = {
                     : res.json()
             )
     },
-    refreshToken() {
-        return fetch(`${config.API_ENDPOINT}/auth/token`, {
-            method: 'PUT',
-            headers: {
-                'authorization': `Bearer ${TokenService.getAuthToken()}`,
-            },
-        })
-            .then(res =>
-                (!res.ok)
-                    ? res.json().then(e => Promise.reject(e))
-                    : res.json()
-            )
-    },
     deleteUser() {
         if (UserService.getUser().id)
             return fetch(`${config.API_ENDPOINT}/users/${UserService.getUser().id}`, {
