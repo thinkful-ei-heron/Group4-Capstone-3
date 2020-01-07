@@ -45,7 +45,7 @@ class Register extends React.Component {
                     </div>
                     <div className='username'>
                         <label htmlFor='RegistrationForm__username'>
-                            User name
+                            Username
                         </label>
                         <input
                             name='username'
