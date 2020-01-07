@@ -40,51 +40,55 @@ export default class LoginForm extends Component {
   render() {
     const { error } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div role='alert'>
-          {error && <p className='error'>Something went wrong!</p>}
-        </div>
-          <section>
-            <div>
-              <label htmlFor='login-username'>
-                Username
-              </label>
-              <input 
-                type='text'
-                id='login-username'
-                name='login-username'
-                required/>
-            </div>
-            <div>
-              <label htmlFor='login-password'>
-                Password
-              </label>
-              <input 
-                type='password'
-                id='login-password'
-                name='login-password'
-                required/>
-            </div>
-            <div>
-              <button
-                type='submit'>
-                  Login
-              </button>
-              <Link 
-                to='/'>
-                  <button>
-                      Back
-                  </button>
-              </Link>
-              <Link
-                to='/register'>
-                  <button>
-                      New user?
-                  </button>
-              </Link>
-            </div>
-          </section>
-      </form>
+      <div>
+        <h1>The Dear Beer</h1>
+        <h3>Login</h3>
+        <form onSubmit={this.handleSubmit}>
+          <div role='alert'>
+            {error && <p className='error'>Something went wrong!</p>}
+          </div>
+            <section>
+              <div>
+                <label htmlFor='login-username'>
+                  Username
+                </label>
+                <input 
+                  type='text'
+                  id='login-username'
+                  name='login-username'
+                  required/>
+              </div>
+              <div>
+                <label htmlFor='login-password'>
+                  Password
+                </label>
+                <input 
+                  type='password'
+                  id='login-password'
+                  name='login-password'
+                  required/>
+              </div>
+              <div>
+                <button
+                  type='submit'>
+                    Login
+                </button>
+                <Link 
+                  to='/'>
+                    <button>
+                        Back
+                    </button>
+                </Link>
+                <Link
+                  to='/register'>
+                    <button>
+                        New user?
+                    </button>
+                </Link>
+              </div>
+            </section>
+        </form>
+      </div>
     )
   }
 }
