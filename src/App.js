@@ -23,10 +23,10 @@ export default class App extends Component {
                     <p>There was an error! Oh no!</p>
                 )}
                 <Switch>
-                    <PublicOnlyRoute path={'/register'} component={Register}/>
-                    <PublicOnlyRoute path={'/landing-page'} component={LandingPage}/>
-                    <PublicOnlyRoute path={'/login'} component={LoginForm}/>
                     <PrivateOnlyRoute path={'/home'} component={Dashboard}/>
+                    <PublicOnlyRoute path={'/register'} component={Register}/>
+                    <PublicOnlyRoute path={'/login'} component={LoginForm}/>
+                    <PublicOnlyRoute exact path={'/'} component={LandingPage}/>
                 </Switch>
 
             </div>
