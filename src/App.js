@@ -6,7 +6,6 @@ import PrivateOnlyRoute from './PrivateRoute/PrivateRoute';
 import LandingPage from "./LandingPage/LandingPage";
 import './App.css'
 import LoginForm from "./LoginForm/login-form";
-import TokenService from "./services/token-service";
 import Dashboard from './Dashboard/Dashboard';
 
 export default class App extends Component {
@@ -16,7 +15,6 @@ export default class App extends Component {
 
     render(){
         const { hasError } = this.state;
-        TokenService.clearAuthToken();
         return (
             <div className='App'>
                 {hasError && (
