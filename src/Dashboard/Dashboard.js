@@ -10,23 +10,19 @@ class Dashboard extends React.Component {
   componentDidMount() {
     this.context.clearError()
     BeerApiService.getAllBeers()
-    ////.then to set beer list from a new function in context
-      // .then(this.context.setBeerList)
-      // .catch(this.context.setError)
+      .then(this.context.setBeerList)
+      .catch(this.context.setError)
   }
-  // renderBeerList() {
-  //   const { beerList = [] } = this.context
-  //     return beerList.map(beer => 
-  //       <BeerListItem 
-  //         key={beer.id}
-  //         beer={beer} />)
-  // }
+  renderBeerList() {
+    const { beerList = [] } = this.context
+      return beerList.map
+  }
     render() {
         return (
           <>
             <h2>Dashboard</h2>
             <NavBar />
-            {/* {this.renderBeerList()} */}
+            {this.renderBeerList()}
           </>
         )
     }

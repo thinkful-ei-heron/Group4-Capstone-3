@@ -3,11 +3,9 @@ import TokenService from '../services/token-service'
 
 const UserContext = React.createContext({
   user: {},
-  language: {},
-  words: [],
   error: null,
-  setLanguage: () => {},
-  setWords: () => {},
+  beerList: [],
+  setBeerList: () => {},
   setError: () => {},
   clearError: () => {},
   setUser: () => {},
@@ -20,7 +18,7 @@ export default UserContext
 export class UserProvider extends Component {
   constructor(props) {
     super(props);
-    const state = { user: {}, language: {}, words: [], error: null };
+    const state = { user: {}, beerList: [], error: null };
 
     const jwtPayload = TokenService.parseAuthToken();
 
@@ -38,6 +36,10 @@ export class UserProvider extends Component {
     console.error(error);
     this.setState({ error })
   };
+
+  setBeerList = beerList => {
+    this.setState({ beerList })
+  }
 
   clearError = () => {
     this.setState({ error: null })
@@ -75,10 +77,8 @@ export class UserProvider extends Component {
     const value = {
       user: this.state.user,
       error: this.state.error,
-      language: this.state.language,
-      words: this.state.words,
-      setLanguage: this.setLanguage,
-      setWords: this.setWords,
+      beerList: this.state.beerList,
+      setBeerList: this.setBeerList,
       setError: this.setError,
       clearError: this.clearError,
       setUser: this.setUser,
