@@ -14,21 +14,15 @@ export default class NavBar extends Component {
   render() {
     return (
       <nav>
-        <button>
-          <Link to={'/home'}>
-            Home
-          </Link>
-        </button>
-        <button>
-          <Link to={'/breweries'}>
-            Breweries
-          </Link>
-        </button>
-        <button>
-          <Link to={'/add'}>
-            Add Beer
-          </Link>
-        </button>
+        <Link to={'/home'}>
+          Home
+        </Link>
+        <Link to={'/breweries'}>
+          Breweries
+        </Link>
+        <Link to={'/add'}>
+          Add Beer
+        </Link>
         <button onClick={this.handleLogoutClick}>
           Logout
         </button>
