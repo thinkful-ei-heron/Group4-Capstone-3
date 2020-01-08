@@ -6,7 +6,7 @@ import AuthApiService from "../services/auth-api-service";
 export default class LoginForm extends Component {
   handleLoginSuccess = () => {
     const { location, history } = this.props;
-    const destination = (location.state || {}).from || "/";
+    const destination = (location.state || {}).from || "/home";
     history.push(destination);
   };
 
