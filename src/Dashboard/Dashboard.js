@@ -15,7 +15,7 @@ class Dashboard extends React.Component {
   }
   renderBeerList() {
     const { beerList = [] } = this.context
-      return beerList.map
+      return beerList.map(beerList => <div>{beerList.name}</div>)
   }
     render() {
         return (
