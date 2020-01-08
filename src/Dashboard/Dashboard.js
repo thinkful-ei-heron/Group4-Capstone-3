@@ -13,14 +13,20 @@ class Dashboard extends React.Component {
     ////.then to set beer list from a new function in context
       // .then(this.context.setBeerList)
       // .catch(this.context.setError)
-    ////List of favorite beers on homepage?
   }
+  // renderBeerList() {
+  //   const { beerList = [] } = this.context
+  //     return beerList.map(beer => 
+  //       <BeerListItem 
+  //         key={beer.id}
+  //         beer={beer} />)
+  // }
     render() {
         return (
           <>
             <h2>Dashboard</h2>
             <NavBar />
-            {/* <BeerList /> */}
+            {/* {this.renderBeerList()} */}
           </>
         )
     }
