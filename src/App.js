@@ -12,8 +12,6 @@ import Dashboard from './Dashboard/Dashboard';
 export default class App extends Component {
     state = { hasError: false };
 
-
-
     render(){
         const { hasError } = this.state;
         return (
