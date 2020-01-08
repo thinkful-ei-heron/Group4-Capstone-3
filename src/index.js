@@ -3,5 +3,6 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 import {BrowserRouter} from "react-router-dom";
+import { UserProvider } from './contexts/UserContext';
 
-ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
+ReactDOM.render(<BrowserRouter><UserProvider><App /></UserProvider></BrowserRouter>, document.getElementById('root'));

@@ -26,7 +26,7 @@ export default class App extends Component {
                     <PublicOnlyRoute path={'/register'} component={Register}/>
                     <PublicOnlyRoute path={'/landing-page'} component={LandingPage}/>
                     <PublicOnlyRoute path={'/login'} component={LoginForm}/>
-                    <PrivateOnlyRoute path={'/home'} component={Dashboard}
+                    <PrivateOnlyRoute path={'/home'} component={Dashboard}/>
                 </Switch>
 
             </div>
