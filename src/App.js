@@ -6,7 +6,6 @@ import PrivateOnlyRoute from './PrivateRoute/PrivateRoute';
 import LandingPage from "./LandingPage/LandingPage";
 import './App.css'
 import LoginForm from "./LoginForm/login-form";
-import TokenService from "./services/token-service";
 import Dashboard from './Dashboard/Dashboard';
 
 export default class App extends Component {
