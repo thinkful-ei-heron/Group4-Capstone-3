@@ -45,7 +45,7 @@ export class JournalProvider extends Component {
   setDesc = description => {this.setState({ description })};
   setType = type => {this.setState({ type })};
   setRating = rating => {this.setState({ rating })};
-  setApv = apv => {this.setState({ apv })};
+  setAbv = abv => {this.setState({ abv })};
   setHeaviness = heaviness => {this.setState({ heaviness })};
   setColor = color => {this.setState({ color })};
   setImage = image => {this.setState({ image })};
@@ -58,12 +58,20 @@ export class JournalProvider extends Component {
       description: '',
       type: '',
       rating: 0,
-      apv: 0,
+      abv: 0,
       heaviness: 0,
       color: 0,
       image: 0
     })
   };
+  
+  checkValues() {
+    let checks = [this.state.name, this.state.date_created, this.state.location, this.state.description, this.state.type]
+    if(checks.filter(x => x.trim().length === 0).length !== 0){
+      return {bool: true};
+    }
+    return {bool: false, error: `${checks.filter(x => x.trim().length === 0).toString()} are empty.`};
+  }
   
   render() {
     let value = {
@@ -73,7 +81,7 @@ export class JournalProvider extends Component {
       description:  this.state.description,
       type:  this.state.type,
       rating: this.state.rating,
-      apv: this.state.apv,
+      abv: this.state.abv,
       heaviness: this.state.heaviness,
       color: this.state.color,
       image: this.state.image,
@@ -83,11 +91,12 @@ export class JournalProvider extends Component {
       setDesc: this.setDesc,
       setType: this.setType,
       setRating: this.setRating,
-      setApv: this.setApv,
+      setAbv: this.setAbv,
       setHeaviness: this.setHeaviness,
       setColor: this.setColor,
       setImage: this.setImage,
-      resetAll: this.resetAll
+      resetAll: this.resetAll,
+      checkValues: this.checkValues,
     };
     return (
       <JournalContext.Provider value={value}>

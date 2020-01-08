@@ -11,27 +11,33 @@ export default class AddForm extends Component {
 
     firstInput = React.createRef();
 
+
     handleSubmit = ev => {
         ev.preventDefault();
-        const {username, password} = ev.target;
+        const checkedValues = this.context.checkValues();
 
-        this.setState({error: null});
-
-        BeerApiService.postBeer({
-            user_name: username.value,
-            password: password.value,
-        })
-            .then(res => {
-                username.value = "";
-                password.value = "";
-                this.context.processLogin(res.authToken);
-                this.handleLoginSuccess();
+        if(!checkedValues.bool)
+            this.setState({error: checkedValues.error});
+        else {
+            BeerApiService.postBeer({
+                name: this.context.name,
+                date_created: this.context.date_created,
+                location: this.context.location,
+                description:  this.context.description,
+                type:  this.context.type,
+                rating: this.context.rating,
+                abv: this.context.abv,
+                heaviness: this.context.heaviness,
+                color: this.context.color
             })
-            .catch(res => {
-                this.setState({error: res.error});
-            });
+                .then(res => {
+                    this.context.resetAll();
+                })
+                .catch(res => {
+                    this.setState({error: res.error});
+                });
+        }
     };
-
     render() {
         const {error} = this.state;
         return (
@@ -39,7 +45,7 @@ export default class AddForm extends Component {
                 <h1>The Dear Beer</h1>
                 <NavBar/>
                 <h3>Add Beer Entry</h3>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.context.handleSubmit}>
                     <div role='alert'>
                         {error && <p className='error'>Something went wrong!</p>}
                     </div>
