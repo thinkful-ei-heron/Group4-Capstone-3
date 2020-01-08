@@ -14,11 +14,11 @@ export default class AddForm extends Component {
 
     handleSubmit = ev => {
         ev.preventDefault();
-        const checkedValues = this.context.checkValues();
+        //const checkedValues = this.context.checkValues();
 
-        if(!checkedValues.bool)
-            this.setState({error: checkedValues.error});
-        else {
+        // if(!checkedValues.bool)
+        //     this.setState({error: checkedValues.error});
+        // else {
             BeerApiService.postBeer({
                 name: this.context.name,
                 date_created: this.context.date_created,
@@ -36,7 +36,7 @@ export default class AddForm extends Component {
                 .catch(res => {
                     this.setState({error: res.error});
                 });
-        }
+       // }
     };
     render() {
         const {error} = this.state;
@@ -45,7 +45,7 @@ export default class AddForm extends Component {
                 <h1>The Dear Beer</h1>
                 <NavBar/>
                 <h3>Add Beer Entry</h3>
-                <form onSubmit={this.context.handleSubmit}>
+                <form onSubmit={this.handleSubmit}>
                     <div role='alert'>
                         {error && <p className='error'>Something went wrong!</p>}
                     </div>
@@ -72,8 +72,13 @@ export default class AddForm extends Component {
                                    id="rating" step="1"/>
                         </div>
                         <div>
-                            <label htmlFor='beer-entry-apv'>APV</label>
-                            <input type='number' id='beer-entry-apv' value={this.context.apv} onChange={(e)=> this.context.setApv(e.target.value)} required/>
+                            <label htmlFor='beer-entry-abv'>ABV</label>
+                            <input type='number' id='beer-entry-abv' value={this.context.abv} onChange={(e)=> this.context.setAbv(e.target.value)} required/>
+                        </div>
+                        <div>
+                            <label htmlFor='beer-entry-type'>Type</label>
+                            <input type='text' id='beer-entry-type' value={this.context.type}
+                                   onChange={(e)=>this.context.setType(e.target.value)} required/>
                         </div>
                         <div>
                             <label htmlFor='beer-entry-rating'>Description</label>
