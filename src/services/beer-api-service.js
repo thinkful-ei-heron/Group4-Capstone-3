@@ -58,6 +58,8 @@ const BeerApiService = {
                 date: beer.date,
                 description: beer.description,
                 rating: beer.rating,
+                apv: beer.apv,
+                image: beer.image,
                 location: beer.location,
                 color: beer.color,
                 heaviness: beer.heaviness
