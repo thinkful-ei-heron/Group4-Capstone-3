@@ -12,10 +12,15 @@ export default class NavBar extends Component {
   render() {
     return (
       <nav>
-        Home
-        Lean Drank
-        Breweries
-        Add
+        <Link to={'/home'}>
+          Home
+        </Link>
+        <Link to={'/breweries'}>
+          Breweries
+        </Link>
+        <Link to={'/add'}>
+          Add+
+        </Link>
       </nav>
     )
   }

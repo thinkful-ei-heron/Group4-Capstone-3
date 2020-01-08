@@ -16,7 +16,6 @@ export default class App extends Component {
 
     render(){
         const { hasError } = this.state;
-        TokenService.clearAuthToken();
         return (
             <div className='App'>
                 {hasError && (
