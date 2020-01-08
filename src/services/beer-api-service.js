@@ -3,7 +3,7 @@ import TokenService from "./token-service";
 
 const BeerApiService = {
     getAllBeers() {
-        return fetch(`${config.API_ENDPOINT}/beers`, {
+        return fetch(`${config.API_ENDPOINT}/journals`, {
             headers: {
                 'authorization': `bearer ${TokenService.getAuthToken()}`,
             },
@@ -15,7 +15,7 @@ const BeerApiService = {
             )
     },
     getBeer(beerId) {
-        return fetch(`${config.API_ENDPOINT}/beers/${beerId}`, {
+        return fetch(`${config.API_ENDPOINT}/journals/${beerId}`, {
             headers: {
                 'authorization': `bearer ${TokenService.getAuthToken()}`,
             },
@@ -27,7 +27,7 @@ const BeerApiService = {
             )
     },
     patchBeer(beer, id) {
-        return fetch(`${config.API_ENDPOINT}/beers/${id}`, {
+        return fetch(`${config.API_ENDPOINT}/journals/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',
@@ -46,7 +46,7 @@ const BeerApiService = {
         })
     },
     postBeer(beer) {
-        return fetch(`${config.API_ENDPOINT}/beers`, {
+        return fetch(`${config.API_ENDPOINT}/journals`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -72,7 +72,7 @@ const BeerApiService = {
             )
     },
     deleteBeer(id) {
-        return fetch(`${config.API_ENDPOINT}/beers/${id}`, {
+        return fetch(`${config.API_ENDPOINT}/journals/${id}`, {
             method: 'DELETE',
             headers: {'authorization': `bearer ${TokenService.getAuthToken()}`}
         })
