@@ -14,13 +14,12 @@ class Dashboard extends React.Component {
       // .then(this.context.setBeerList)
       // .catch(this.context.setError)
   }
-  // renderBeerList() {
-  //   const { beerList = [] } = this.context
-  //     return beerList.map(beer => 
-  //       <BeerListItem 
-  //         key={beer.id}
-  //         beer={beer} />)
-  // }
+  renderBeerList() {
+    const { beerList = [] } = this.context
+      return beerList.map(
+
+    )
+  }
     render() {
         return (
           <>
