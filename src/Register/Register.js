@@ -33,6 +33,7 @@ class Register extends React.Component {
     render() {
         const {error} = this.state;
         return (
+        <div className="register_route">
             <div className="register">
                 <h1>Dear Beer</h1>
                 <h3>Register</h3>
@@ -99,6 +100,7 @@ class Register extends React.Component {
                         Submit
                     </button>
                 </form>
+            </div>
             </div>
         )
     }

@@ -1,23 +1,23 @@
-/* html {
+/* . {
 	background-color: black;
 	padding-top: 150px;
 } */
-/* body {
+.register_route {
     background-image: url("../images/beer3.jpg");
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
     padding-left: 70px;
     
-} */
+}
 
-.register-page h1 {
+.register_route h1 {
 	font-family: 'Merriweather', serif;
 	color: white;
 	font-size: 50px;
 }
 
-.register-page h3 {
+.register_route h3 {
 	font-family: 'Roboto Slab', serif;
 	color: white;
 	font-size: 25px;
@@ -31,14 +31,14 @@
 	background-color: rgba(0, 0, 0, 0.584);
 }
 
-.register-page input {
+.register_route input {
 	background-color: rgba(255, 255, 255, 0.66);
 	font-size: 15px;
 	color: black;
 	margin-bottom: 10px;
 }
 
-.register-page button {
+.register_route button {
 	background-color: transparent;
 	border-radius: 0px;
 	color: white;
