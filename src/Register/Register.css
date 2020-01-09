@@ -1,61 +1,48 @@
-html {
-    background-color: black;
-    padding-top: 150px;
-
-}
-body {
+/* html {
+	background-color: black;
+	padding-top: 150px;
+} */
+/* body {
     background-image: url("../images/beer3.jpg");
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
     padding-left: 70px;
     
+} */
+
+.register-page h1 {
+	font-family: 'Merriweather', serif;
+	color: white;
+	font-size: 50px;
 }
 
-
-h1 {
-    font-family: 'Merriweather', serif;
-    color:white;
-    font-size: 50px;
-   
-}
-
-
-h3 {
-    font-family: 'Roboto Slab', serif;
-    color:white;
-    font-size: 25px;
+.register-page h3 {
+	font-family: 'Roboto Slab', serif;
+	color: white;
+	font-size: 25px;
 }
 
 .register {
- 
-    padding-bottom: 25px;
-    text-align: center;
-    align-self: center;
-    align-content: center;
-    background-color: rgba(0, 0, 0, 0.584);
-
+	padding-bottom: 25px;
+	text-align: center;
+	align-self: center;
+	align-content: center;
+	background-color: rgba(0, 0, 0, 0.584);
 }
 
-input{
-    background-color:rgba(255, 255, 255, 0.66);
-    font-size: 15px;
-    color: black;
-    margin-bottom: 10px;
+.register-page input {
+	background-color: rgba(255, 255, 255, 0.66);
+	font-size: 15px;
+	color: black;
+	margin-bottom: 10px;
 }
 
-
-
-button {
-    
-   background-color: transparent;
-    border-radius: 0px;
-    color: white;
-    margin-right: 5px;
-    font-size: 15px;
-    cursor: hover;
-
+.register-page button {
+	background-color: transparent;
+	border-radius: 0px;
+	color: white;
+	margin-right: 5px;
+	font-size: 15px;
+	cursor: hover;
 }
-
-
-

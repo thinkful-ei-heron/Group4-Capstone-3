@@ -18,7 +18,7 @@
 .parallax-banner-layer-0 > * {
 	opacity: 1;
 }
-h1 {
+.landing-page h1 {
 	color: white;
 	font-family: 'Merriweather', serif;
 	position: absolute;
@@ -30,18 +30,18 @@ h1 {
 	justify-content: center;
 	font-size: 4em;
 }
-nav {
+.landing-page nav {
 	position: absolute;
 	right: 0;
 	padding: 10px;
 }
-nav a {
+.landing-page nav a {
 	color: white;
 	padding: 5px;
 	font-size: 20px;
 	text-decoration: none;
 }
-nav a:hover {
+.landing-page nav a:hover {
 	color: rgb(9, 162, 250);
 	cursor: pointer;
 }
