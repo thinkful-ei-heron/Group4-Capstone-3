@@ -73,8 +73,7 @@ export default class LoginForm extends Component {
                   type='submit'>
                     Login
                 </button>
-                <Link 
-                  to='/'>
+                <Link to='/'>
                     <button>
                         Back
                     </button>
