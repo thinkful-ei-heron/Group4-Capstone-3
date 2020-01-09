@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import UserContext from "../contexts/UserContext";
 import AuthApiService from "../services/auth-api-service";
+import './login-form.css' 
 
 export default class LoginForm extends Component {
   handleLoginSuccess = () => {
@@ -40,8 +41,9 @@ export default class LoginForm extends Component {
   render() {
     const { error } = this.state;
     return (
-      <div>
-        <h1>The Dear Beer</h1>
+      <div className='login-page'>
+        <div className='login'>
+        <h1>Dear Beer</h1>
         <h3>Login</h3>
         <form onSubmit={this.handleSubmit}>
           <div role='alert'>
@@ -50,23 +52,25 @@ export default class LoginForm extends Component {
             <section>
               <div>
                 <label htmlFor='login-username'>
-                  Username
+                  {/* Username */}
                 </label>
                 <input 
                   type='text'
                   id='login-username'
                   name='username'
-                  required/>
+                  required
+                  placeholder='Username'/>
               </div>
               <div>
                 <label htmlFor='login-password'>
-                  Password
+                  {/* Password */}
                 </label>
                 <input 
                   type='password'
                   id='login-password'
                   name='password'
-                  required/>
+                  required
+                  placeholder='Password'/>
               </div>
               <div>
                 <button
@@ -87,6 +91,7 @@ export default class LoginForm extends Component {
               </div>
             </section>
         </form>
+      </div>
       </div>
     )
   }
