@@ -33,21 +33,13 @@ export class JournalProvider extends Component {
       description: '',
       type: '',
       rating: 0,
-      abv: 0,
+      apv: 0,
       heaviness: 0,
       color: 0,
       image: 0
     };
-    this.setName = this.setName.bind(this);
-    this.setLoc = this.setName.bind(this);
-    this.setDesc = this.setName.bind(this);
-    this.setType = this.setName.bind(this);
-    this.setRating = this.setName.bind(this);
-    this.setAbv = this.setName.bind(this);
-    this.setHeaviness = this.setName.bind(this);
-    this.setColor = this.setName.bind(this);
-    this.setImage = this.setName.bind(this);
   }
+  setDate = date_created => {this.setState({ date_created })};
   setName = name => {this.setState({ name })};
   setLoc = location => {this.setState({ location })};
   setDesc = description => {this.setState({ description })};
@@ -58,8 +50,31 @@ export class JournalProvider extends Component {
   setColor = color => {this.setState({ color })};
   setImage = image => {this.setState({ image })};
 
+  resetAll = () => {
+    this.setState({
+      name: '',
+      date_created: '',
+      location: '',
+      description: '',
+      type: '',
+      rating: 0,
+      abv: 0,
+      heaviness: 0,
+      color: 0,
+      image: 0
+    })
+  };
+  
+  checkValues() {
+    let checks = [this.state.name, this.state.date_created, this.state.location, this.state.description, this.state.type]
+    if(checks.filter(x => x.trim().length === 0).length !== 0){
+      return {bool: true};
+    }
+    return {bool: false, error: `${checks.filter(x => x.trim().length === 0).toString()} are empty.`};
+  }
+  
   render() {
-    const value = {
+    let value = {
       name: this.state.name,
       date_created: this.state.date_created,
       location: this.state.location,
@@ -70,6 +85,7 @@ export class JournalProvider extends Component {
       heaviness: this.state.heaviness,
       color: this.state.color,
       image: this.state.image,
+      setDate: this.setDate,
       setName: this.setName,
       setLoc:  this.setLoc,
       setDesc: this.setDesc,
@@ -78,7 +94,9 @@ export class JournalProvider extends Component {
       setAbv: this.setAbv,
       setHeaviness: this.setHeaviness,
       setColor: this.setColor,
-      setImage: this.setImage
+      setImage: this.setImage,
+      resetAll: this.resetAll,
+      checkValues: this.checkValues,
     };
     return (
       <JournalContext.Provider value={value}>
