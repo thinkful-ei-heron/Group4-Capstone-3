@@ -1,43 +1,44 @@
-import React from "react";
-import {Link} from "react-router-dom";
-import './LandingPage.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ParallaxBanner } from 'react-scroll-parallax';
+import bg1 from '../assets/img/bg1.jpg';
+import './LandingPage.css';
 class LandingPage extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {}
-    }
+	constructor(props) {
+		super(props);
+		this.state = {};
+	}
 
-    render() {
-        return (
-            <main className={'landing-page'}>
-                <header>Parrallaxing Banner .33 head</header>
-                <h1>The Dear Beer App</h1>
-                <nav>
-                    <Link to={'/login'}>Log-in</Link>
-                    <Link to={'/register'}>Register</Link>
-                </nav>
-                <section className={'landing-page-about'}>
-                    <div>
-                        <h2>About</h2>
-                        <p>Info Info Info Good Tomato</p>
-                    </div>
-                    <figure>
-                        <img src={require("../assets/img/deerbear.png")} alt={'The Deer Bear'} width={'150px'}/>
-                        <figcaption>The Deer Bear</figcaption>
-                    </figure>
-                </section>
-                <section className={'landing-page-audience'}>
-                        <h2>Target Audience</h2>
-                        <p>Beer Drinkers</p>
-                </section>
-                <section>
-                    <h2>Contact</h2>
-                    <p>OOF</p>
-                </section>
-                <footer> @Copyright 2020</footer>
-            </main>
-        )
-    }
+	render() {
+		return (
+			<main className={'landing-page'}>
+				<ParallaxBanner
+					className="header"
+					layers={[ { image: bg1, amount: 0.8 } ]}
+					style={{ minHeight: '50vh', maxHeight: '50vh' }}
+				>
+					<nav>
+						<Link to={'/login'}>Login</Link>
+						<Link to={'/register'}>Register</Link>
+					</nav>
+					<h1>Dear Beer</h1>
+				</ParallaxBanner>
+
+				<section className={'landing-page-about'}>
+					<div>
+						<h2>About</h2>
+						<p>Info Info Info Good Tomato</p>
+					</div>
+					<figure>
+						<img src={require('../assets/img/deerbear.png')} alt={'The Deer Bear'} width={'150px'} />
+						<figcaption>The Deer Bear</figcaption>
+					</figure>
+				</section>
+
+				<footer> @Copyright 2020</footer>
+			</main>
+		);
+	}
 }
 
 export default LandingPage;

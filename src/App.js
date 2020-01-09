@@ -6,7 +6,7 @@ import PrivateOnlyRoute from './PrivateRoute/PrivateRoute';
 import LandingPage from "./LandingPage/LandingPage";
 import './App.css'
 import LoginForm from "./LoginForm/login-form";
-import AddForm from "./AddForm/add-form";
+import AddForm from './AddForm/AddForm';
 import Dashboard from './Dashboard/Dashboard';
 
 export default class App extends Component {
