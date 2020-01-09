@@ -33,8 +33,8 @@ class Register extends React.Component {
     render() {
         const {error} = this.state;
         return (
-            <div>
-                <h1>The Dear Beer</h1>
+            <div className="register">
+                <h1>Dear Beer</h1>
                 <h3>Register</h3>
 
                 <form
@@ -46,46 +46,50 @@ class Register extends React.Component {
                     </div>
                     <div className='username'>
                         <label htmlFor='RegistrationForm__username'>
-                            Username
+                            {/* Username */}
                         </label>
                         <input
                             name='username'
                             type='text'
                             required
-                            id='RegistrationForm__username'>
+                            id='RegistrationForm__username'
+                            placeholder= 'Username'>
                         </input>
                     </div>
                     <div className='password'>
                         <label htmlFor='RegistrationForm__password'>
-                            Password
+                            {/* Password */}
                         </label>
                         <input
                             name='password'
                             type='password'
                             required
-                            id='RegistrationForm__password'>
+                            id='RegistrationForm__password'
+                            placeholder= 'Password'>
                         </input>
                     </div>
                     <div className='password'>
                         <label htmlFor='RegistrationForm__confirmPassword'>
-                            Confirm Password
+                            {/* Confirm Password */}
                         </label>
                         <input
                             name='confirmPassword'
                             type='password'
                             required
-                            id='RegistrationForm__confirmPassword'>
+                            id='RegistrationForm__confirmPassword'
+                            placeholder= 'Confirm Password'>
                         </input>
                     </div>
                     <div className='full_name'>
                         <label htmlFor='RegistrationForm__nickname'>
-                            Nickname
+                            {/* Nickname */}
                         </label>
                         <input
                             name='nickname'
                             type='text'
                             required
-                            id='RegistrationForm__nickname'>
+                            id='RegistrationForm__nickname'
+                            placeholder= 'Nick Name'>
                         </input>
                     </div>
                     <button type='button' onClick={()=>window.location.replace('/login')}>
