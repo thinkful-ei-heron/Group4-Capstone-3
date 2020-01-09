@@ -11,6 +11,7 @@ const UserContext = React.createContext({
   setUser: () => {},
   processLogin: () => {},
   processLogout: () => {},
+  toggleExpanded: () => {}
 });
 
 export default UserContext
@@ -38,8 +39,15 @@ export class UserProvider extends Component {
   };
 
   setBeerList = beerList => {
+    beerList.map( beerList => {return {...beerList, expanded: false}})
     this.setState({ beerList })
-  }
+  };
+
+  toggleExpanded = id => {
+    let currentBL = this.state.beerList.find(bl => bl.id === id);
+    currentBL.expanded = !currentBL.expanded;
+    this.forceUpdate();
+  };
 
   clearError = () => {
     this.setState({ error: null })
@@ -84,6 +92,7 @@ export class UserProvider extends Component {
       setUser: this.setUser,
       processLogin: this.processLogin,
       processLogout: this.processLogout,
+      toggleExpanded: this.toggleExpanded,
     };
     return (
       <UserContext.Provider value={value}>
