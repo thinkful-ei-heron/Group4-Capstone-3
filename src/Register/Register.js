@@ -1,5 +1,6 @@
 import React from 'react';
 import AuthApiService from "../services/auth-api-service";
+import './Register.css' 
 
 class Register extends React.Component {
     state = { error: null };

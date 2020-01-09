@@ -1,0 +1,28 @@
+
+body {
+    background-image: url("../images/beer3.jpg");
+    background-repeat: no-repeat;
+    padding: 90px 200px;
+  
+}
+
+
+h1 {
+    font-family: 'Merriweather', serif;
+    color: rgb(204, 192, 172);
+    font-size: 45px;
+   
+}
+
+h3 {
+    color: white;
+}
+
+div {
+    background-color: rgba(0, 0, 0, 0.365);
+
+}
+
+label {
+    color: whitesmoke;
+}
