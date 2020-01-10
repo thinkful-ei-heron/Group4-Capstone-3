@@ -18,6 +18,7 @@ class Dashboard extends React.Component {
             sort: 'None'
         };
         this.handleSubmitEdit = this.handleSubmitEdit.bind(this)
+        this.handleDelete = this.handleDelete.bind(this)
     }
 
     toggleSort() {// Rating  ASC DSC Heavyness ASC DESC
@@ -60,6 +61,11 @@ class Dashboard extends React.Component {
     }
 
 
+    handleDelete (id){
+        BeerApiService.deleteBeer(id)
+        this.setState({beerList: this.state.beerList.filter(beer => beer.id !== id)})
+    }
+
     componentDidMount() {
         this.context.clearError()
         BeerApiService.getAllBeers()
@@ -77,7 +83,7 @@ class Dashboard extends React.Component {
     };
     renderBeerList() {
         return this.state.beerList.map((beerList, i) => (beerList.expanded) ?
-            <DashboardExpanded key={i} toggleExpanded={this.context.toggleExpanded} journal={beerList} handleSubmit={this.handleSubmitEdit}/> :
+            <DashboardExpanded key={i} toggleExpanded={this.context.toggleExpanded} journal={beerList} handleDelete={this.handleDelete} handleSubmit={this.handleSubmitEdit}/> :
             <div key={i}>
                 <button
                     onClick={() => this.context.toggleExpanded(beerList.id)}

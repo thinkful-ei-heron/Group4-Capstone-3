@@ -96,7 +96,7 @@ export default class AddForm extends Component {
 
                         <div>
                             <label htmlFor='beer-entry-date'>Date</label>
-                            <input type='text' id='beer-entry-date' value={this.context.date_created}
+                            <input type='date' id='beer-entry-date' value={this.context.date_created}
                                    onChange={(e) => this.context.setDate(e.target.value)} required/>
                         </div>
                         <div>

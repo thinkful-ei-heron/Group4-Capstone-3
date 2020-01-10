@@ -18,8 +18,7 @@ class DashboardExpanded extends React.Component {
             rating: 0,
             abv: 0,
             heaviness: 0,
-            color: 0,
-            isEditable: false
+            color: 0
         }
     }
 
@@ -125,17 +124,17 @@ class DashboardExpanded extends React.Component {
                 description: this.state.description,
                 type: this.state.type,
                 rating: this.state.rating,
-                abv: this.state.abv,
-                heaviness: this.state.heaviness,
-                color: this.state.color
+                abv: parseFloat(this.state.abv),
+                heaviness: parseInt(this.state.heaviness),
+                color: parseInt(this.state.color)
             })}>
                 <figure>
-                    <img src={this.getImage(this.state.color)} alt={'Beer'} width={'150px'}/>
+                    <img src={this.getImage(parseInt(this.state.color))} alt={'Beer'} width={'150px'}/>
                     <figcaption>ABV: <input type='number' value={this.state.abv} onChange={this.handleAbv}/>
                     </figcaption>
                 </figure>
                 <section>
-                    <label>Date <input type='date' value={this.state.date} onChange={this.handleDate}/></label>
+                    <label>Date <input type='date' value={this.state.date_created} onChange={this.handleDate}/></label>
                     <label>Name <input type='text' value={this.state.name} onChange={this.handleName}/></label>
                     <label>Loc <input type='text' value={this.state.location} onChange={this.handleLoc}/></label>
                 </section>
@@ -164,6 +163,7 @@ class DashboardExpanded extends React.Component {
                 <input type='range' min="1" max="6" value={this.state.journal.color} readOnly/>
                 <h3>Heavy to Light</h3>
                 <input type='range' min="1" max="5" value={this.state.journal.heaviness} readOnly/>
+                <button onClick={()=> this.props.handleDelete(this.state.journal.id)}>Delete</button>
                 <button onClick={this.toggleIsEditable}>Edit</button>
             </section>);
         return (
