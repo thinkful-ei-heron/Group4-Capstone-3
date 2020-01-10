@@ -83,10 +83,11 @@ export default class AddForm extends Component {
         const {error} = this.state;
         return (
             <div className='add-form-page'>
-                <div className='color-overlay'></div>
-                <h1>Dear Beer</h1>
-                <NavBar/>
-                <h3>Add Beer Entry</h3>
+                {/*<div className='color-overlay'></div>*/}
+                <section className= 'dashboard-top'>
+                    <h2>Add Beer Entry</h2>
+                    <NavBar/>
+                </section>
                 <form onSubmit={this.handleSubmit}>
                     <div role='alert'>
                         {error && <p className='error'>Something went wrong!</p>}
