@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import JournalContext from "../contexts/JournalContext";
 import BeerApiService from "../services/beer-api-service";
 import NavBar from "../NavBar/NavBar"
+import './AddForm.css' 
 
 export default class AddForm extends Component {
 
@@ -80,15 +81,16 @@ export default class AddForm extends Component {
     render() {
         const {error} = this.state;
         return (
-            <div>
-                <h1>The Dear Beer</h1>
+            <div className='add-form-page'>
+                <div className='color-overlay'></div>
+                <h1>Dear Beer</h1>
                 <NavBar/>
                 <h3>Add Beer Entry</h3>
                 <form onSubmit={this.handleSubmit}>
                     <div role='alert'>
                         {error && <p className='error'>Something went wrong!</p>}
                     </div>
-                    <section>
+                    <section >
                         <figure>
                             <img src={this.getImage(this.context.color)} alt={'Beer'} width={'150px'}/>
                         </figure>
@@ -151,6 +153,7 @@ export default class AddForm extends Component {
                     </section>
                 </form>
             </div>
+        
         )
     }
 }
