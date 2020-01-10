@@ -1,6 +1,7 @@
 import React from 'react';
 import AuthApiService from "../services/auth-api-service";
 import './Register.css' 
+import TokenService from '../services/token-service';
 
 class Register extends React.Component {
     state = { error: null };
@@ -16,11 +17,18 @@ class Register extends React.Component {
                 password: password.value,
                 full_name: nickname.value,
             })
-                .then(user => {
-                    nickname.value = '';
+                .then(() => {
+                    return AuthApiService.postLogin({
+                        user_name: username.value,
+                        password: password.value,
+                    })
+                })
+                .then(res => {
+                    TokenService.saveAuthToken(res.authToken)
+                    window.location.replace('/home')
                     username.value = '';
                     password.value = '';
-                    window.location.replace('/login');
+                    nickname.value = '';
                 })
                 .catch(res => {
                     this.setState({error: res.error})
