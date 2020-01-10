@@ -43,6 +43,7 @@ export default class AddForm extends Component {
         })
             .then(res => {
                 this.context.resetAll();
+                window.location.replace('/home');
             })
             .catch(res => {
                 this.setState({error: res.error});
