@@ -99,11 +99,15 @@ class Dashboard extends React.Component {
         return (
             <>
                 <main className='dashboard-page'>
+                    <section className= 'dashboard-top'>
                 <h2>Dashboard</h2>
                 <NavBar/>
+                </section>
+                <section className='dashboard-bottom'>
                 <button onClick={()=>
                     this.toggleSort(this.state.beerList)}>{this.state.sort}</button>
                 {this.renderBeerList()}
+                </section>
                 </main>
             </>
         )

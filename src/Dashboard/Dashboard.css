@@ -7,8 +7,59 @@
 
 .journal-item-button:hover {
 	cursor: pointer;
-	background-color: gray;
+	background-color: rgba(201, 197, 197, 0.884);
+}
+.dashboard-top {
+	background-image: url('../assets//img/hops5.jpg');
+	background-size: cover;
 }
 .dashboard-page {
-	background-image: url('../assets//img/hops5.jpg');
+	background: rgba(8, 8, 8, 0.952);
+	height: 100vh;
+}
+.dashboard-page h2 {
+	color: rgb(0, 0, 0);
+	font-family: 'Merriweather', serif;
+	font-size: 2em;
+	margin-top: 0;
+	padding: 1em;
+}
+.dashboard-page nav a {
+	padding: 1em;
+	color: white;
+	font-size: 1.5em;
+	text-decoration: none;
+	font-family: 'Merriweather', serif;
+}
+.dashboard-page nav {
+	background-color: rgba(8, 8, 8, 0.774);
+	/* opacity: 0.6; */
+	height: 2.3em;
+}
+.dashboard-page nav a:hover {
+	color: rgb(8, 184, 8);
+}
+.dashboard-page nav button {
+	float: right;
+	background-color: rgba(8, 8, 8, 0.041);
+	color: white;
+	font-family: 'Merriweather', serif;
+	font-size: 1.5em;
+	border: none;
+	height: 1.3em;
+}
+.dashboard-page nav button:hover {
+	color: rgb(8, 184, 8);
+}
+.dashboard-bottom {
+	padding: 4em;
+}
+/* .dashboard-bottom button {
+	color: white;
+	background-color: black;
+	border: none;
+} */
+.dashboard-bottom li {
+	list-style: none;
+	color: white;
 }
