@@ -16,16 +16,19 @@ class Dashboard extends React.Component {
             search: '',
             filter: '',
             sort: 'None'
-        }
+        };
+        this.handleSubmitEdit = this.handleSubmitEdit.bind(this)
+        this.handleDelete = this.handleDelete.bind(this)
     }
 
     toggleSort() {// Rating  ASC DSC Heavyness ASC DESC
         switch (this.state.sort) {
             case 'None':
-                this.setState({sort: 'Youngest', beerList: this.state.beerList.sort((a,b)=> new Date(b.date).getTime() - new Date(a.date).getTime())});
+                console.log(this.state.beerList)
+                this.setState({sort: 'Youngest', beerList: this.state.beerList.sort((a,b)=> new Date(a.date_created) - new Date(b.date_created))});
                 break;
             case 'Youngest':
-                this.setState({sort: 'Oldest', beerList: this.state.beerList.sort((a,b)=> new Date(a.date).getTime() - new Date(b.date).getTime())});
+                this.setState({sort: 'Oldest', beerList: this.state.beerList.sort((a,b)=> new Date(b.date_created) - new Date(a.date_created))});
                 break;
             case 'Oldest':
                 this.setState({sort: 'Rating ASC', beerList: this.state.beerList.sort((a,b)=> a.rating - b.rating)});
@@ -58,6 +61,11 @@ class Dashboard extends React.Component {
     }
 
 
+    handleDelete (id){
+        BeerApiService.deleteBeer(id)
+        this.setState({beerList: this.state.beerList.filter(beer => beer.id !== id)})
+    }
+
     componentDidMount() {
         this.context.clearError()
         BeerApiService.getAllBeers()
@@ -67,9 +75,15 @@ class Dashboard extends React.Component {
             .catch(this.context.setError)
     }
 
+    handleSubmitEdit = (id, newJournal) => {
+        let currentBeer = this.state.beerList.find((beer) => beer.id === id);
+        this.state.beerList.splice(this.state.beerList.indexOf(currentBeer), 1, newJournal);
+        BeerApiService.patchBeer(newJournal, id)
+        this.forceUpdate();
+    };
     renderBeerList() {
         return this.state.beerList.map((beerList, i) => (beerList.expanded) ?
-            <DashboardExpanded key={i} toggleExpanded={this.context.toggleExpanded} journal={beerList}/> :
+            <DashboardExpanded key={i} toggleExpanded={this.context.toggleExpanded} journal={beerList} handleDelete={this.handleDelete} handleSubmit={this.handleSubmitEdit}/> :
             <div key={i}>
                 <button
                     onClick={() => this.context.toggleExpanded(beerList.id)}
@@ -84,11 +98,17 @@ class Dashboard extends React.Component {
     render() {
         return (
             <>
+                <main className='dashboard-page'>
+                    <section className= 'dashboard-top'>
                 <h2>Dashboard</h2>
                 <NavBar/>
+                </section>
+                <section className='dashboard-bottom'>
                 <button onClick={()=>
                     this.toggleSort(this.state.beerList)}>{this.state.sort}</button>
                 {this.renderBeerList()}
+                </section>
+                </main>
             </>
         )
     }
