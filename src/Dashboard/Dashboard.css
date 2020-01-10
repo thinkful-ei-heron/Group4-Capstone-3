@@ -1,11 +1,14 @@
 .journal-item-button {
-  border: none;
-  margin: 10px;
-  padding: 10px 10px 30px 10px;
-  width: 600px;
+	border: none;
+	margin: 10px;
+	padding: 10px 10px 30px 10px;
+	width: 600px;
 }
 
 .journal-item-button:hover {
-  cursor: pointer;
-  background-color: gray;
+	cursor: pointer;
+	background-color: gray;
+}
+.dashboard-page {
+	background-image: url('../assets//img/hops5.jpg');
 }

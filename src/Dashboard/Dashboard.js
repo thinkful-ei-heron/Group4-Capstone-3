@@ -92,11 +92,13 @@ class Dashboard extends React.Component {
     render() {
         return (
             <>
+                <main className='dashboard-page'>
                 <h2>Dashboard</h2>
                 <NavBar/>
                 <button onClick={()=>
                     this.toggleSort(this.state.beerList)}>{this.state.sort}</button>
                 {this.renderBeerList()}
+                </main>
             </>
         )
     }

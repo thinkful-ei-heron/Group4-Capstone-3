@@ -1,15 +1,11 @@
 .landing-page-about {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	/* height: -webkit-fill-available; */
 }
 .landing-page {
-	/* background-image: url(https://images.unsplash.com/photo-1505075106905-fb052892c116?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80); */
-	/* background-repeat: no-repeat;
-	/* background-attachment: scroll; */
-	/* background-position: center;
-	background-size: cover;  */
-	/* height: 100%;
-    opacity: 0.9; */
 	background-color: rgb(39, 40, 49);
 }
 .parallax-banner-layer-0 {
@@ -40,8 +36,44 @@
 	padding: 5px;
 	font-size: 20px;
 	text-decoration: none;
+	/* font-family: 'Merriweather', serif; */
 }
 .landing-page nav a:hover {
 	color: rgb(9, 162, 250);
 	cursor: pointer;
+}
+.landing-page footer {
+	padding: 2em;
+}
+.landing-page-about figure {
+	float: left;
+	margin-top: 13%;
+	margin-left: 10%;
+	margin-bottom: 10%;
+}
+.landing-page-about img {
+	height: 19em;
+	width: 15em;
+	border-radius: 3%;
+}
+.landing-page-about figcaption {
+	color: white;
+	font-family: 'Merriweather', serif;
+}
+.landing-page-about h2 {
+	color: white;
+	font-family: 'Merriweather', serif;
+}
+.landing-page-about p {
+	color: white;
+	font-size: 1.2em;
+	font-family: 'Merriweather', serif;
+}
+.landing-page-about div {
+	float: left;
+	width: 44%;
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+@media only screen and (max-width: 600px) {
 }
