@@ -3,6 +3,7 @@
 #### Created by: Andrea Bender, Maria Danielson, Jonny Deates, Evan Vogts
 
 ### Link to live App:
+[DearBeer](https://dearbeer.now.sh)   
 
 ## Introduction
 
