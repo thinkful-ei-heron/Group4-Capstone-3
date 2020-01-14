@@ -56,7 +56,7 @@ class Dashboard extends React.Component {
                 });
                 break;
             case "Heaviness DSC":
-                this.setState({sort: 'None', beerList: this.context.beerList});
+                this.setState({sort: 'None', beerList: this.state.beerList});
                 break;
             default:
                 this.setState({sort: 'None'});
