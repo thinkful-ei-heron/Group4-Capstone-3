@@ -17,9 +17,9 @@ export default class NavBar extends Component {
         <Link to={'/home'}>
           Home
         </Link>
-        <Link to={'/breweries'}>
-          Breweries
-        </Link>
+        {/*<Link to={'/breweries'}>*/}
+        {/*  Breweries*/}
+        {/*</Link>*/}
         <Link to={'/add'}>
           Add Beer
         </Link>

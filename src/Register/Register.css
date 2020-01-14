@@ -8,7 +8,11 @@
 	display: flex;
 	justify-content: center;
 }
-
+.error {
+	font-weight: 900;
+	color: #feb502;
+	font-size: larger;
+}
 .register_route h1 {
 	font-family: 'Merriweather', serif;
 	color: white;

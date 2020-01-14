@@ -10,7 +10,7 @@
 	background-color: rgba(201, 197, 197, 0.884);
 }
 .dashboard-top {
-	background-image: url('../assets//img/hops5.jpg');
+	background-image: url('../assets/img/hops5.jpg');
 	background-size: cover;
 }
 .dashboard-page {
@@ -52,8 +52,13 @@
 	color: rgb(8, 184, 8);
 }
 .dashboard-bottom {
-	padding: 4em;
+	background-image: url(/static/media/wall3.359ad85a.jpeg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	min-height: 100vh;
 }
+
 /* .dashboard-bottom button {
 	color: white;
 	background-color: black;
@@ -62,4 +67,10 @@
 .dashboard-bottom li {
 	list-style: none;
 	color: white;
+}
+.darker {
+	padding: 4em;
+	background-color: #00000055;
+	height: max-content;
+	min-height: 100vh;
 }

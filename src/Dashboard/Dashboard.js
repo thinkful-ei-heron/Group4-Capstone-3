@@ -25,22 +25,34 @@ class Dashboard extends React.Component {
         switch (this.state.sort) {
             case 'None':
                 console.log(this.state.beerList)
-                this.setState({sort: 'Youngest', beerList: this.state.beerList.sort((a,b)=> new Date(a.date_created) - new Date(b.date_created))});
+                this.setState({
+                    sort: 'Youngest',
+                    beerList: this.state.beerList.sort((a, b) => new Date(a.date_created) - new Date(b.date_created))
+                });
                 break;
             case 'Youngest':
-                this.setState({sort: 'Oldest', beerList: this.state.beerList.sort((a,b)=> new Date(b.date_created) - new Date(a.date_created))});
+                this.setState({
+                    sort: 'Oldest',
+                    beerList: this.state.beerList.sort((a, b) => new Date(b.date_created) - new Date(a.date_created))
+                });
                 break;
             case 'Oldest':
-                this.setState({sort: 'Rating ASC', beerList: this.state.beerList.sort((a,b)=> a.rating - b.rating)});
+                this.setState({sort: 'Rating ASC', beerList: this.state.beerList.sort((a, b) => a.rating - b.rating)});
                 break;
             case 'Rating ASC':
-                this.setState({sort: 'Rating DSC', beerList: this.state.beerList.sort((a,b)=> b.rating - a.rating)});
+                this.setState({sort: 'Rating DSC', beerList: this.state.beerList.sort((a, b) => b.rating - a.rating)});
                 break;
             case 'Rating DSC':
-                this.setState({sort: 'Heaviness ASC', beerList: this.state.beerList.sort((a,b)=> a.heaviness - b.heaviness)});
+                this.setState({
+                    sort: 'Heaviness ASC',
+                    beerList: this.state.beerList.sort((a, b) => a.heaviness - b.heaviness)
+                });
                 break;
             case "Heaviness ASC":
-                this.setState({sort: 'Heaviness DSC', beerList: this.state.beerList.sort((a,b)=> b.heaviness - a.heaviness)});
+                this.setState({
+                    sort: 'Heaviness DSC',
+                    beerList: this.state.beerList.sort((a, b) => b.heaviness - a.heaviness)
+                });
                 break;
             case "Heaviness DSC":
                 this.setState({sort: 'None', beerList: this.context.beerList});
@@ -61,7 +73,7 @@ class Dashboard extends React.Component {
     }
 
 
-    handleDelete (id){
+    handleDelete(id) {
         BeerApiService.deleteBeer(id)
         this.setState({beerList: this.state.beerList.filter(beer => beer.id !== id)})
     }
@@ -81,9 +93,11 @@ class Dashboard extends React.Component {
         BeerApiService.patchBeer(newJournal, id)
         this.forceUpdate();
     };
+
     renderBeerList() {
         return this.state.beerList.map((beerList, i) => (beerList.expanded) ?
-            <DashboardExpanded key={i} toggleExpanded={this.context.toggleExpanded} journal={beerList} handleDelete={this.handleDelete} handleSubmit={this.handleSubmitEdit}/> :
+            <DashboardExpanded key={i} toggleExpanded={this.context.toggleExpanded} journal={beerList}
+                               handleDelete={this.handleDelete} handleSubmit={this.handleSubmitEdit}/> :
             <div key={i}>
                 <button
                     onClick={() => this.context.toggleExpanded(beerList.id)}
@@ -99,15 +113,17 @@ class Dashboard extends React.Component {
         return (
             <>
                 <main className='dashboard-page'>
-                    <section className= 'dashboard-top'>
-                <h2>Dashboard</h2>
-                <NavBar/>
-                </section>
-                <section className='dashboard-bottom'>
-                <button onClick={()=>
-                    this.toggleSort(this.state.beerList)}>{this.state.sort}</button>
-                {this.renderBeerList()}
-                </section>
+                    <section className='dashboard-top'>
+                        <h2>Dashboard</h2>
+                        <NavBar/>
+                    </section>
+                    <section className='dashboard-bottom'>
+                        <div className={'darker'}>
+                            <button onClick={() =>
+                                this.toggleSort(this.state.beerList)}>{this.state.sort}</button>
+                            {this.renderBeerList()}
+                        </div>
+                    </section>
                 </main>
             </>
         )

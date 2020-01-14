@@ -1,10 +1,10 @@
-.add-form-page{
+.add-form-page > form{
     background-image: url("../images/wall3.jpeg");
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
 	height: 100vh;
-	display: flex;
+	/*display: flex;*/
     justify-content: center;
     flex-direction: column;
 }
@@ -14,34 +14,75 @@
     
 }
 
-.add-form-page nav {
+/*.add-form-page nav {*/
 
-    display: inline-block;
-    display: flex;
-    flex-direction: row; 
-    justify-content: center;
-    padding-top: 30px;
-    z-index: 1;
+/*    display: inline-block;*/
+/*    display: flex;*/
+/*    flex-direction: row; */
+/*    justify-content: center;*/
+/*    padding-top: 30px;*/
+/*    z-index: 1;*/
 
+/*}*/
+/*.add-form-page a {*/
+/*    margin-right: 20px;*/
+/*    list-style: none;*/
+/*    text-decoration: none;*/
+/*    color: white;*/
+/*    border: white solid 1px;*/
+/*    padding: 3px;*/
+
+
+/*}*/
+
+/*.add-form-page h1 {*/
+/*	font-family: 'Merriweather', serif;*/
+/*	color: white;*/
+/*    font-size: 35px;*/
+/*    z-index: 1;*/
+/*}*/
+.dashboard-top {
+    background-image: url('../assets/img/hops5.jpg');
+    background-size: cover;
 }
-.add-form-page a {
-    margin-right: 20px;
-    list-style: none;
-    text-decoration: none;
+.add-form-page {
+    background: rgba(8, 8, 8, 0.952);
+    height: 100vh;
+}
+.add-form-page h2 {
+    color: rgb(0, 0, 0);
+    font-family: 'Merriweather', serif;
+    font-size: 2em;
+    margin-top: 0;
+    padding: 1em;
+}
+.add-form-page nav a {
+    padding: 1em;
     color: white;
-    border: white solid 1px;
-    padding: 3px;
-
-
+    font-size: 1.5em;
+    text-decoration: none;
+    font-family: 'Merriweather', serif;
 }
-
-.add-form-page h1 {
-	font-family: 'Merriweather', serif;
-	color: white;
-    font-size: 35px;
-    z-index: 1;
+.add-form-page nav {
+    background-color: rgba(8, 8, 8, 0.774);
+    /* opacity: 0.6; */
+    height: 2.3em;
 }
-
+.add-form-page nav a:hover {
+    color: rgb(8, 184, 8);
+}
+.add-form-page nav button {
+    float: right;
+    background-color: rgba(8, 8, 8, 0.041);
+    color: white;
+    font-family: 'Merriweather', serif;
+    font-size: 1.5em;
+    border: none;
+    height: 1.3em;
+}
+.add-form-page nav button:hover {
+    color: rgb(8, 184, 8);
+}
 .add-form-page h3 {
 	font-family: 'Roboto Slab', serif;
 	color: white;
@@ -64,14 +105,15 @@
 	color: white;
 	margin-right: 10px;
 	font-size: 16px;
-    cursor: hover;
+    cursor: pointer;
     
 }
 
-.add-form-page section{
+.add-form-page > form section{
 	align-self: center;
     padding: 15px 100px;
-
+    background-color: #00000055;
+    min-height: 98vh;
 }
 .add-form-page label {
     color:white;

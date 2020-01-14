@@ -28,6 +28,7 @@ class Register extends React.Component {
                     window.location.replace('/home')
                     username.value = '';
                     password.value = '';
+                    confirmPassword.value = '';
                     nickname.value = '';
                 })
                 .catch(res => {
@@ -51,7 +52,7 @@ class Register extends React.Component {
                     onSubmit={this.handleSubmit}
                 >
                     <div role='alert'>
-                        {error && <p className='red'>{error}</p>}
+                        {error && <p className='error'>{error}</p>}
                     </div>
                     <div className='username'>
                         <label htmlFor='RegistrationForm__username'>

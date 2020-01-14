@@ -1,6 +1,6 @@
 {
   "name": "capstone-3-client",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -33,5 +33,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This application is meant to be used in conjunction with the server located at: https://github.com/thinkful-ei-heron/Group4-Capstone3-API.",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinkful-ei-heron/Group4-Capstone-3.git"
+  },
+  "author": "Andrea Bender, Maria Danielson, Jonny Deates, Evan Vogts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thinkful-ei-heron/Group4-Capstone-3/issues"
+  },
+  "homepage": ""
 }
