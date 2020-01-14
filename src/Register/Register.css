@@ -67,6 +67,7 @@
 	border: none;
 	padding: 2em;
 	font-family: 'Merriweather', serif;
+	cursor: pointer;
 }
 .login-btn:hover {
 	color: rgb(252, 189, 55);
