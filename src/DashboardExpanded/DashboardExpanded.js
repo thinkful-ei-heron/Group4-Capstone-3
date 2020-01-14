@@ -127,31 +127,35 @@ class DashboardExpanded extends React.Component {
 				<button type={'submit'}>Submit</button>
 			</form>
 		) : (
-			<section>
-				<figure>
-					<img src={Utils.getImage(this.state.journal.color)} alt={'Beer'} width={'150px'} />
-					<figcaption>ABV: {this.state.journal.abv} % </figcaption>
-				</figure>
-				<section onClick={() => this.props.toggleExpanded(this.state.journal.id)}>
-					<h3>
-						Date: <span>{Utils.formattedDate(this.state.journal.date_created)}</span>
-					</h3>
-					<h3>
-						Name: <span>{this.state.journal.name}</span>
-					</h3>
-					<h3>
-						Location: <span>{this.state.journal.location}</span>
-					</h3>
-				</section>
-				<input type="range" min="0" max="9" value={this.state.journal.rating} readOnly />
-				<p>{this.state.journal.description}</p>
-				<h3>Dark to Light</h3>
-				<input type="range" min="1" max="6" value={this.state.journal.color} readOnly />
-				<h3>Heavy to Light</h3>
-				<input type="range" min="1" max="5" value={this.state.journal.heaviness} readOnly />
-				<button onClick={() => this.props.handleDelete(this.state.journal.id)}>Delete</button>
-				<button onClick={this.toggleIsEditable}>Edit</button>
-			</section>
+            <>
+                <div className='dashboard-expanded-section'>
+                <section onClick={() => this.props.toggleExpanded(this.state.journal.id)}>
+                    <figure>
+                        <img src={Utils.getImage(this.state.journal.color)} alt={'Beer'} width={'150px'} />
+                        <figcaption>ABV: {this.state.journal.abv} % </figcaption>
+                    </figure>
+                    <section>
+                        <h3>
+                            Date: <span>{Utils.formattedDate(this.state.journal.date_created)}</span>
+                        </h3>
+                        <h3>
+                            Name: <span>{this.state.journal.name}</span>
+                        </h3>
+                        <h3>
+                            Location: <span>{this.state.journal.location}</span>
+                        </h3>
+                    </section>
+                    <input type="range" min="0" max="9" value={this.state.journal.rating} readOnly />
+                    <p>{this.state.journal.description}</p>
+                    <h3>Dark to Light</h3>
+                    <input type="range" min="1" max="6" value={this.state.journal.color} readOnly />
+                    <h3>Heavy to Light</h3>
+                    <input type="range" min="1" max="5" value={this.state.journal.heaviness} readOnly />
+                </section>
+                <button onClick={() => this.props.handleDelete(this.state.journal.id)}>Delete</button>
+                <button onClick={this.toggleIsEditable}>Edit</button>
+                </div>
+            </>
 		);
 		return <li>{x}</li>;
 	}

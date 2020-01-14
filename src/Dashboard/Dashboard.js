@@ -4,6 +4,7 @@ import BeerApiService from '../services/beer-api-service';
 import UserContext from '../contexts/UserContext';
 import DashboardExpanded from '../DashboardExpanded/DashboardExpanded';
 import Utils from '../Utils/Utils'
+import Header from '../Header/Header'
 import './Dashboard.css'
 
 class Dashboard extends React.Component {
@@ -56,7 +57,7 @@ class Dashboard extends React.Component {
                 });
                 break;
             case "Heaviness DSC":
-                this.setState({sort: 'None', beerList: this.context.beerList});
+                this.setState({sort: 'None', beerList: this.state.beerList});
                 break;
             default:
                 this.setState({sort: 'None'});
@@ -115,10 +116,7 @@ class Dashboard extends React.Component {
         return (
             <>
                 <main className='dashboard-page'>
-                    <section className='dashboard-top'>
-                        <h2>Dashboard</h2>
-                        <NavBar location={this.props.location}/>
-                    </section>
+                    <Header location={this.props.location} header={'Home'}/>
                     <section className='dashboard-bottom'>
                         <div className={'darker'}>
                             <button className = 'toggleSort' onClick={() =>

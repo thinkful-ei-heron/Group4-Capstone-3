@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import JournalContext from "../contexts/JournalContext";
 import BeerApiService from "../services/beer-api-service";
-import NavBar from "../NavBar/NavBar"
+import Header from "../Header/Header"
 import Utils from '../Utils/Utils'
 import './AddForm.css' 
 
@@ -56,11 +56,7 @@ export default class AddForm extends Component {
         const {error} = this.state;
         return (
             <div className='add-form-page'>
-                {/*<div className='color-overlay'></div>*/}
-                <section className= 'dashboard-top'>
-                    <h2>Add Beer Entry</h2>
-                    <NavBar location={this.props.location}/>
-                </section>
+                <Header location={this.props.location} header={'Add Beer'}/>
                 <form onSubmit={this.handleSubmit}>
                     <div role='alert'>
                         {error && <p className='error'>Something went wrong!</p>}
@@ -81,7 +77,7 @@ export default class AddForm extends Component {
                                    onChange={(e) => this.context.setName(e.target.value)} required/>
                         </div>
                         <div>
-                            <label htmlFor='beer-entry-location'>Loc</label>
+                            <label htmlFor='beer-entry-location'>Location</label>
                             <input type='text' id='beer-entry-location' value={this.context.location}
                                    onChange={(e) => this.context.setLoc(e.target.value)} required/>
                         </div>
