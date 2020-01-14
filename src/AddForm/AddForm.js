@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import JournalContext from "../contexts/JournalContext";
 import BeerApiService from "../services/beer-api-service";
 import NavBar from "../NavBar/NavBar"
+import Utils from '../Utils/Utils'
 import './AddForm.css' 
 
 export default class AddForm extends Component {
