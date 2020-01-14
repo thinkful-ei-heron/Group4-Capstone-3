@@ -101,18 +101,18 @@ class DashboardExpanded extends React.Component {
 				<figure>
 					<img src={Utils.getImage(parseInt(this.state.color))} alt={'Beer'} width={'150px'} />
 					<figcaption>
-						ABV: <input type="number" value={this.state.abv} onChange={this.handleAbv} />
+						ABV: <input type="number" value={this.state.abv} onChange={this.handleAbv} /> %
 					</figcaption>
 				</figure>
 				<section>
 					<label>
-						Date <input type="date" value={this.state.date_created} onChange={this.handleDate} />
+						Date: <input type="date" value={this.state.date_created} onChange={this.handleDate} />
 					</label>
 					<label>
-						Name <input type="text" value={this.state.name} onChange={this.handleName} />
+						Name: <input type="text" value={this.state.name} onChange={this.handleName} />
 					</label>
 					<label>
-						Loc <input type="text" value={this.state.location} onChange={this.handleLoc} />
+						Location: <input type="text" value={this.state.location} onChange={this.handleLoc} />
 					</label>
 				</section>
 				<input type="range" min="0" max="9" value={this.state.rating} onChange={this.handleRating} />
@@ -128,17 +128,17 @@ class DashboardExpanded extends React.Component {
 			<section>
 				<figure>
 					<img src={Utils.getImage(this.state.journal.color)} alt={'Beer'} width={'150px'} />
-					<figcaption>ABV: {this.state.journal.abv} </figcaption>
+					<figcaption>ABV: {this.state.journal.abv} % </figcaption>
 				</figure>
 				<section onClick={() => this.props.toggleExpanded(this.state.journal.id)}>
 					<h3>
-						Date <span>{Utils.formattedDate(this.state.journal.date_created)}</span>
+						Date: <span>{Utils.formattedDate(this.state.journal.date_created)}</span>
 					</h3>
 					<h3>
-						Name <span>{this.state.journal.name}</span>
+						Name: <span>{this.state.journal.name}</span>
 					</h3>
 					<h3>
-						Loc <span>{this.state.journal.location}</span>
+						Location: <span>{this.state.journal.location}</span>
 					</h3>
 				</section>
 				<input type="range" min="0" max="9" value={this.state.journal.rating} readOnly />
