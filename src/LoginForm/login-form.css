@@ -13,6 +13,10 @@
 	color: white;
 	font-size: 75px;
 }
+.login-header {
+	text-decoration: none;
+	cursor: pointer;
+}
 
 .login-page h3 {
 	font-family: 'Roboto Slab', serif;

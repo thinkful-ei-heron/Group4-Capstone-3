@@ -1,9 +1,8 @@
-
 .register_route {
-    background-image: url("../images/beer3.jpg");
-    background-repeat: no-repeat;
-    background-position:center;
-    background-size: cover;
+	background-image: url("../images/beer3.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	height: 100vh;
 	display: flex;
 	justify-content: center;
@@ -47,20 +46,32 @@
 	cursor: hover;
 }
 .submit-button {
-background: rgb(112, 206, 99);
-color: white;
-border-style: outset;
-border-color: #0066A2;
-height: 50px;
-font: bold 15px arial, sans-serif;
-text-shadow:none;
-cursor: hover;
+	background: rgb(112, 206, 99);
+	color: white;
+	border-style: outset;
+	border-color: #0066a2;
+	height: 40px;
+	font: bold 15px arial, sans-serif;
+	text-shadow: none;
+	cursor: pointer;
+	width: 6em;
+	font-family: 'Merriweather', serif;
 }
-
-.home-btn {
-	display: flow-root;
-
-	
+.submit-button:hover {
+	background-color: rgba(0, 0, 0, 0.384);
+	color: white;
+	border-style: outset;
+	border-color: #0066a2;
 }
-
-
+.login-btn {
+	border: none;
+	padding: 2em;
+	font-family: 'Merriweather', serif;
+}
+.login-btn:hover {
+	color: rgb(252, 189, 55);
+}
+.register-header {
+	text-decoration: none;
+	cursor: pointer;
+}

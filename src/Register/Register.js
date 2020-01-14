@@ -2,6 +2,7 @@ import React from 'react';
 import AuthApiService from '../services/auth-api-service';
 import './Register.css';
 import TokenService from '../services/token-service';
+import { Link } from 'react-router-dom';
 
 class Register extends React.Component {
 	state = { error: null };
@@ -44,7 +45,9 @@ class Register extends React.Component {
 		return (
 			<div className="register_route">
 				<div className="register">
-					<h1>DearBeer</h1>
+					<Link className="register-header" to="/">
+						<h1>DearBeer</h1>
+					</Link>
 					<h3>Register</h3>
 
 					<form className="RegistrationForm" onSubmit={this.handleSubmit}>
@@ -92,8 +95,9 @@ class Register extends React.Component {
 						<button className="submit-button" type="submit">
 							Submit
 						</button>
-						<button className="home-btn" type="button" onClick={() => window.location.replace('/login')}>
-							Home
+						<br />
+						<button className="login-btn" type="button" onClick={() => window.location.replace('/login')}>
+							Already a user?
 						</button>
 					</form>
 				</div>
