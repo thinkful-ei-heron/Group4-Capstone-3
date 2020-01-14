@@ -1,17 +1,16 @@
-.add-form-page > form{
-    background-image: url("../images/wall3.jpeg");
-    background-repeat: no-repeat;
-    background-position:center;
-    background-size: cover;
+.add-form-page > form {
+	background-image: url("../images/wall3.jpeg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	height: 100vh;
 	/*display: flex;*/
-    justify-content: center;
-    flex-direction: column;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .add-form-page sub {
-    background-color: rgba(0, 0, 0, 0.584);
-    
+	background-color: rgba(0, 0, 0, 0.584);
 }
 
 /*.add-form-page nav {*/
@@ -32,7 +31,6 @@
 /*    border: white solid 1px;*/
 /*    padding: 3px;*/
 
-
 /*}*/
 
 /*.add-form-page h1 {*/
@@ -42,100 +40,95 @@
 /*    z-index: 1;*/
 /*}*/
 .dashboard-top {
-    background-image: url('../assets/img/hops5.jpg');
-    background-size: cover;
+	background-image: url('../assets/img/hops5.jpg');
+	background-size: cover;
 }
 .add-form-page {
-    background: rgba(8, 8, 8, 0.952);
-    height: 100vh;
+	background: rgba(8, 8, 8, 0.952);
+	height: 100vh;
 }
 .add-form-page h2 {
-    color: rgb(0, 0, 0);
-    font-family: 'Merriweather', serif;
-    font-size: 2em;
-    margin-top: 0;
-    padding: 1em;
+	color: rgb(0, 0, 0);
+	font-family: 'Merriweather', serif;
+	font-size: 2em;
+	margin-top: 0;
+	padding: 1em;
 }
 .add-form-page nav a {
-    /* padding: 1em; */
-    margin: 2em;
-    color: white;
-    font-size: 1.5em;
-    text-decoration: none;
-    font-family: 'Merriweather', serif;
+	/* padding: 1em; */
+	margin: 1em;
+	color: white;
+	font-size: 1.5em;
+	text-decoration: none;
+	font-family: 'Merriweather', serif;
 }
 .add-form-page nav {
-    background-color: rgba(8, 8, 8, 0.774);
-    /* opacity: 0.6; */
-    height: 2.3em;
+	background-color: rgba(8, 8, 8, 0.774);
+	/* opacity: 0.6; */
+	height: 2.3em;
+	text-align: left;
 }
 .add-form-page nav a:hover {
-    color: rgb(8, 184, 8);
+	color: rgb(8, 184, 8);
 }
 .add-form-page nav button {
-    float: right;
-    background-color: rgba(8, 8, 8, 0.041);
-    color: white;
-    font-family: 'Merriweather', serif;
-    font-size: 1.5em;
-    border: none;
-    height: 1.3em;
+	float: right;
+	background-color: rgba(8, 8, 8, 0.041);
+	color: white;
+	font-family: 'Merriweather', serif;
+	font-size: 1.5em;
+	border: none;
+	height: 1.3em;
 }
 .add-form-page nav button:hover {
-    color: rgb(8, 184, 8);
+	color: rgb(8, 184, 8);
 }
 .add-form-page h3 {
 	font-family: 'Roboto Slab', serif;
 	color: white;
-    font-size: 25px;
-    z-index: 1;
+	font-size: 25px;
+	z-index: 1;
 }
-  
+
 .add-form-page input {
 	background-color: rgba(255, 255, 255, 0.66);
 	font-size: 15px;
 	color: black;
-    margin-bottom: 10px;
-    z-index: 1;
-
+	margin-bottom: 10px;
+	z-index: 1;
 }
 
 .add-form-page button {
-    background-color: transparent;
-    border: solid white 1px;
+	background-color: transparent;
+	border: solid white 1px;
 	color: white;
 	margin-right: 10px;
 	font-size: 16px;
-    cursor: pointer;
-    
+	cursor: pointer;
 }
 
-.add-form-page > form section{
+.add-form-page > form section {
 	align-self: center;
-    padding: 15px 100px;
-    background-color: #00000055;
-    min-height: 98vh;
+	padding: 15px 100px;
+	background-color: #00000055;
+	min-height: 98vh;
 }
 .add-form-page label {
-    color:white;
-    display: flex;
-    flex-direction: column;
-    z-index: 1;
-
-   
+	color: white;
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
 }
 
 .add-form-page textarea {
-    background-color: rgba(255, 255, 255, 0.66);
+	background-color: rgba(255, 255, 255, 0.66);
 	font-size: 15px;
-    color: black;
-
+	color: black;
 }
 
 .color-overlay {
-    background-color: rgba(0, 0, 0, 0.564);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-
+	background-color: rgba(0, 0, 0, 0.564);
+	width: 100%;
+	height: 100%;
+	position: absolute;
 }

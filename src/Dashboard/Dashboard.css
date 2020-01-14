@@ -1,8 +1,10 @@
 .journal-item-button {
 	border: none;
-	margin: 10px;
+	border-radius: 5%;
+	margin: 3em;
 	padding: 10px 10px 30px 10px;
-	width: 33vh;
+	width: 35vh;
+	height: 38vh;
 }
 
 .journal-item-button:hover {
@@ -27,7 +29,7 @@
 .dashboard-page nav a {
 	/* padding: 1em; */
 	color: white;
-	margin: 2em;
+	margin: 1em;
 	font-size: 1.5em;
 	text-decoration: none;
 	font-family: 'Merriweather', serif;
@@ -48,6 +50,7 @@
 	font-size: 1.5em;
 	border: none;
 	height: 1.3em;
+	margin-right: 1em;
 }
 .dashboard-page nav button:hover {
 	color: rgb(8, 184, 8);
@@ -84,4 +87,9 @@
 	display: flex;
 	margin-left: auto;
 	margin-right: auto;
+}
+.beer-color-img {
+	height: 11em;
+	width: 11em;
+	padding: 1em;
 }

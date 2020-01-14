@@ -103,7 +103,7 @@ class Dashboard extends React.Component {
                 <button
                     onClick={() => this.context.toggleExpanded(beerList.id)}
                     className='journal-item-button'>
-                        {/* <div>{Utils.getImage(this.beerList.color)}</div> */}
+                    <img className='beer-color-img'src={Utils.getImage(beerList.color)} alt='beer-color'></img>
                     <h4>{beerList.name}</h4>
                     <div>{beerList.date_created}</div>
                     <div>Rating: {beerList.rating}</div>
