@@ -12,8 +12,7 @@ export default class NavBar extends Component {
   }
 
   render() {
-    const links = [{to: '/home', name: 'Home'},{to: '/breweries', name: 'Breweries'},{to: '/add', name: 'Add'}]
-    console.log(this.props.location.pathname)
+    const links = [{to: '/home', name: 'Home'},{to: '/breweries', name: 'Breweries'},{to: '/add', name: 'Add Beer'}]
     return (
       <nav>
         {links.map((link, i) => <Link key={i} to={link.to} className={this.props.location.pathname === link.to ? 'active' : ''}>
