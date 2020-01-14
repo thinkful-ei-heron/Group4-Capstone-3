@@ -116,7 +116,7 @@ class Dashboard extends React.Component {
         return (
             <>
                 <main className='dashboard-page'>
-                    <Header location={this.props.location} header={'Dashboard'}/>
+                    <Header location={this.props.location} header={'Home'}/>
                     <section className='dashboard-bottom'>
                         <div className={'darker'}>
                             <button className = 'toggleSort' onClick={() =>

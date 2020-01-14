@@ -6,7 +6,7 @@ class Header extends React.Component {
     render() {
         return (
             <>
-                <section className='header'>
+                <section className='header-component'>
                     <h2>{this.props.header}</h2>
                     <NavBar location={this.props.location}/>
                 </section>

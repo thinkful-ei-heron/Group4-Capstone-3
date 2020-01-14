@@ -1,15 +1,15 @@
-.header {
+.header-component {
     background-image: url('../assets/img/hops5.jpg');
     background-size: cover;
 }
-.header h2 {
+.header-component h2 {
     color: rgb(0, 0, 0);
     font-family: 'Merriweather', serif;
     font-size: 2em;
     margin-top: 0;
     padding: 1em;
 }
-.header nav a {
+.header-component nav a {
     /* padding: 1em; */
     color: white;
     margin: 1em;
@@ -17,15 +17,15 @@
     text-decoration: none;
     font-family: 'Merriweather', serif;
 }
-.header nav {
+.header-component nav {
     background-color: rgba(8, 8, 8, 0.774);
     height: 2.3em;
     text-align: left;
 }
-.header nav a:hover {
+.header-component nav a:hover {
     color: rgb(8, 184, 8);
 }
-.header nav button {
+.header-component nav button {
     float: right;
     background-color: rgba(8, 8, 8, 0.041);
     color: white;
