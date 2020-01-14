@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ParallaxBanner } from 'react-scroll-parallax';
 import bg1 from '../assets/img/bg1.jpg';
 import './LandingPage.css';
+import logo from '../assets/img/logo.png';
 class LandingPage extends React.Component {
 	constructor(props) {
 		super(props);
@@ -21,7 +22,10 @@ class LandingPage extends React.Component {
 						<Link to={'/login'}>Login</Link>
 						<Link to={'/register'}>Register</Link>
 					</nav>
-					<h1>DearBeer</h1>
+					<div className="header-logo">
+						<img className="logo" src={logo} alt="logo" />
+						<h1>DearBeer</h1>
+					</div>
 				</ParallaxBanner>
 
 				<section className={'landing-page-about'}>
