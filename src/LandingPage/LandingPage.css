@@ -75,5 +75,20 @@
 	margin-top: 10%;
 	margin-bottom: 10%;
 }
+.logo {
+	height: 12vh;
+	width: 12vh;
+	position: absolute;
+}
+.header-logo {
+	margin-left: auto;
+	margin-top: 15vh;
+	margin-right: 48vh;
+}
+.header-logo h1 {
+	position: relative;
+	top: 18px;
+	left: 246px;
+}
 @media only screen and (max-width: 600px) {
 }
