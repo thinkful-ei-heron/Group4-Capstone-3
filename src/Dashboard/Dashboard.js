@@ -3,6 +3,7 @@ import NavBar from './../NavBar/NavBar';
 import BeerApiService from '../services/beer-api-service';
 import UserContext from '../contexts/UserContext';
 import DashboardExpanded from '../DashboardExpanded/DashboardExpanded';
+import Utils from '../Utils/Utils'
 import './Dashboard.css'
 
 class Dashboard extends React.Component {
@@ -98,11 +99,11 @@ class Dashboard extends React.Component {
         return this.state.beerList.map((beerList, i) => (beerList.expanded) ?
             <DashboardExpanded key={i} toggleExpanded={this.context.toggleExpanded} journal={beerList}
                                handleDelete={this.handleDelete} handleSubmit={this.handleSubmitEdit}/> :
-            <div key={i}>
+            <div className= 'beerList-item' key={i}>
                 <button
                     onClick={() => this.context.toggleExpanded(beerList.id)}
                     className='journal-item-button'>
-                        <div>{Utils.getImage(this.beerList.color)}</div>
+                        {/* <div>{Utils.getImage(this.beerList.color)}</div> */}
                     <h4>{beerList.name}</h4>
                     <div>{beerList.date_created}</div>
                     <div>Rating: {beerList.rating}</div>
@@ -120,7 +121,7 @@ class Dashboard extends React.Component {
                     </section>
                     <section className='dashboard-bottom'>
                         <div className={'darker'}>
-                            <button onClick={() =>
+                            <button className = 'toggleSort' onClick={() =>
                                 this.toggleSort(this.state.beerList)}>{this.state.sort}</button>
                             {this.renderBeerList()}
                         </div>
