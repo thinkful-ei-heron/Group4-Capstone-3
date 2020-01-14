@@ -43,7 +43,7 @@ class Register extends React.Component {
         return (
         <div className="register_route">
             <div className="register">
-                <h1>Dear Beer</h1>
+                <h1>DearBeer</h1>
                 <h3>Register</h3>
 
                 <form

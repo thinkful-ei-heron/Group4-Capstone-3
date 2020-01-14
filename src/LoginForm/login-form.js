@@ -43,7 +43,7 @@ export default class LoginForm extends Component {
     return (
       <div className='login-page'>
         <div className='login'>
-        <h1>Dear Beer</h1>
+        <h1>DearBeer</h1>
         <h3>Login</h3>
         <form onSubmit={this.handleSubmit}>
           <div role='alert'>
