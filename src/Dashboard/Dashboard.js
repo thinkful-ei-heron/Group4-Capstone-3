@@ -115,7 +115,7 @@ class Dashboard extends React.Component {
                 <main className='dashboard-page'>
                     <section className='dashboard-top'>
                         <h2>Dashboard</h2>
-                        <NavBar/>
+                        <NavBar location={this.props.location}/>
                     </section>
                     <section className='dashboard-bottom'>
                         <div className={'darker'}>

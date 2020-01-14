@@ -1,0 +1,7 @@
+.active {
+  border-bottom: 5px rgb(110, 110, 110) inset;
+  color: rgb(8,184,8) !important;
+}
+.active:hover {
+  cursor: default;
+}

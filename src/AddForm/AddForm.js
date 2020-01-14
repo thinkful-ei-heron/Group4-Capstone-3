@@ -86,7 +86,7 @@ export default class AddForm extends Component {
                 {/*<div className='color-overlay'></div>*/}
                 <section className= 'dashboard-top'>
                     <h2>Add Beer Entry</h2>
-                    <NavBar/>
+                    <NavBar location={this.props.location}/>
                 </section>
                 <form onSubmit={this.handleSubmit}>
                     <div role='alert'>

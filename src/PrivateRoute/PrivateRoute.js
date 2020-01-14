@@ -13,7 +13,7 @@ export default function PrivateRoute({component, ...props}) {
 
                         {userContext =>
                             !!userContext.user.id
-                                ?  <JournalContext.Consumer>{() => <Component {...componentProps} />}</JournalContext.Consumer>
+                                ?  <JournalContext.Consumer>{() => <Component {...componentProps} location={componentProps.location}/>}</JournalContext.Consumer>
                                 : (
                                     <Redirect
                                         to={{
