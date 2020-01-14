@@ -12,17 +12,13 @@ export default class NavBar extends Component {
   }
 
   render() {
+    const links = [{to: '/home', name: 'Home'},{to: '/breweries', name: 'Breweries'},{to: '/add', name: 'Add'}]
+    console.log(this.props.location.pathname)
     return (
       <nav>
-        <Link to={'/home'}>
-          Home
-        </Link>
-        {/*<Link to={'/breweries'}>*/}
-        {/*  Breweries*/}
-        {/*</Link>*/}
-        <Link to={'/add'}>
-          Add Beer
-        </Link>
+        {links.map((link, i) => <Link key={i} to={link.to} className={this.props.location.pathname === link.to ? 'active' : ''}>
+          {link.name}
+        </Link>)}
         <button onClick={this.handleLogoutClick}>
           Logout
         </button>

@@ -25,8 +25,9 @@
 	padding: 1em;
 }
 .dashboard-page nav a {
-	padding: 1em;
+	/* padding: 1em; */
 	color: white;
+	margin: 2em;
 	font-size: 1.5em;
 	text-decoration: none;
 	font-family: 'Merriweather', serif;
