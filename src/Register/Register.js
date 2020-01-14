@@ -101,11 +101,11 @@ class Register extends React.Component {
                             placeholder= 'Nick Name'>
                         </input>
                     </div>
-                    <button type='button' onClick={()=>window.location.replace('/login')}>
-                        Back
-                    </button>
-                    <button type='submit'>
+                    <button className='submit-button' type='submit'>
                         Submit
+                    </button>
+                    <button className='home-btn' type='button' onClick={()=>window.location.replace('/login')}>
+                        Home
                     </button>
                 </form>
             </div>

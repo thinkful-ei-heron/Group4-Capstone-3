@@ -39,9 +39,25 @@
 	cursor: hover;
 }
 
+.submit-btn {
+background: rgb(112, 206, 99);
+color: white;
+border-style: outset;
+border-color: #0066A2;
+height: 50px;
+font: bold 15px arial, sans-serif;
+text-shadow:none;
+cursor: hover;
+}
+
+.other-btns {
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-evenly;
+	cursor: hover;
+}
 .login {
     background-color: rgba(0, 0, 0, 0.584);
     padding: 100px 75px;
     align-self: center;
-
 }

@@ -42,3 +42,21 @@
 	font-size: 20px;
 	cursor: hover;
 }
+.submit-button {
+background: rgb(112, 206, 99);
+color: white;
+border-style: outset;
+border-color: #0066A2;
+height: 50px;
+font: bold 15px arial, sans-serif;
+text-shadow:none;
+cursor: hover;
+}
+
+.home-btn {
+	display: flow-root;
+
+	
+}
+
+

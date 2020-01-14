@@ -74,12 +74,14 @@ export default class LoginForm extends Component {
               </div>
               <div>
                 <button
+                  className='submit-btn'
                   type='submit'>
                     Login
                 </button>
+                <div className='other-btns'>
                 <Link to='/'>
                     <button>
-                        Back
+                        Home
                     </button>
                 </Link>
                 <Link
@@ -87,7 +89,8 @@ export default class LoginForm extends Component {
                     <button>
                         New user?
                     </button>
-                </Link>
+                </Link>  
+                </div>
               </div>
             </section>
         </form>
