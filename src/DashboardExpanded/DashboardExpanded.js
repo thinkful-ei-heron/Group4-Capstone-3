@@ -1,6 +1,8 @@
 import React from 'react';
 import UserContext from '../contexts/UserContext';
 import Utils from '../Utils/Utils';
+import './DashboardExpanded.css';
+
 class DashboardExpanded extends React.Component {
 	static contextType = UserContext;
 
