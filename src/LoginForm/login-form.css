@@ -1,13 +1,11 @@
 .login-page {
-    background-image: url("../images/beer3.jpg");
-    background-repeat: no-repeat;
-    background-position:center;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-
-    
+	background-image: url("../images/beer3.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
 }
 
 .login-page h1 {
@@ -19,9 +17,8 @@
 .login-page h3 {
 	font-family: 'Roboto Slab', serif;
 	color: white;
-    font-size: 40px;
+	font-size: 40px;
 }
-
 
 .login-page input {
 	background-color: rgba(255, 255, 255, 0.66);
@@ -39,14 +36,22 @@
 }
 
 .submit-btn {
-background: rgb(112, 206, 99);
-color: white;
-border-style: outset;
-border-color: #0066A2;
-height: 50px;
-font: bold 15px arial, sans-serif;
-text-shadow:none;
-cursor: hover;
+	background: rgb(112, 206, 99);
+	color: white;
+	border-style: outset;
+	border-color: #0066a2;
+	height: 40px;
+	font: bold 15px arial, sans-serif;
+	text-shadow: none;
+	cursor: pointer;
+	width: 6em;
+	font-family: 'Merriweather', serif;
+}
+.submit-btn:hover {
+	background-color: rgba(0, 0, 0, 0.384);
+	color: white;
+	border-style: outset;
+	border-color: #0066a2;
 }
 
 .other-btns {
@@ -56,7 +61,15 @@ cursor: hover;
 	cursor: hover;
 }
 .login {
-    background-color: rgba(0, 0, 0, 0.584);
-    padding: 100px 75px;
-    align-self: center;
+	background-color: rgba(0, 0, 0, 0.584);
+	padding: 100px 75px;
+	align-self: center;
+}
+.new-user-btn {
+	border: none;
+	cursor: pointer;
+	font-family: 'Merriweather', serif;
+}
+.new-user-btn:hover {
+	color: rgb(252, 189, 55);
 }
