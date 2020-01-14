@@ -51,34 +51,6 @@ export default class AddForm extends Component {
             });
     };
 
-    getImage(id) {
-        let beerImg = '';
-        switch (id) {
-            case 6:
-                beerImg = require('../assets/beers/light.jpg');
-                break;
-            case 5:
-                beerImg = require('../assets/beers/light-2.jpg');
-                break;
-            case 4:
-                beerImg = require('../assets/beers/light-3.jpg');
-                break;
-            case 3:
-                beerImg = require('../assets/beers/medium.jpg');
-                break;
-            case 2:
-                beerImg = require('../assets/beers/dark.jpg');
-                break;
-            case 1:
-                beerImg = require('../assets/beers/dark-1.jpg');
-                break;
-            default:
-                beerImg = require('../assets/beers/light.jpg');
-                break;
-        }
-        return beerImg;
-    }
-
     render() {
         const {error} = this.state;
         return (
@@ -94,7 +66,7 @@ export default class AddForm extends Component {
                     </div>
                     <section >
                         <figure>
-                            <img src={this.getImage(this.context.color)} alt={'Beer'} width={'150px'}/>
+                            <img src={Utils.getImage(this.context.color)} alt={'Beer'} width={'150px'}/>
                         </figure>
 
                         <div>

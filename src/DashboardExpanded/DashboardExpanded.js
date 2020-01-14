@@ -1,6 +1,6 @@
 import React from "react";
 import UserContext from '../contexts/UserContext';
-
+import Utils from '../Utils/Utils'
 class DashboardExpanded extends React.Component {
 
     static contextType = UserContext;
@@ -83,38 +83,9 @@ class DashboardExpanded extends React.Component {
 
     };
 
-    getImage(id) {
-        let beerImg = '';
-        switch (id) {
-            case 6:
-                beerImg = require('../assets/beers/light.jpg');
-                break;
-            case 5:
-                beerImg = require('../assets/beers/light-2.jpg');
-                break;
-            case 4:
-                beerImg = require('../assets/beers/light-3.jpg');
-                break;
-            case 3:
-                beerImg = require('../assets/beers/medium.jpg');
-                break;
-            case 2:
-                beerImg = require('../assets/beers/dark.jpg');
-                break;
-            case 1:
-                beerImg = require('../assets/beers/dark-1.jpg');
-                break;
-            default:
-                beerImg = require('../assets/beers/light.jpg');
-                break;
-        }
-        return beerImg;
-    }
+
 
     render() {
-        let date = new Date(this.state.journal.date_created);
-        let formattedDate = `${date.getUTCMonth() + 1}/${date.getUTCDate()}/${date.getUTCFullYear()}`;
-
         let x = (this.state.isEditable) ? (
             <form onSubmit={() => this.props.handleSubmit(this.props.journal.id, {
                 id: this.props.journal.id,
@@ -129,7 +100,7 @@ class DashboardExpanded extends React.Component {
                 color: parseInt(this.state.color)
             })}>
                 <figure>
-                    <img src={this.getImage(parseInt(this.state.color))} alt={'Beer'} width={'150px'}/>
+                    <img src={Utils.getImage(parseInt(this.state.color))} alt={'Beer'} width={'150px'}/>
                     <figcaption>ABV: <input type='number' value={this.state.abv} onChange={this.handleAbv}/>
                     </figcaption>
                 </figure>
@@ -149,7 +120,7 @@ class DashboardExpanded extends React.Component {
             </form>) : (
             <section>
                 <figure>
-                    <img src={this.getImage(this.state.journal.color)} alt={'Beer'} width={'150px'}/>
+                    <img src={Utils.getImage(this.state.journal.color)} alt={'Beer'} width={'150px'}/>
                     <figcaption>ABV: {this.state.journal.abv} </figcaption>
                 </figure>
                 <section onClick={() => this.props.toggleExpanded(this.state.journal.id)}>
