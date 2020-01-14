@@ -106,7 +106,7 @@ class Dashboard extends React.Component {
                     className='journal-item-button'>
                     <img className='beer-color-img'src={Utils.getImage(beerList.color)} alt='beer-color'></img>
                     <h4>{beerList.name}</h4>
-                    <div>{beerList.date_created}</div>
+                    <div>{Utils.formattedDate(beerList.date_created)}</div>
                     <div>Rating: {beerList.rating}</div>
                 </button>
             </div>)
