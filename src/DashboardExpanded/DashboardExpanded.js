@@ -117,7 +117,11 @@ class DashboardExpanded extends React.Component {
 						Location: <input type="text" value={this.state.location} onChange={this.handleLoc} />
 					</label>
 				</section>
-				<input type="range" min="0" max="9" value={this.state.rating} onChange={this.handleRating} />
+				<figure>
+					<figcaption>Rating</figcaption>
+					<img className='edit-rating-img' src={Utils.getRatingImage(parseInt(this.state.rating))} alt={'Rating icons'} height={'50px'} />
+					<input type="range" min="0" max="9" value={this.state.rating} onChange={this.handleRating} />
+				</figure>
 				<textarea value={this.state.description} onChange={this.handleDesc} />
 				<h3>Dark to Light</h3>
 				<input type="range" min="1" max="6" value={this.state.color} onChange={this.handleColor} />
@@ -147,7 +151,7 @@ class DashboardExpanded extends React.Component {
                     </section>
 										<figure>
 											<figcaption>Rating</figcaption>
-											<img className='rating-img' src={Utils.getRatingImage(this.state.journal.rating)} alt={'Rating'} height={'50px'} />
+											<img className='rating-img' src={Utils.getRatingImage(this.state.journal.rating)} alt={'Rating icons'} height={'50px'} />
 										</figure>
                     {/* <input type="range" min="0" max="9" value={this.state.journal.rating} readOnly /> */}
                     <p>{this.state.journal.description}</p>
