@@ -4,12 +4,12 @@
 	margin: 3em;
 	padding: 10px 10px 30px 10px;
 	width: 35vh;
-	height: 38vh;
+	height: 45vh;
 }
 
 .journal-item-button:hover {
 	cursor: pointer;
-	background-color: rgba(201, 197, 197, 0.884);
+	background-color: rgba(209, 240, 205, 0.884);
 }
 .dashboard-page {
 	background: rgba(8, 8, 8, 0.952);
@@ -17,9 +17,8 @@
 }
 .dashboard-bottom {
 	background-image: url(/static/media/wall3.359ad85a.jpeg);
-	background-repeat: no-repeat;
+	background-repeat: repeat-y;
 	background-position: center;
-	background-size: cover;
 	min-height: 100vh;
 }
 
@@ -33,7 +32,7 @@
 	color: white;
 }
 .darker {
-	padding: 4em;
+	/* padding: 4em; */
 	background-color: #00000055;
 	height: max-content;
 	min-height: 100vh;
@@ -52,4 +51,25 @@
 	height: 11em;
 	width: 11em;
 	padding: 1em;
+}
+.rating-img {
+	margin: 1rem auto;
+	display: block;
+}
+.sort-select {
+	margin-top: 4em;
+	height: 3em;
+	width: 10em;
+	cursor: pointer;
+}
+.sort-select:hover {
+	border: rgb(9, 48, 9);
+}
+.journal-item-button h4 {
+	font-size: 2em;
+	font-family: 'Merriweather', serif;
+}
+.beer-date {
+	font-size: 1.5em;
+	font-family: 'Merriweather', serif;
 }
