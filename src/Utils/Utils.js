@@ -29,6 +29,42 @@ const Utils = {
                 break;
         }
         return beerImg;
+    },
+    getRatingImage(id) {
+        let ratingImg = '';
+        switch (id) {
+            case 9:
+                ratingImg = require('../assets/rating2/5.png');
+                break;
+            case 8:
+                ratingImg = require('../assets/rating2/4half.png');
+                break;
+            case 7:
+                ratingImg = require('../assets/rating2/4.png');
+                break;
+            case 6:
+                ratingImg = require('../assets/rating2/3half.png');
+                break;
+            case 5:
+                ratingImg = require('../assets/rating2/3.png');
+                break;
+            case 4:
+                ratingImg = require('../assets/rating2/2half.png');
+                break;
+            case 3:
+                ratingImg = require('../assets/rating2/2.png');
+                break;
+            case 2:
+                ratingImg = require('../assets/rating2/1half.png');
+                break;
+            case 1:
+                ratingImg = require('../assets/rating2/1.png');
+                break;
+            default:
+                ratingImg = require('../assets/rating2/half.png');
+                break;
+        }
+        return ratingImg;
     }
 };
 
