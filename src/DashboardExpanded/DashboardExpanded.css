@@ -1,21 +1,28 @@
 .dashboard-expanded-section {
-  border: none;
-  background-color: buttonface;
-  color: Black;
-  border-radius: 5%;
-  margin-top: 1rem;
-  padding: 1rem 0 1.5rem 0;
+	width: 90vh;
+	background-color: buttonface;
+	color: Black;
+	border-radius: 5%;
+	margin-top: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+	height: fit-content;
+	padding: 1rem 0 1.5rem 0;
 }
 
 .dashboard-expanded-section:hover {
-  background-color: rgba(201, 197, 197, 0.884)
+	background-color: rgba(209, 240, 205, 0.884);
+	cursor: pointer;
 }
 
 .rating-img {
-  margin: 1rem 0 0 0;
+	margin: 1rem 0 0 0;
 }
 
 .edit-rating-img {
-  margin: 1rem auto;
-  display: block;
+	margin: 1rem auto;
+	display: block;
+}
+.dashboard-expanded-section p {
+	margin: 1em;
 }

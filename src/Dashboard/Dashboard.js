@@ -90,8 +90,8 @@ class Dashboard extends React.Component {
                     className='journal-item-button'>
                     <img className='beer-color-img'src={Utils.getImage(beerList.color)} alt='beer-color'></img>
                     <h4>{beerList.name}</h4>
-                    <div>{Utils.formattedDate(beerList.date_created)}</div>
-                    <div>Rating: {beerList.rating}</div>
+                    <div className='beer-date'> {Utils.formattedDate(beerList.date_created)}</div>
+                    <img className='rating-img' src={Utils.getRatingImage(beerList.rating)} alt={'Rating icons'} height={'50px'}></img>
                 </button>
             </div>)
     }
@@ -103,7 +103,7 @@ class Dashboard extends React.Component {
                     <Header location={this.props.location} header={'Home'}/>
                     <section className='dashboard-bottom'>
                         <div className={'darker'}>
-                            <select 
+                            <select className='sort-select'
                                 onChange={this.sortSelect}>
                                 <option value='none'>Sort By</option>
                                 <option value='Youngest'>Youngest</option>
@@ -113,6 +113,7 @@ class Dashboard extends React.Component {
                                 <option value='Heaviness ASC'>Heaviness ASC</option>
                                 <option value='Heaviness DESC'>Heaviness DESC</option>
                             </select>
+                            <br></br>
                             {this.renderBeerList()}
                         </div>
                     </section>

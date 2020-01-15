@@ -3,7 +3,6 @@
 	justify-content: center;
 	margin-top: 10%;
 	margin-bottom: 10%;
-	/* height: -webkit-fill-available; */
 }
 .landing-page {
 	background-color: rgb(39, 40, 49);
@@ -36,14 +35,16 @@
 	padding: 5px;
 	font-size: 20px;
 	text-decoration: none;
-	/* font-family: 'Merriweather', serif; */
+	font-family: 'Merriweather', serif;
 }
 .landing-page nav a:hover {
-	color: rgb(9, 162, 250);
+	/* color: rgb(9, 162, 250); */
+	color: rgb(250, 77, 9);
 	cursor: pointer;
 }
 .landing-page footer {
 	padding: 2em;
+	color: white;
 }
 .landing-page-about figure {
 	float: left;
@@ -91,5 +92,5 @@
 	top: 18px;
 	left: 246px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 660px) {
 }
