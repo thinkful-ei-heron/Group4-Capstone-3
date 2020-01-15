@@ -77,3 +77,23 @@
 .new-user-btn:hover {
 	color: rgb(252, 189, 55);
 }
+/* @media only screen and (max-width: 1024px) {
+} */
+@media only screen and (max-width: 660px) {
+	.login {
+		background-color: rgba(0, 0, 0, 0.584);
+		padding: 76px 13px;
+		align-self: center;
+	}
+	.login-page h1 {
+		font-family: 'Merriweather', serif;
+		color: white;
+		font-size: 65px;
+		margin: 0;
+	}
+	.login-page h3 {
+		font-family: 'Roboto Slab', serif;
+		color: white;
+		font-size: 35px;
+	}
+}

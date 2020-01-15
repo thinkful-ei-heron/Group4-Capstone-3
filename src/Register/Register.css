@@ -26,8 +26,10 @@
 
 .register {
 	align-self: center;
-	padding: 100px 75px;
+	padding: 65px 75px;
 	background-color: rgba(0, 0, 0, 0.584);
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .register_route input {
@@ -65,7 +67,7 @@
 }
 .login-btn {
 	border: none;
-	padding: 2em;
+	margin-top: 3em;
 	font-family: 'Merriweather', serif;
 	cursor: pointer;
 }
@@ -75,4 +77,30 @@
 .register-header {
 	text-decoration: none;
 	cursor: pointer;
+}
+@media only screen and (max-width: 660px) {
+	.register {
+		align-self: center;
+		padding: 34px 13px;
+		background-color: rgba(0, 0, 0, 0.584);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.register_route h1 {
+		font-family: 'Merriweather', serif;
+		color: white;
+		font-size: 65px;
+		margin: 0;
+	}
+	.register_route h3 {
+		font-family: 'Roboto Slab', serif;
+		color: white;
+		font-size: 35px;
+	}
+	.login-btn {
+		border: none;
+		margin-top: 2em;
+		font-family: 'Merriweather', serif;
+		cursor: pointer;
+	}
 }
