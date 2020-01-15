@@ -6,7 +6,7 @@ import GoogleMapReact from 'google-map-react';
 import BarMarker from './Marker/BarMarker'
 import BreweryMarker from './Marker/BreweryMarker'
 import MapsApiService from '../services/maps-api-service'
-
+import ListComponent from './ListComponent/ListComponent'
 class Dashboard extends React.Component {
 
     static contextType = JournalContext;
@@ -42,7 +42,6 @@ class Dashboard extends React.Component {
         e.preventDefault();
         MapsApiService.getArea(this.state.value).then(res=> {
             let {lat, lng} = res.results;
-            console.log(res)
             this.setState({center: {lat, lng}, nearByBars: res.bars, nearByBreweries: res.breweries});
     })
     }
@@ -57,7 +56,13 @@ class Dashboard extends React.Component {
                                                 value={this.state.value}/></label>
                         <button type='submit'>Go</button>
                     </form>
-                    <div style={{height: '100vh', width: '100%'}}>
+
+                    <div style={{height: '75vh', width: '95%', display: 'inline-flex', justifyContent: 'space-between'}}>
+                        <div className={'breweries-list'}>
+                            {[...this.state.nearByBreweries,...this.state.nearByBars].map((place,i) =>
+                                <ListComponent key={i} place={place}/>
+                            )}
+                        </div>
                         <GoogleMapReact
                             bootstrapURLKeys={{key: 'AIzaSyCG_FMdGssqTRG7tGSvu24UYFopSWQY_-g'}}
                             defaultCenter={this.state.defaultCenter}

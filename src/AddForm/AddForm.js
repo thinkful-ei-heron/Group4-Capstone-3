@@ -3,7 +3,7 @@ import JournalContext from "../contexts/JournalContext";
 import BeerApiService from "../services/beer-api-service";
 import Header from "../Header/Header"
 import Utils from '../Utils/Utils'
-import './AddForm.css' 
+import './AddForm.css'
 
 export default class AddForm extends Component {
 
@@ -58,86 +58,86 @@ export default class AddForm extends Component {
             <div className='add-form-page'>
                 <Header location={this.props.location} header={'Add Beer'}/>
                 <form onSubmit={this.handleSubmit}>
-                <input type="checkbox" />
-                    <span></span>
-                    <span></span>
-                    <span></span>
                     <div role='alert'>
                         {error && <p className='error'>Something went wrong!</p>}
                     </div>
                     <section className='form-section'>
-                        <fieldset><legend>Beer Information</legend>
-                        <figure>
-                            <img src={Utils.getImage(this.context.color)} alt={'Beer'} width={'150px'}/>
-                        </figure>
+                        <fieldset>
+                            <legend>Beer Information</legend>
+                            <figure>
+                                <img src={Utils.getImage(this.context.color)} alt={'Beer'} width={'150px'}/>
+                            </figure>
 
-                        <div>
-                            <label htmlFor='beer-entry-date'>Date</label><span class="required">*</span>
-                            <input type='date' id='beer-entry-date' value={this.context.date_created}
-                                   onChange={(e) => this.context.setDate(e.target.value)} required/>
-                        </div>
-                        <div>
-                            <label htmlFor='beer-entry-location'>Location</label><span class="required">*</span>
-                            <input type='text' id='beer-entry-location' value={this.context.location}
-                                   onChange={(e) => this.context.setLoc(e.target.value)} required/>
-                        </div>
+                            <div>
+                                <label htmlFor='beer-entry-date'>Date</label><span class="required">*</span>
+                                <input type='date' id='beer-entry-date' value={this.context.date_created}
+                                       onChange={(e) => this.context.setDate(e.target.value)} required/>
+                            </div>
+                            <div>
+                                <label htmlFor='beer-entry-location'>Location</label><span class="required">*</span>
+                                <input type='text' id='beer-entry-location' value={this.context.location}
+                                       onChange={(e) => this.context.setLoc(e.target.value)} required/>
+                            </div>
 
-                        <div>
-                            <label htmlFor='beer-entry-name'>Name</label><span class="required">*</span>
-                            <input type='text' id='beer-entry-name' value={this.context.name}
-                                   onChange={(e) => this.context.setName(e.target.value)} required/>
-                        </div>
+                            <div>
+                                <label htmlFor='beer-entry-name'>Name</label><span class="required">*</span>
+                                <input type='text' id='beer-entry-name' value={this.context.name}
+                                       onChange={(e) => this.context.setName(e.target.value)} required/>
+                            </div>
 
-                        <div>
-                            <label htmlFor='beer-entry-type'>Type</label><span class="required">*</span>
-                            <input type='text' id='beer-entry-type' value={this.context.type}
-                                   onChange={(e) => this.context.setType(e.target.value)} required/>
-                        </div>
-                        <div>
-                            <label htmlFor='beer-entry-abv'>ABV</label><span class="required">*</span>
-                            <input type='number' id='beer-entry-abv' value={this.context.abv}
-                                   onChange={(e) => this.context.setAbv(e.target.value)} required/>
-                        </div>
+                            <div>
+                                <label htmlFor='beer-entry-type'>Type</label><span class="required">*</span>
+                                <input type='text' id='beer-entry-type' value={this.context.type}
+                                       onChange={(e) => this.context.setType(e.target.value)} required/>
+                            </div>
+                            <div>
+                                <label htmlFor='beer-entry-abv'>ABV</label><span class="required">*</span>
+                                <input type='number' id='beer-entry-abv' value={this.context.abv}
+                                       onChange={(e) => this.context.setAbv(e.target.value)} required/>
+                            </div>
 
 
-                
-                  
-                        <div>
-                            <label htmlFor='beer-entry-color'>Dark to Light</label><span class="required">*</span>
-                            <input type="range" id="beer-entry-color" min="1" max="6" step='1'
-                                   value={this.context.color}
-                                   onChange={(e) => {
-                                       this.context.setColor(parseInt(e.target.value));
-                                       this.setState({color: parseInt(e.target.value)})
-                                   }}/>
-                        </div>
-                        <div>
-                            <label htmlFor='beer-entry-heaviness'>Heavy to Light</label><span class="required">*</span>
-                            <input type="range" min="1" max="5" className="slider" id="heaviness" step='1'
-                                   value={this.context.heaviness}
-                                   onChange={(e) => this.context.setHeaviness(e.target.value)}/>
-                        </div>
+                            <div>
+                                <label htmlFor='beer-entry-color'>Dark to Light</label><span class="required">*</span>
+                                <input type="range" id="beer-entry-color" min="1" max="6" step='1'
+                                       value={this.context.color}
+                                       onChange={(e) => {
+                                           this.context.setColor(parseInt(e.target.value));
+                                           this.setState({color: parseInt(e.target.value)})
+                                       }}/>
+                            </div>
+                            <div>
+                                <label htmlFor='beer-entry-heaviness'>Heavy to Light</label><span
+                                class="required">*</span>
+                                <input type="range" min="1" max="5" className="slider" id="heaviness" step='1'
+                                       value={this.context.heaviness}
+                                       onChange={(e) => this.context.setHeaviness(e.target.value)}/>
+                            </div>
                         </fieldset>
-                        <fieldset className='lastfield'><legend>What I think about this beer!</legend>
-                        <div>
-                            <label htmlFor='beer-entry-rating'>Rating</label><span class="required">*</span>
-                            <input type="range" min="0" max="9" value={this.context.rating}
-                                   onChange={(e) => this.context.setRating(e.target.value)} className="slider"
-                                   id="rating" step="1"/>
-                        </div>
-                        
-                            <label className="desc-label" htmlFor='beer-entry-rating'>Description</label><span class="required">*</span>
+                        <fieldset className='lastfield'>
+                            <legend>What I think about this beer!</legend>
+                            <div>
+                                <label htmlFor='beer-entry-rating'>Rating</label><span class="required">*</span>
+                                <input type="range" min="0" max="9" value={this.context.rating}
+                                       onChange={(e) => this.context.setRating(e.target.value)} className="slider"
+                                       id="rating" step="1"/>
+            </div>
+
+                            <label className="desc-label" htmlFor='beer-entry-rating'>Description</label><span
+                            class="required">*</span>
                             <textarea id='beer-entry-description' value={this.context.description}
                                       onChange={(e) => this.context.setDesc(e.target.value)} required/>
                             <div className="btns-2">
-                            <button className='clear-submit-btn' type='button' onClick={this.context.resetAll}>Clear</button>
-                            <button className='clear-submit-btn' type='submit'>Submit</button>
+                                <button className='clear-submit-btn' type='button'
+                                        onClick={this.context.resetAll}>Clear
+                                </button>
+                                <button className='clear-submit-btn' type='submit'>Submit</button>
                             </div>
                         </fieldset>
                     </section>
                 </form>
             </div>
-        
+
         )
     }
 }
