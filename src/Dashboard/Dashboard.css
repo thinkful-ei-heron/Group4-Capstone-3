@@ -30,6 +30,7 @@
 .dashboard-bottom li {
 	list-style: none;
 	color: white;
+	padding: 2em;
 }
 .darker {
 	/* padding: 4em; */
