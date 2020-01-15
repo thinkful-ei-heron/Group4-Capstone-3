@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
-import KegIcon from '../../assets/markers/keg-marker.png'
-import MarkerIcon from '../../assets/markers/beer-marker.png'
+import KegMarker from '../../assets/markers/keg-marker.png';
 
-export default class Marker extends Component {
+export default class BreweryMarker extends Component {
     render() {
-        const K_WIDTH = (this.props.isBeer) ? 20 : 50;
-        const K_HEIGHT = (this.props.isBeer) ? 50 : 20;
+        const K_WIDTH = 20;
+        const K_HEIGHT = 50;
         const greatPlaceStyle = {
             // initially any map object has left top corner at lat lng coordinates
             // it's on you to set object origin to 0,0 coordinates
@@ -20,8 +19,7 @@ export default class Marker extends Component {
             padding: 4
         };
         return (
-            (this.props.isBeer) ? <img src={MarkerIcon} style={greatPlaceStyle} alt={'Marker'}/> :
-                <div style={greatPlaceStyle}><img src={KegIcon} style={greatPlaceStyle} alt={'Marker'}/> <p>{this.props.name}</p></div>
+            <img src={KegMarker} style={greatPlaceStyle} alt={'Brewery Marker'}/>
         );
     }
 }

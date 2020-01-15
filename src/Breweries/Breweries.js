@@ -3,7 +3,8 @@ import JournalContext from '../contexts/UserContext';
 import './Breweries.css';
 import Header from '../Header/Header';
 import GoogleMapReact from 'google-map-react';
-import Marker from './Marker/Marker'
+import BarMarker from './Marker/BarMarker'
+import BreweryMarker from './Marker/BreweryMarker'
 import MapsApiService from '../services/maps-api-service'
 
 class Dashboard extends React.Component {
@@ -13,11 +14,17 @@ class Dashboard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            defaultCenter: {
+                lat: 0,
+                lng: 0
+            },
             center: {
-                lat: 59.95,
-                lng: 30.33
+                lat: 0,
+                lng: 0
             },
             zoom: 11,
+            nearByBars: [],
+            nearByBreweries: [],
             value: ''
         }
         this.handleInput = this.handleInput.bind(this);
@@ -33,7 +40,11 @@ class Dashboard extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        MapsApiService.getArea(this.state.value).then(res=> console.log(res, 'hgasetheasjikdfh'))
+        MapsApiService.getArea(this.state.value).then(res=> {
+            let {lat, lng} = res.results;
+            console.log(res)
+            this.setState({center: {lat, lng}, nearByBars: res.bars, nearByBreweries: res.breweries});
+    })
     }
 
     render() {
@@ -49,14 +60,24 @@ class Dashboard extends React.Component {
                     <div style={{height: '100vh', width: '100%'}}>
                         <GoogleMapReact
                             bootstrapURLKeys={{key: 'AIzaSyCG_FMdGssqTRG7tGSvu24UYFopSWQY_-g'}}
-                            defaultCenter={this.state.center}
+                            defaultCenter={this.state.defaultCenter}
                             defaultZoom={this.state.zoom}
+                            center={this.state.center}
                         >
-                            <Marker
-                                lat={59.955413}
-                                lng={30.337844}
-                                text="My Marker"
-                            />
+                            {this.state.nearByBars.map((place, i)=><BarMarker
+                                key={i}
+                                lat={place.geometry.location.lat}
+                                lng={place.geometry.location.lng}
+                                text={place.name}
+                                isBeer={false}
+                            />)}
+                            {this.state.nearByBreweries.map((place, i)=><BreweryMarker
+                                key={i}
+                                lat={place.geometry.location.lat}
+                                lng={place.geometry.location.lng}
+                                text={place.name}
+                                isBeer={false}
+                            />)}
                         </GoogleMapReact>
                     </div>
                 </main>
