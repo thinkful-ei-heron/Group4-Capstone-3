@@ -17,51 +17,37 @@ class Dashboard extends React.Component {
             beerList: [],
             search: '',
             filter: '',
-            sort: 'None'
         };
         this.handleSubmitEdit = this.handleSubmitEdit.bind(this)
         this.handleDelete = this.handleDelete.bind(this)
     }
 
-    toggleSort() {// Rating  ASC DSC Heavyness ASC DESC
-        switch (this.state.sort) {
-            case 'None':
-                console.log(this.state.beerList)
-                this.setState({
-                    sort: 'Youngest',
-                    beerList: this.state.beerList.sort((a, b) => new Date(a.date_created) - new Date(b.date_created))
-                });
-                break;
-            case 'Youngest':
-                this.setState({
-                    sort: 'Oldest',
-                    beerList: this.state.beerList.sort((a, b) => new Date(b.date_created) - new Date(a.date_created))
-                });
-                break;
-            case 'Oldest':
-                this.setState({sort: 'Rating ASC', beerList: this.state.beerList.sort((a, b) => a.rating - b.rating)});
-                break;
-            case 'Rating ASC':
-                this.setState({sort: 'Rating DSC', beerList: this.state.beerList.sort((a, b) => b.rating - a.rating)});
-                break;
-            case 'Rating DSC':
-                this.setState({
-                    sort: 'Heaviness ASC',
-                    beerList: this.state.beerList.sort((a, b) => a.heaviness - b.heaviness)
-                });
-                break;
-            case "Heaviness ASC":
-                this.setState({
-                    sort: 'Heaviness DSC',
-                    beerList: this.state.beerList.sort((a, b) => b.heaviness - a.heaviness)
-                });
-                break;
-            case "Heaviness DSC":
-                this.setState({sort: 'None', beerList: this.state.beerList});
-                break;
-            default:
-                this.setState({sort: 'None'});
-                break;
+    sortSelect = event => {
+        const sortMethod = event.target
+        if(sortMethod.value === 'Youngest') {
+            this.setState({
+              beerList: this.state.beerList.sort((a, b) => new Date(a.date_created) - new Date(b.date_created))  
+            })
+        } else if(sortMethod.value === 'Oldest') {
+            this.setState({
+               beerList: this.state.beerList.sort((a, b) => new Date(b.date_created) - new Date(a.date_created)) 
+            })
+        } else if (sortMethod.value === 'Rating ASC') {
+            this.setState({
+                beerList: this.state.beerList.sort((a, b) => a.rating - b.rating)
+            })
+        } else if (sortMethod.value === 'Rating DESC') {
+            this.setState({
+                beerList: this.state.beerList.sort((a, b) => b.rating - a.rating)
+            })
+        } else if (sortMethod.value === 'Heaviness ASC') {
+            this.setState({
+                beerList: this.state.beerList.sort((a, b) => a.heaviness - b.heaviness)
+            })
+        } else if (sortMethod.value === 'Heaviness DESC') {
+            this.setState({
+                beerList: this.state.beerList.sort((a, b) => b.heaviness - a.heaviness)
+            })
         }
     }
 
@@ -118,8 +104,16 @@ class Dashboard extends React.Component {
                     <Header location={this.props.location} header={'Home'}/>
                     <section className='dashboard-bottom'>
                         <div className={'darker'}>
-                            <button className = 'toggleSort' onClick={() =>
-                                this.toggleSort(this.state.beerList)}>{this.state.sort}</button>
+                            <select 
+                                onChange={this.sortSelect}>
+                                <option value='none'>Sort By</option>
+                                <option value='Youngest'>Youngest</option>
+                                <option value='Oldest'>Oldest</option>
+                                <option value='Rating ASC'>Rating ASC</option>
+                                <option value='Rating DESC'>Rating DESC</option>
+                                <option value='Heaviness ASC'>Heaviness ASC</option>
+                                <option value='Heaviness DESC'>Heaviness DESC</option>
+                            </select>
                             {this.renderBeerList()}
                         </div>
                     </section>
