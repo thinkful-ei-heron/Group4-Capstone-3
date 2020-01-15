@@ -104,7 +104,7 @@ class Dashboard extends React.Component {
                     <Header location={this.props.location} header={'Home'}/>
                     <section className='dashboard-bottom'>
                         <div className={'darker'}>
-                            <select className='sort-select'
+                            {(this.state.beerList.length !== 0 ) ? <select className='sort-select'
                                 onChange={this.sortSelect}>
                                 <option value='none'>Sort By</option>
                                 <option value='Youngest'>Youngest</option>
@@ -113,8 +113,9 @@ class Dashboard extends React.Component {
                                 <option value='Rating DESC'>Rating DESC</option>
                                 <option value='Heaviness ASC'>Heaviness ASC</option>
                                 <option value='Heaviness DESC'>Heaviness DESC</option>
-                            </select>
+                            </select> : ''}
                             <br></br>
+                            {(this.state.beerList.length === 0 ) ?  <h2>ADD SOME BEERS YOU FILTHY ANIMAL</h2> : ''}
                             {this.renderBeerList()}
                         </div>
                     </section>
