@@ -76,7 +76,8 @@ class Dashboard extends React.Component {
 
     handleSubmitEdit = (id, newJournal) => {
         let currentBeer = this.state.beerList.find((beer) => beer.id === id);
-        BeerApiService.patchBeer(newJournal, id).then(() =>  this.state.beerList.splice(this.state.beerList.indexOf(currentBeer), 1, newJournal))
+        BeerApiService.patchBeer(newJournal, id).then(() =>
+            this.state.beerList.splice(this.state.beerList.indexOf(currentBeer), 1, newJournal));
         this.forceUpdate();
     };
 
