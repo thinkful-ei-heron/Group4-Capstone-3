@@ -77,7 +77,7 @@ export default class AddForm extends Component {
                                    onChange={(e) => this.context.setName(e.target.value)} required/>
                         </div>
                         <div>
-                            <label htmlFor='beer-entry-location'>Loc</label>
+                            <label htmlFor='beer-entry-location'>Location</label>
                             <input type='text' id='beer-entry-location' value={this.context.location}
                                    onChange={(e) => this.context.setLoc(e.target.value)} required/>
                         </div>

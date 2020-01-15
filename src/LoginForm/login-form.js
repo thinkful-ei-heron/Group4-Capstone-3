@@ -38,64 +38,57 @@ export default class LoginForm extends Component {
 			});
 	};
 
-  render() {
-    const { error } = this.state;
-    return (
-      <div className='login-page'>
-        <div className='login'>
-        <h1>DearBeer</h1>
-        <h3>Login</h3>
-        <form onSubmit={this.handleSubmit}>
-          <div role='alert'>
-            {error && <p className='error'>Something went wrong!</p>}
-          </div>
-            <section>
-              <div>
-                <label htmlFor='login-username'>
-                  {/* Username */}
-                </label>
-                <input 
-                  type='text'
-                  id='login-username'
-                  name='username'
-                  required
-                  placeholder='Username'/>
-              </div>
-              <div>
-                <label htmlFor='login-password'>
-                  {/* Password */}
-                </label>
-                <input 
-                  type='password'
-                  id='login-password'
-                  name='password'
-                  required
-                  placeholder='Password'/>
-              </div>
-              <div>
-                <button
-                  className='submit-btn'
-                  type='submit'>
-                    Login
-                </button>
-                <div className='other-btns'>
-                <Link to='/'>
+	render() {
+		const { error } = this.state;
+		return (
+			<div className="login-page">
+				<div className="login">
+					<Link className="login-header" to="/">
+						<h1>DearBeer</h1>
+					</Link>
+					<h3>Login</h3>
+					<form onSubmit={this.handleSubmit}>
+						<div role="alert">{error && <p className="error">Something went wrong!</p>}</div>
+						<section>
+							<div>
+								<label htmlFor="login-username">{/* Username */}</label>
+								<input
+									type="text"
+									id="login-username"
+									name="username"
+									required
+									placeholder="Username"
+								/>
+							</div>
+							<div>
+								<label htmlFor="login-password">{/* Password */}</label>
+								<input
+									type="password"
+									id="login-password"
+									name="password"
+									required
+									placeholder="Password"
+								/>
+							</div>
+							<div>
+								<button className="submit-btn" type="submit">
+									Submit
+								</button>
+								<div className="other-btns">
+									{/* <Link to='/'>
                     <button>
                         Home
                     </button>
-                </Link>
-                <Link
-                  to='/register'>
-                    <button>
-                        New user?
-                    </button>
-                </Link>  
-                </div>
-              </div>
-            </section>
-        </form>
-      </div>
-      </div>
-    )
-  }
+                </Link> */}
+									<Link to="/register">
+										<button className="new-user-btn">New user?</button>
+									</Link>
+								</div>
+							</div>
+						</section>
+					</form>
+				</div>
+			</div>
+		);
+	}
 }

@@ -1,29 +1,29 @@
 .header-component {
-    background-image: url('../assets/img/hops5.jpg');
-    background-size: cover;
+	background-image: url('../assets/img/hops5.jpg');
+	background-size: cover;
 }
 .header-component h2 {
-    color: rgb(0, 0, 0);
-    font-family: 'Merriweather', serif;
-    font-size: 2em;
-    margin-top: 0;
-    padding: 1em;
+	color: rgb(0, 0, 0);
+	font-family: 'Merriweather', serif;
+	font-size: 2em;
+	margin-top: 0;
+	padding: 1em;
 }
 .header-component nav a {
-    /* padding: 1em; */
-    color: white;
-    margin: 1em;
-    font-size: 1.5em;
-    text-decoration: none;
-    font-family: 'Merriweather', serif;
+	/* padding: 1em; */
+	color: white;
+	margin: 1em;
+	font-size: 1.5em;
+	text-decoration: none;
+	font-family: 'Merriweather', serif;
 }
 .header-component nav {
-    background-color: rgba(8, 8, 8, 0.774);
-    height: 2.3em;
-    text-align: left;
+	background-color: rgba(8, 8, 8, 0.774);
+	height: 2.3em;
+	text-align: left;
 }
 .header-component nav a:hover {
-    color: rgb(8, 184, 8);
+	color: rgb(8, 184, 8);
 }
 
 .header-component nav button {
@@ -39,4 +39,7 @@
 }
 .header-component nav button:hover {
     color: rgb(8, 184, 8);
+}
+.header-component nav button:hover {
+	color: rgb(8, 184, 8);
 }
