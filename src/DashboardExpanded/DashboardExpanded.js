@@ -145,7 +145,11 @@ class DashboardExpanded extends React.Component {
                             Location: <span>{this.state.journal.location}</span>
                         </h3>
                     </section>
-                    <input type="range" min="0" max="9" value={this.state.journal.rating} readOnly />
+										<figure>
+											<figcaption>Rating</figcaption>
+											<img className='rating-img' src={Utils.getRatingImage(this.state.journal.rating)} alt={'Rating'} height={'50px'} />
+										</figure>
+                    {/* <input type="range" min="0" max="9" value={this.state.journal.rating} readOnly /> */}
                     <p>{this.state.journal.description}</p>
                     <h3>Dark to Light</h3>
                     <input type="range" min="1" max="6" value={this.state.journal.color} readOnly />
