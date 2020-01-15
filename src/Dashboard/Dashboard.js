@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from './../NavBar/NavBar';
 import BeerApiService from '../services/beer-api-service';
 import UserContext from '../contexts/UserContext';
 import DashboardExpanded from '../DashboardExpanded/DashboardExpanded';
