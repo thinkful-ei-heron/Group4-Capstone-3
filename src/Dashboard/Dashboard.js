@@ -54,10 +54,14 @@ class Dashboard extends React.Component {
     filterType = event => {
         const filter = event.target;
         if(filter.value) {
+            if(filter.value === 'None') {
+                this.setState({beerList: this.context.beerList});
+            } else {
             this.setState({
                 beerList: this.context.beerList.filter(obj => 
                     {return obj.type===filter.value})
             })
+        }
         }
     }
     // Name
