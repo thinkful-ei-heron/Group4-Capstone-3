@@ -68,10 +68,9 @@ export default class AddForm extends Component {
                             <figure>
                                 <img src={Utils.getImage(this.context.color)} alt={'Beer'} width={'150px'}/>
                             </figure>
-
                             <div>
                                 <label htmlFor='beer-entry-date'>Date</label><span className="required">*</span>
-                                <input type='date' id='beer-entry-date' value={this.context.date_created}
+                                <input className='unstyled' type='date' id='beer-entry-date' value={this.context.date_created}
                                        onChange={(e) => this.context.setDate(e.target.value)} required/>
                             </div>
                             <div>
