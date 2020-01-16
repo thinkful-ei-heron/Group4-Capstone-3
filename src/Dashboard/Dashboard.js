@@ -130,7 +130,7 @@ class Dashboard extends React.Component {
                                 <option value='Heaviness DESC'>Heaviness DESC</option>
                             </select> : ''}
                             {(this.context.beerList.length !== 0) ?
-                                <select onChange={this.filterType}>
+                            <select onChange={this.filterType}>
                                 <option value='Ale'>Ale</option>
                                 <option value='Altbier'>Altbier</option>
                                 <option value='American Lager'>American Lager</option>
