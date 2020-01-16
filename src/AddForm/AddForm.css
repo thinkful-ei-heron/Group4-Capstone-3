@@ -7,10 +7,9 @@
 	}
 
 .add-form-page form {
-	background-image: url("../images/wall3.jpeg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+	background-image: url("../images/wall6.jpg");
+	background-repeat: repeat;
+	background-size: ;
 	margin-right: 0em;
 	padding: 49px;	
 }
@@ -65,7 +64,7 @@ textarea {
 	-webkit-box-shadow: inset 1px 1px 4px rgb(110, 107, 108);
 	background: rgb(178, 220, 183);
 }
-.clear-submit-btn {
+.clear-submit-back-btn {
 	background: rgb(63, 62, 63);
 	border: 1px solid rgb(27, 10, 18);
 	padding: 5px 15px 5px 15px;
@@ -90,7 +89,7 @@ textarea {
 	box-shadow: inset 0px 0px 15px rgb(243, 230, 230);
 	-moz-box-shadow: inset 0px 0px 15px rgb(236, 217, 217);
 	-webkit-box-shadow: inset 0px 0px 15px rgb(215, 209, 209);
-	background-color: rgba(226, 240, 227, 0.653);
+	background-color: rgba(255, 255, 255, 0.66);
 	z-index: 1;
 }
 .unstyled::-webkit-inner-spin-button {
@@ -117,7 +116,7 @@ textarea {
 	margin: 0px 0px 20px 15px;
 }
 
-#beer-entry-type,
+
 #beer-entry-abv,
 #beer-entry-location,
 #beer-entry-name,
@@ -127,6 +126,15 @@ textarea {
 	font-weight: bold;
 	font-size: 13px;
 	text-shadow: 1px 1px 1px #fff;
+}
+
+#beer-entry-type{
+	width: 90%;
+	background: rgb(63, 62, 63);
+	border: 1px solid rgb(27, 10, 18);
+	padding: 5px 15px 5px 15px;
+	color: rgb(122, 194, 125);
+	font-size: 15px;
 }
 
 .add-form-page legend {
