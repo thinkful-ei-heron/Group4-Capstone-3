@@ -135,6 +135,7 @@ class Dashboard extends React.Component {
                                 <option value='Altbier'>Altbier</option>
                                 <option value='American Lager'>American Lager</option>
                                 <option value='Barley Wine'>Barley Wine</option>
+                                <option value='Belgian'>Belgian</option>
                                 <option value='Berliner Weisse'>Berliner Weisse</option>
                                 <option value='Bitter'>Bitter</option>
                                 <option value='Bock'>Bock</option>
