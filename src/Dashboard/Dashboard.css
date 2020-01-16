@@ -34,7 +34,7 @@
 }
 .darker {
 	/* padding: 4em; */
-	background-color: #00000055;
+	/* background-color: #00000055; */
 	height: max-content;
 	min-height: 100vh;
 }

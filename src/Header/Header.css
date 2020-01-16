@@ -18,7 +18,7 @@
 	font-family: 'Merriweather', serif;
 }
 .header-component nav {
-	background-color: rgba(8, 8, 8, 0.774);
+	background-color: rgb(8, 8, 8);
 	height: 2.3em;
 	text-align: left;
 }
@@ -27,18 +27,18 @@
 }
 
 .header-component nav button {
-    float: right;
-    background-color: rgba(8, 8, 8, 0.041);
-    color: white;
-    font-family: 'Merriweather', serif;
-    font-size: 1.5em;
-    border: none;
-    height: 1.3em;
-    margin-right: 1em;
-    cursor: pointer;
+	float: right;
+	background-color: rgba(8, 8, 8, 0.041);
+	color: white;
+	font-family: 'Merriweather', serif;
+	font-size: 1.5em;
+	border: none;
+	height: 1.3em;
+	margin-right: 1em;
+	cursor: pointer;
 }
 .header-component nav button:hover {
-    color: rgb(8, 184, 8);
+	color: rgb(8, 184, 8);
 }
 .header-component nav button:hover {
 	color: rgb(8, 184, 8);
