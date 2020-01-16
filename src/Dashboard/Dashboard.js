@@ -114,7 +114,8 @@ class Dashboard extends React.Component {
                                 <option value='Heaviness ASC'>Heaviness ASC</option>
                                 <option value='Heaviness DESC'>Heaviness DESC</option>
                             </select> : ''}
-                            <select onChange={this.filterType}>
+                            {(this.context.beerList.length !== 0) ?
+                                <select onChange={this.filterType}>
                                 <option value='Ale'>Ale</option>
                                 <option value='Altbier'>Altbier</option>
                                 <option value='American Lager'>American Lager</option>
@@ -155,7 +156,7 @@ class Dashboard extends React.Component {
                                 <option value='Vienna lager'>Vienna lager</option>
                                 <option value='Wittbier'>Wittbier</option>
                                 <option value='Other'>Other</option>
-                            </select>
+                            </select> : ''}
                             <br></br>
                             {(this.state.beerList.length === 0 ) ?  <h2>ADD SOME BEERS YOU FILTHY ANIMAL</h2> : ''}
                             {this.renderBeerList()}
