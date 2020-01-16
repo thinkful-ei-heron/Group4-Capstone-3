@@ -5,3 +5,13 @@
 .active:hover {
   cursor: default;
 }
+
+nav input {
+  display: none;
+}
+
+
+
+
+  
+

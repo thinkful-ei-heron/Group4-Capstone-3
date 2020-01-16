@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import JournalContext from '../contexts/JournalContext';
 import BeerApiService from '../services/beer-api-service';
+import ReactTooltip from 'react-tooltip';
 import Header from '../Header/Header';
 import Utils from '../Utils/Utils';
 import { Link } from 'react-router-dom';
@@ -132,14 +133,15 @@ export default class AddForm extends Component {
                             </select>
                             </div>
                             <div>
-                                <label htmlFor='beer-entry-abv'>ABV</label><span className="required">*</span>
+                                <label htmlFor='beer-entry-abv' data-tip='Alcohol By Volume'>ABV</label><span className="required">*</span>
+                                <ReactTooltip place="top" type="dark" effect="solid" />
                                 <input type='number' id='beer-entry-abv' value={this.context.abv}
                                        onChange={(e) => this.context.setAbv(e.target.value)} required/>
                             </div>
 
 
                             <div>
-                                <label htmlFor='beer-entry-color'>Dark to Light</label><span className="required">*</span>
+                                <label htmlFor='beer-entry-color' data-tip='Color of beer'>Dark to Light</label><span className="required">*</span>
                                 <input type="range" id="beer-entry-color" min="1" max="6" step='1'
                                        value={this.context.color}
                                        onChange={(e) => {
@@ -148,7 +150,7 @@ export default class AddForm extends Component {
                                        }}/>
                             </div>
                             <div>
-                                <label htmlFor='beer-entry-heaviness'>Heavy to Light</label><span
+                                <label htmlFor='beer-entry-heaviness'data-tip='Strength of alcohol'>Heavy to Light</label><span
                                 className="required">*</span>
                                 <input type="range" min="1" max="5" className="slider" id="heaviness" step='1'
                                        value={this.context.heaviness}
@@ -174,16 +176,17 @@ export default class AddForm extends Component {
 										Back
 									</button>
 								</Link>
-                                <button className='clear-submit-btn' type='button'
-                                        onClick={this.context.resetAll}>Clear
-                                </button>
-                                <button className='clear-submit-btn' type='submit'>Submit</button>
-                            </div>
-                        </fieldset>
-                    </section>
-                </form>
-            </div>
-
-        )
-    }
+								<button className="clear-submit-btn" type="button" onClick={this.context.resetAll}>
+									Clear
+								</button>
+								<button className="clear-submit-btn" type="submit">
+									Submit
+								</button>
+							</div>
+						</fieldset>
+					</section>
+				</form>
+			</div>
+		);
+	}
 }
