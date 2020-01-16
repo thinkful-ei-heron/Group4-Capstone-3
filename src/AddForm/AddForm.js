@@ -58,10 +58,6 @@ export default class AddForm extends Component {
             <div className='add-form-page'>
                 <Header location={this.props.location} header={'Add Beer'}/>
                 <form onSubmit={this.handleSubmit}>
-                <input type="checkbox" />
-                    <span></span>
-                    <span></span>
-                    <span></span>
                     <div role='alert'>
                         {error && <p className='error'>Something went wrong!</p>}
                     </div>
