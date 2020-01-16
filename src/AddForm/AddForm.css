@@ -12,7 +12,7 @@
 	background-position: center;
 	background-size: cover;
 	margin-right: 0em;
-	padding: 0px;	
+	padding: 49px;	
 }
 
 .dashboard-top {
@@ -261,10 +261,10 @@
 	.add-form-page nav input:checked ~ a
 	{
 	  transform: none;
-	  display: inline;
+	  display: flex;
 	  position: relative;
-	  top: -18px;
-	  left: 32px;
+	  top: 12px;
+	  left: -7px;
 	  margin-right: 10px;
 	  background-color:rgba(226, 240, 227, 0.653);
 	  border: 1px solid rgba(60, 131, 64, 0.858);
@@ -280,13 +280,13 @@
 		display: block;
 		float: right;
 		position: relative;
-		top: -118px;
-		right: -22px;
+		top: -111px;
+		right: 148px;
 		font-weight: bold;
 		font-size: 20px;
 	}
 
-	
+
 	.add-form-page nav {
 		background-color: rgba(8, 8, 8, 0.774);
 		height: 2.3em;
