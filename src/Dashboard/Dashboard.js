@@ -130,7 +130,8 @@ class Dashboard extends React.Component {
                                 <option value='Heaviness DESC'>Heaviness DESC</option>
                             </select> : ''}
                             {(this.context.beerList.length !== 0) ?
-                            <select onChange={this.filterType}>
+                            <select className='type-select' onChange={this.filterType}>
+                                <option value='None'>Search beer type</option>
                                 <option value='Ale'>Ale</option>
                                 <option value='Altbier'>Altbier</option>
                                 <option value='American Lager'>American Lager</option>
@@ -173,7 +174,7 @@ class Dashboard extends React.Component {
                                 <option value='Wittbier'>Wittbier</option>
                                 <option value='Other'>Other</option>
                             </select> : ''}
-                            <input type='text' placeholder='Search by name...' onChange={this.handleSearch}/>
+                            <input className='search-bar' type='text' placeholder='Search by name...' onChange={this.handleSearch}/>
                             <br></br>
                             {(this.state.beerList.length === 0 ) ?  <h2>ADD SOME BEERS YOU FILTHY ANIMAL</h2> : ''}
                             {this.renderBeerList()}

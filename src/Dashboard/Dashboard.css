@@ -62,6 +62,7 @@
 	height: 3em;
 	width: 10em;
 	cursor: pointer;
+	margin: 1em;
 }
 .sort-select:hover {
 	border: rgb(9, 48, 9);
@@ -73,4 +74,19 @@
 .beer-date {
 	font-size: 1.5em;
 	font-family: 'Merriweather', serif;
+}
+.search-bar {
+	margin: 1em;
+	height: 2.4em;
+	width: 14em;
+}
+.type-select {
+	margin-top: 4em;
+	height: 3em;
+	width: 11em;
+	cursor: pointer;
+	margin: 2em;
+}
+.type-select:hover {
+	border: rgb(9, 48, 9);
 }
