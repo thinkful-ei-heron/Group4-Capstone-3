@@ -92,6 +92,10 @@
 	-webkit-box-shadow: inset 0px 0px 15px rgb(215, 209, 209);
 	background-color: rgba(226, 240, 227, 0.653);
 }
+.unstyled::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+}
 
 .add-form-page textarea {
 	width: 100%;
