@@ -19,6 +19,7 @@ class Dashboard extends React.Component {
         };
         this.handleSubmitEdit = this.handleSubmitEdit.bind(this)
         this.handleDelete = this.handleDelete.bind(this)
+        this.handleSearch = this.handleSearch.bind(this)
     }
 
     sortSelect = event => {
@@ -60,8 +61,22 @@ class Dashboard extends React.Component {
         }
     }
     // Name
-    search() {
-
+    handleSearch = event => {
+        let currentList = [];
+        let newList = [];
+        if (event.target.value !== '') {
+            currentList = this.context.beerList;
+            newList = currentList.filter(beer => {
+                const lowerCase = beer.name.toLowerCase();
+                const search = event.target.value.toLowerCase();
+                return lowerCase.includes(search);
+            });
+        } else {
+            newList = this.context.beerList;
+        }
+        this.setState({
+            beerList: newList
+        });
     }
     handleDelete(id) {
         BeerApiService.deleteBeer(id)
@@ -157,6 +172,7 @@ class Dashboard extends React.Component {
                                 <option value='Wittbier'>Wittbier</option>
                                 <option value='Other'>Other</option>
                             </select> : ''}
+                            <input type='text' placeholder='Search by name...' onChange={this.handleSearch}/>
                             <br></br>
                             {(this.state.beerList.length === 0 ) ?  <h2>ADD SOME BEERS YOU FILTHY ANIMAL</h2> : ''}
                             {this.renderBeerList()}
