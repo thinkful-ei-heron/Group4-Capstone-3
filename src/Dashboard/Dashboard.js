@@ -4,6 +4,11 @@ import UserContext from '../contexts/UserContext';
 import DashboardExpanded from '../DashboardExpanded/DashboardExpanded';
 import Utils from '../Utils/Utils'
 import Header from '../Header/Header'
+import DetailsIcon from '../assets/radio/details-icon.png'
+import LargeIcon from '../assets/radio/large-icon.png'
+import ListIcon from '../assets/radio/list-icon.png'
+import SmallIcon from '../assets/radio/small-icon.png'
+import TileIcon from '../assets/radio/tiles-icon.png'
 import './Dashboard.css'
 
 class Dashboard extends React.Component {
@@ -16,6 +21,7 @@ class Dashboard extends React.Component {
             beerList: [],
             search: '',
             filter: '',
+            selectedOption: 'large-icons'
         };
         this.handleSubmitEdit = this.handleSubmitEdit.bind(this)
         this.handleDelete = this.handleDelete.bind(this)
@@ -111,6 +117,12 @@ class Dashboard extends React.Component {
                 </button>
             </div>)
     }
+    handleOptionChange = event => {
+        this.setState({
+            selectedOption: event.target.value
+        })
+        console.log(this.state.selectedOption)
+    }
     render() {
         return (
             <>
@@ -118,6 +130,24 @@ class Dashboard extends React.Component {
                     <Header location={this.props.location} header={'Home'}/>
                     <section className='dashboard-bottom'>
                         <div className={'darker'}>
+                        <span className="radio-group">
+
+                            <input type="radio" value="small-icons" id="small-icons" className="hidden" checked={this.state.selectedOption === 'small-icons'} onChange={this.handleOptionChange}/>
+                            <label htmlFor="small-icons"><img src={SmallIcon} alt='small icon view' height='20px' width='20px'/></label>
+
+                            <input type="radio" value="large-icons" id="large-icons" className="hidden" checked={this.state.selectedOption === 'large-icons'} onChange={this.handleOptionChange}/>
+                            <label htmlFor="large-icons"><img src={LargeIcon} alt='large icon view' height='20px' width='20px'/></label>
+
+                            <input type="radio" value="tiles" id="tiles" className="hidden" checked={this.state.selectedOption === 'tiles'} onChange={this.handleOptionChange}/>
+                            <label htmlFor="tiles"><img src={TileIcon} alt='tile view' height='20px' width='20px'/></label>
+
+                            <input type="radio" value="list" id="list" className="hidden" checked={this.state.selectedOption === 'list'} onChange={this.handleOptionChange}/>
+                            <label htmlFor="list"><img src={ListIcon} alt='list view' height='20px' width='20px'/></label>
+
+                            <input type="radio" value="details" id="details" className="hidden" checked={this.state.selectedOption === 'details'} onChange={this.handleOptionChange}/>
+                            <label htmlFor="details"><img src={DetailsIcon} alt='detailed view' height='20px' width='20px'/></label>
+
+                        </span>
                             {(this.state.beerList.length !== 0 ) ? 
                             <select className='sort-select'
                                 onChange={this.sortSelect}>
@@ -175,7 +205,7 @@ class Dashboard extends React.Component {
                             </select> : ''}
                             <input type='text' placeholder='Search by name...' onChange={this.handleSearch}/>
                             <br></br>
-                            {(this.state.beerList.length === 0 ) ?  <h2>ADD SOME BEERS YOU FILTHY ANIMAL</h2> : ''}
+                            {(this.context.beerList.length === 0 ) ?  <h2>ADD SOME BEERS YOU FILTHY ANIMAL</h2> : ''}
                             {this.renderBeerList()}
                         </div>
                     </section>
