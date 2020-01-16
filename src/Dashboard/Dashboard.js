@@ -8,7 +8,6 @@ import DetailsIcon from '../assets/radio/details-icon.png'
 import LargeIcon from '../assets/radio/large-icon.png'
 import ListIcon from '../assets/radio/list-icon.png'
 import SmallIcon from '../assets/radio/small-icon.png'
-import TileIcon from '../assets/radio/tiles-icon.png'
 import './Dashboard.css'
 
 class Dashboard extends React.Component {
@@ -103,7 +102,21 @@ class Dashboard extends React.Component {
         this.forceUpdate();
     };
     renderBeerList() {
-        return this.state.beerList.map((beerList, i) => (beerList.expanded) ?
+        if (this.state.selectedOption === 'small-icons') {
+            return this.state.beerList.map((beerList, i) => (beerList.expanded) ?
+            <DashboardExpanded key={i} toggleExpanded={this.context.toggleExpanded} journal={beerList}
+                               handleDelete={this.handleDelete} handleSubmit={this.handleSubmitEdit}/> :
+            <div className= 'beerList-item' key={i}>
+                <button
+                    onClick={() => this.context.toggleExpanded(beerList.id)}
+                    className='journal-item-button-small'>
+                    <h4>{beerList.name}</h4>
+                    <img className='rating-img-small' src={Utils.getRatingImage(beerList.rating)} alt={'Rating icons'} height={'50px'}></img>
+                    <div className='beer-date-small'> {Utils.formattedDate(beerList.date_created)}</div>
+                </button>
+            </div>)
+        } else if (this.state.selectedOption === 'large-icons') {
+            return this.state.beerList.map((beerList, i) => (beerList.expanded) ?
             <DashboardExpanded key={i} toggleExpanded={this.context.toggleExpanded} journal={beerList}
                                handleDelete={this.handleDelete} handleSubmit={this.handleSubmitEdit}/> :
             <div className= 'beerList-item' key={i}>
@@ -116,12 +129,45 @@ class Dashboard extends React.Component {
                     <img className='rating-img' src={Utils.getRatingImage(beerList.rating)} alt={'Rating icons'} height={'50px'}></img>
                 </button>
             </div>)
+        } else if (this.state.selectedOption === 'list') {
+            return this.state.beerList.map((beerList, i) => (beerList.expanded) ?
+            <DashboardExpanded key={i} toggleExpanded={this.context.toggleExpanded} journal={beerList}
+                               handleDelete={this.handleDelete} handleSubmit={this.handleSubmitEdit}/> :
+            <div className= 'beerList-item' key={i}>
+                <button
+                    onClick={() => this.context.toggleExpanded(beerList.id)}
+                    className='journal-item-button-list'>
+                    <h4>{beerList.name}</h4>
+                    <div className='beer-date'> {Utils.formattedDate(beerList.date_created)}</div>
+                    <img className='rating-img' src={Utils.getRatingImage(beerList.rating)} alt={'Rating icons'} height={'50px'}></img>
+                </button>
+            </div>)
+        } else if (this.state.selectedOption === 'details') {
+            return this.state.beerList.map((beerList, i) => (beerList.expanded) ?
+            <DashboardExpanded key={i} toggleExpanded={this.context.toggleExpanded} journal={beerList}
+                               handleDelete={this.handleDelete} handleSubmit={this.handleSubmitEdit}/> :
+            <div className= 'beerList-item' key={i}>
+                <button
+                    onClick={() => this.context.toggleExpanded(beerList.id)}
+                    className='journal-item-button-details'>
+                    <img className='beer-color-img'src={Utils.getImage(beerList.color)} alt='beer-color'></img>
+                    <h4>{beerList.name}</h4>
+                    <div className='beer-date'> {Utils.formattedDate(beerList.date_created)}</div>
+                    <img className='rating-img' src={Utils.getRatingImage(beerList.rating)} alt={'Rating icons'} height={'50px'}></img>
+                </button>
+            </div>)
+        }
     }
     handleOptionChange = event => {
         this.setState({
             selectedOption: event.target.value
         })
-        console.log(this.state.selectedOption)
+        document.getElementById('small-icons-img').className = 'inactiveClass'
+        document.getElementById('large-icons-img').className = 'inactiveClass'
+        document.getElementById('list-img').className = 'inactiveClass'
+        document.getElementById('details-img').className = 'inactiveClass'
+        document.getElementById(`${event.target.value}-img`).className = 'activeClass'
+        console.log(event.target.value)
     }
     render() {
         return (
@@ -133,19 +179,16 @@ class Dashboard extends React.Component {
                         <span className="radio-group">
 
                             <input type="radio" value="small-icons" id="small-icons" className="hidden" checked={this.state.selectedOption === 'small-icons'} onChange={this.handleOptionChange}/>
-                            <label htmlFor="small-icons"><img src={SmallIcon} alt='small icon view' height='20px' width='20px'/></label>
+                            <label htmlFor="small-icons"><img src={SmallIcon} alt='small icon view' height='20px' width='20px' id='small-icons-img' className='inactiveClass'/></label>
 
                             <input type="radio" value="large-icons" id="large-icons" className="hidden" checked={this.state.selectedOption === 'large-icons'} onChange={this.handleOptionChange}/>
-                            <label htmlFor="large-icons"><img src={LargeIcon} alt='large icon view' height='20px' width='20px'/></label>
-
-                            <input type="radio" value="tiles" id="tiles" className="hidden" checked={this.state.selectedOption === 'tiles'} onChange={this.handleOptionChange}/>
-                            <label htmlFor="tiles"><img src={TileIcon} alt='tile view' height='20px' width='20px'/></label>
+                            <label htmlFor="large-icons"><img src={LargeIcon} alt='large icon view' height='20px' width='20px' id='large-icons-img' className='activeClass'/></label>
 
                             <input type="radio" value="list" id="list" className="hidden" checked={this.state.selectedOption === 'list'} onChange={this.handleOptionChange}/>
-                            <label htmlFor="list"><img src={ListIcon} alt='list view' height='20px' width='20px'/></label>
+                            <label htmlFor="list"><img src={ListIcon} alt='list view' height='20px' width='20px' id='list-img' className='inactiveClass'/></label>
 
                             <input type="radio" value="details" id="details" className="hidden" checked={this.state.selectedOption === 'details'} onChange={this.handleOptionChange}/>
-                            <label htmlFor="details"><img src={DetailsIcon} alt='detailed view' height='20px' width='20px'/></label>
+                            <label htmlFor="details"><img src={DetailsIcon} alt='detailed view' height='20px' width='20px' id='details-img' className='inactiveClass'/></label>
 
                         </span>
                             {(this.state.beerList.length !== 0 ) ? 
