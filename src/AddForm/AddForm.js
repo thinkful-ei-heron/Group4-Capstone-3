@@ -172,14 +172,14 @@ export default class AddForm extends Component {
                                       onChange={(e) => this.context.setDesc(e.target.value)} required/>
                             <div className="btns-2">
                                 <Link to="/home">
-									<button className="back-btn" type="button">
+									<button className="clear-submit-back-btn" type="button">
 										Back
 									</button>
 								</Link>
-								<button className="clear-submit-btn" type="button" onClick={this.context.resetAll}>
+								<button className="clear-submit-back-btn" type="button" onClick={this.context.resetAll}>
 									Clear
 								</button>
-								<button className="clear-submit-btn" type="submit">
+								<button className="clear-submit-back-btn" type="submit">
 									Submit
 								</button>
 							</div>
