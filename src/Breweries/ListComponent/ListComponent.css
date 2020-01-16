@@ -1,0 +1,16 @@
+.list-component-rating {
+    width: 150px;
+    min-width: 150px;
+    margin: 0 auto;
+}
+.list-component-rating > img{
+    z-index: 1;
+    width: 100%
+}
+.list-component-rating > div{
+    background-color: #ffbf00;
+    position: relative;
+    height: 28px;
+    margin-top: -32px;
+    z-index: -1;
+}
