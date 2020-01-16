@@ -3,8 +3,8 @@ import KegMarker from '../../assets/markers/keg-marker.png';
 
 export default class BreweryMarker extends Component {
     render() {
-        const K_WIDTH = 20;
-        const K_HEIGHT = 50;
+        const K_WIDTH = 38;
+        const K_HEIGHT = 40;
         const greatPlaceStyle = {
             // initially any map object has left top corner at lat lng coordinates
             // it's on you to set object origin to 0,0 coordinates

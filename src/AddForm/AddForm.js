@@ -1,23 +1,23 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import JournalContext from '../contexts/JournalContext';
 import BeerApiService from '../services/beer-api-service';
 import ReactTooltip from 'react-tooltip';
 import Header from '../Header/Header';
 import Utils from '../Utils/Utils';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import './AddForm.css';
 
 export default class AddForm extends Component {
 
     static contextType = JournalContext;
 
-    state = {error: null, color: 1};
+    state = {error: null, color: 1, rating: 0};
 
     firstInput = React.createRef();
 
 
     componentDidMount() {
-        this.setState({color: this.context.color})
+        this.setState({color: this.context.color, rating: this.context.rating})
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -71,7 +71,8 @@ export default class AddForm extends Component {
                             </figure>
                             <div>
                                 <label htmlFor='beer-entry-date'>Date</label>
-                                <input className='unstyled' type='date' id='beer-entry-date' value={this.context.date_created}
+                                <input className='unstyled' type='date' id='beer-entry-date'
+                                       value={this.context.date_created}
                                        onChange={(e) => this.context.setDate(e.target.value)}/>
                             </div>
                             <div>
@@ -88,7 +89,8 @@ export default class AddForm extends Component {
 
                             <div>
                                 <label htmlFor='beer-entry-type'>Type</label><span className="required">*</span>
-                                <select id='beer-entry-type' value={this.context.type} onChange={(e) => this.context.setType(e.target.value)} required>
+                                <select id='beer-entry-type' value={this.context.type}
+                                        onChange={(e) => this.context.setType(e.target.value)} required>
                                     <option value='Ale'>Ale</option>
                                     <option value='Altbier'>Altbier</option>
                                     <option value='American Lager'>American Lager</option>
@@ -130,18 +132,20 @@ export default class AddForm extends Component {
                                     <option value='Vienna lager'>Vienna lager</option>
                                     <option value='Wittbier'>Wittbier</option>
                                     <option value='Other'>Other</option>
-                            </select>
+                                </select>
                             </div>
                             <div>
-                                <label htmlFor='beer-entry-abv' data-tip='Alcohol By Volume'>ABV</label><span className="required">*</span>
-                                <ReactTooltip place="top" type="dark" effect="solid" />
+                                <label htmlFor='beer-entry-abv' data-tip='Alcohol By Volume'>ABV</label><span
+                                className="required">*</span>
+                                <ReactTooltip place="top" type="dark" effect="solid"/>
                                 <input type='number' id='beer-entry-abv' value={this.context.abv}
                                        onChange={(e) => this.context.setAbv(e.target.value)} required/>
                             </div>
 
 
                             <div>
-                                <label htmlFor='beer-entry-color' data-tip='Color of beer'>Dark to Light</label><span className="required">*</span>
+                                <label htmlFor='beer-entry-color' data-tip='Color of beer'>Dark to Light</label><span
+                                className="required">*</span>
                                 <input type="range" id="beer-entry-color" min="1" max="6" step='1'
                                        value={this.context.color}
                                        onChange={(e) => {
@@ -150,7 +154,8 @@ export default class AddForm extends Component {
                                        }}/>
                             </div>
                             <div>
-                                <label htmlFor='beer-entry-heaviness'data-tip='Strength of alcohol'>Heavy to Light</label><span
+                                <label htmlFor='beer-entry-heaviness' data-tip='Strength of alcohol'>Heavy to
+                                    Light</label><span
                                 className="required">*</span>
                                 <input type="range" min="1" max="5" className="slider" id="heaviness" step='1'
                                        value={this.context.heaviness}
@@ -160,11 +165,13 @@ export default class AddForm extends Component {
                         <fieldset className='lastfield'>
                             <legend>What I think about this beer!</legend>
                             <div>
+                                <img className='rating-img' src={Utils.getRatingImage(this.state.rating)}
+                                     alt={'Rating icons'} height={'50px'}/>
                                 <label htmlFor='beer-entry-rating'>Rating</label><span className="required">*</span>
                                 <input type="range" min="0" max="9" value={this.context.rating}
-                                       onChange={(e) => this.context.setRating(e.target.value)} className="slider"
+                                       onChange={(e) => {this.context.setRating(e.target.value); this.setState({rating: parseInt(e.target.value)})}} className="slider"
                                        id="rating" step="1"/>
-            </div>
+                            </div>
 
                             <label className="desc-label" htmlFor='beer-entry-rating'>Description</label><span
                             className="required">*</span>
@@ -172,21 +179,21 @@ export default class AddForm extends Component {
                                       onChange={(e) => this.context.setDesc(e.target.value)} required/>
                             <div className="btns-2">
                                 <Link to="/home">
-									<button className="clear-submit-back-btn" type="button">
-										Back
-									</button>
-								</Link>
-								<button className="clear-submit-back-btn" type="button" onClick={this.context.resetAll}>
-									Clear
-								</button>
-								<button className="clear-submit-back-btn" type="submit">
-									Submit
-								</button>
-							</div>
-						</fieldset>
-					</section>
-				</form>
-			</div>
-		);
-	}
+                                    <button className="clear-submit-back-btn" type="button">
+                                        Back
+                                    </button>
+                                </Link>
+                                <button className="clear-submit-back-btn" type="button" onClick={this.context.resetAll}>
+                                    Clear
+                                </button>
+                                <button className="clear-submit-back-btn" type="submit">
+                                    Submit
+                                </button>
+                            </div>
+                        </fieldset>
+                    </section>
+                </form>
+            </div>
+        );
+    }
 }

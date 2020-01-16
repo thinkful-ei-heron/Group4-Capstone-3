@@ -8,6 +8,7 @@ import BreweryMarker from './Marker/BreweryMarker'
 import InfoMarker from './Marker/InfoMarker'
 import MapsApiService from '../services/maps-api-service'
 import ListComponent from './ListComponent/ListComponent'
+import KeyComponent from './KeyComponent/KeyComponent'
 
 class Dashboard extends React.Component {
 
@@ -108,6 +109,7 @@ class Dashboard extends React.Component {
                                 vicinity={this.state.selectedMarker.vicinity}
                             /> : ''}
                         </GoogleMapReact>
+                        <KeyComponent/>
                     </div>
                 </main>
             </>

@@ -3,7 +3,7 @@ import CircleIndicator from './Circle-Indicator/CircleIndicator';
 import rating from '../../assets/rating/star-rating.png'
 import './ListComponent.css'
 
-export default class ListComponent extends Component {
+export default class KeyComponent extends Component {
 
     copyToClipboard(text) {
         const dummy = document.createElement("textarea");
@@ -13,7 +13,7 @@ export default class ListComponent extends Component {
         document.execCommand("copy");
         document.body.removeChild(dummy);
     }
-
+ 
     render() {
         return (
             <>
