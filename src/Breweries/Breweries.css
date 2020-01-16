@@ -1,0 +1,5 @@
+.breweries-list{
+    width:30%;
+    height: 75vh;
+    overflow-y: scroll;
+}

@@ -3,11 +3,10 @@ import JournalContext from '../contexts/UserContext';
 import './Breweries.css';
 import Header from '../Header/Header';
 import GoogleMapReact from 'google-map-react';
-import BarMarker from './Marker/BarMarker';
-import BreweryMarker from './Marker/BreweryMarker';
-import MapsApiService from '../services/maps-api-service';
-import ListComponent from './ListComponent/ListComponent';
-
+import BarMarker from './Marker/BarMarker'
+import BreweryMarker from './Marker/BreweryMarker'
+import MapsApiService from '../services/maps-api-service'
+import ListComponent from './ListComponent/ListComponent'
 class Dashboard extends React.Component {
 
     static contextType = JournalContext;

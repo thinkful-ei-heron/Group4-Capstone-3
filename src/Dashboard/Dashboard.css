@@ -16,9 +16,9 @@
 	height: 100vh;
 }
 .dashboard-bottom {
-	background-image: url(/static/media/wall3.359ad85a.jpeg);
-	background-repeat: repeat-y;
-	background-position: center;
+	background-image: url('../images/wall3.jpeg');
+	/* background-repeat: repeat-y;
+	background-position: center; */
 	min-height: 100vh;
 }
 
@@ -30,6 +30,7 @@
 .dashboard-bottom li {
 	list-style: none;
 	color: white;
+	padding: 2em;
 }
 .darker {
 	/* padding: 4em; */

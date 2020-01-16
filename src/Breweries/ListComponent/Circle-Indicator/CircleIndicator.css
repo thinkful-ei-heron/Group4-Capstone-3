@@ -1,0 +1,25 @@
+.circle-indicator {
+    width: 16px;
+    height: 16px;
+    background-color: gray;
+    border-radius: 100%;
+    display: inline-flex;
+    margin-right: 16px;
+
+}
+.circle-indicator-red {
+    width: 16px;
+    height: 16px;
+    background-color: red;
+    border-radius: 100%;
+    display: inline-flex;
+    margin-right: 16px;
+}
+.circle-indicator-green {
+    width: 16px;
+    height: 16px;
+    background-color: green;
+    border-radius: 100%;
+    display: inline-flex;
+    margin-right: 16px;
+}

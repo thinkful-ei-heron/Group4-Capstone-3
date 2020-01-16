@@ -55,7 +55,7 @@ const BeerApiService = {
             body: JSON.stringify({
                 name: beer.name,
                 type: beer.type,
-                date: beer.date,
+                date_created: beer.date_created,
                 description: beer.description,
                 rating: beer.rating,
                 abv: beer.abv,

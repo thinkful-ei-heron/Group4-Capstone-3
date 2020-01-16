@@ -28,7 +28,7 @@ export class JournalProvider extends Component {
     super(props);
     this.state = {
       name: '',
-      date_created: '',
+      date_created: new Date(),
       location: '',
       description: '',
       type: '',
@@ -53,7 +53,7 @@ export class JournalProvider extends Component {
   resetAll = () => {
     this.setState({
       name: '',
-      date_created: '',
+      date_created: new Date(),
       location: '',
       description: '',
       type: '',
