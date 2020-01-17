@@ -29,7 +29,7 @@ class LandingPage extends React.Component {
 				</ParallaxBanner>
 
 				<section className={'landing-page-about'}>
-					<div>
+					<div className="about-desc">
 						<h2>About</h2>
 						<p>A place to save your favorite beers.</p>
 						<p>
@@ -43,8 +43,26 @@ class LandingPage extends React.Component {
 						</p>
 					</div>
 					<figure>
-						<img src={require('../assets/img/deerbear.png')} alt={'The Deer Bear'} width={'150px'} />
+						<img
+							className="deerbear-img"
+							src={require('../assets/img/deerbear.png')}
+							alt={'The Deer Bear'}
+							width={'150px'}
+						/>
 						<figcaption>Henri le Biere</figcaption>
+					</figure>
+					<figure>
+						<img
+							className="map-img"
+							src={require('../assets/img/map.png')}
+							alt={'map of brews'}
+							width={'150px'}
+						/>
+						<figcaption>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+							laboris nisi ut aliquip ex ea commodo consequat.
+						</figcaption>
 					</figure>
 				</section>
 

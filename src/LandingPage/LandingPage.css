@@ -1,7 +1,7 @@
 .landing-page-about {
-	display: flex;
+	display: inline-block;
 	justify-content: center;
-	margin-top: 10%;
+	/* margin-top: 10%; */
 	margin-bottom: 10%;
 }
 .landing-page {
@@ -52,9 +52,14 @@
 	margin-left: 10%;
 	margin-bottom: 10%;
 }
-.landing-page-about img {
-	height: 19em;
-	width: 15em;
+/* .landing-page-about img {
+	height: 27em;
+	width: 20em;
+	border-radius: 3%;
+} */
+.deerbear-img {
+	height: 27em;
+	width: 20em;
 	border-radius: 3%;
 }
 .landing-page-about figcaption {
@@ -72,10 +77,20 @@
 	font-family: 'Merriweather', serif;
 }
 .landing-page-about div {
-	float: left;
+	float: right;
 	width: 44%;
 	margin-top: 10%;
 	margin-bottom: 10%;
+	margin-right: 9em;
+}
+.map-img {
+	width: 60em;
+	height: 25em;
+	margin-right: 20%;
+	margin-left: 5%;
+	border-radius: 1%;
+	margin-top: -10em;
+	margin-bottom: 2em;
 }
 .logo {
 	height: 12vh;
@@ -91,6 +106,9 @@
 	position: relative;
 	top: 18px;
 	left: 246px;
+}
+figcaption {
+	text-align: center;
 }
 @media only screen and (max-width: 660px) {
 }
