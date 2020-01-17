@@ -141,8 +141,6 @@ export default class AddForm extends Component {
                                 <input type='number' id='beer-entry-abv' value={this.context.abv}
                                        onChange={(e) => this.context.setAbv(e.target.value)} required/>
                             </div>
-
-
                             <div>
                                 <label htmlFor='beer-entry-color' data-tip='Color of beer'>Dark to Light</label><span
                                 className="required">*</span>
@@ -173,7 +171,7 @@ export default class AddForm extends Component {
                                        id="rating" step="1"/>
                             </div>
 
-                            <label className="desc-label" htmlFor='beer-entry-rating'>Description</label><span
+                            <label className="desc-label" htmlFor='beer-entry-description'>Description</label><span
                             className="required">*</span>
                             <textarea id='beer-entry-description' value={this.context.description}
                                       onChange={(e) => this.context.setDesc(e.target.value)} required/>
