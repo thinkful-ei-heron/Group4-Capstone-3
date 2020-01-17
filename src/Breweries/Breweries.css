@@ -8,6 +8,11 @@
 .breweries-page {
 	background-image: url('../images/wall6.jpg');
 }
+.breweries-page form {
+	margin: 1em;
+	color: white;
+	font-family: 'Merriweather', serif;
+}
 
 @media only screen and (max-width: 570px) {
 	.breweries-page input:checked ~ a {
