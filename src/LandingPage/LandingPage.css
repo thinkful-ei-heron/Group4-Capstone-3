@@ -13,18 +13,7 @@
 .parallax-banner-layer-0 > * {
 	opacity: 1;
 }
-.landing-page h1 {
-	color: white;
-	font-family: 'Merriweather', serif;
-	position: absolute;
-	text-align: center;
-	height: 75%;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	font-size: 4em;
-}
+
 .landing-page nav {
 	position: absolute;
 	right: 0;
@@ -78,19 +67,39 @@
 	margin-bottom: 10%;
 }
 .logo {
-	height: 12vh;
-	width: 12vh;
-	position: absolute;
+	width: 283px;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 320px;
+	left: 199px;
+	padding: 40px;
 }
-.header-logo {
-	margin-left: auto;
-	margin-top: 15vh;
-	margin-right: 48vh;
+.landing-page h1 {
+    font-size: 150px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Merriweather', serif;
+    position: relative;
+	top: -7px;
+	z-index: 3;
+
+
 }
-.header-logo h1 {
-	position: relative;
-	top: 18px;
-	left: 246px;
+/* .header-logo-h1 {
+	display: flex;
+	flex-direction: row;
+} */
+
+@media only screen and (max-width: 700px) {
+
 }
-@media only screen and (max-width: 660px) {
+
+@media only screen and (max-width: 500px) {
+
+	.header-logo-h1 {
+		display: flex;
+		flex-direction: column;
+	}
 }

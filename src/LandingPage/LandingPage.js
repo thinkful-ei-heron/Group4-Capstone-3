@@ -22,7 +22,7 @@ class LandingPage extends React.Component {
 						<Link to={'/login'}>Login</Link>
 						<Link to={'/register'}>Register</Link>
 					</nav>
-					<div className="header-logo">
+					<div className="header-logo-h1">
 						<img className="logo" src={logo} alt="logo" />
 						<h1>DearBeer</h1>
 					</div>
