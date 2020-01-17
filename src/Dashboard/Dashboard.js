@@ -122,7 +122,7 @@ class Dashboard extends React.Component {
                     <Header location={this.props.location} header={'Home'}/>
                     <section className='dashboard-bottom'>
                         <div className={'darker'}>
-                            {(this.state.beerList.length !== 0 ) ? 
+                            {(this.context.beerList.length !== 0 ) ? 
                             <select className='sort-select'
                                 onChange={this.sortSelect}>
                                 <option value='none'>Sort By</option>
@@ -180,7 +180,7 @@ class Dashboard extends React.Component {
                             </select> : ''}
                             <input className='search-bar' type='text' placeholder='Search by name...' onChange={this.handleSearch}/>
                             <br></br>
-                            {(this.state.beerList.length === 0 ) ?  <h2>ADD SOME BEERS YOU FILTHY ANIMAL</h2> : ''}
+                            {(this.context.beerList.length === 0 ) ?  <h2>ADD SOME BEERS YOU FILTHY ANIMAL</h2> : ''}
                             {this.renderBeerList()}
                         </div>
                     </section>
