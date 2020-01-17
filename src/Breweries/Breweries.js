@@ -9,7 +9,7 @@ import InfoMarker from './Marker/InfoMarker'
 import MapsApiService from '../services/maps-api-service'
 import ListComponent from './ListComponent/ListComponent'
 import KeyComponent from './KeyComponent/KeyComponent'
-
+import config  from '../config'
 class Dashboard extends React.Component {
 
     static contextType = JournalContext;
@@ -68,7 +68,7 @@ class Dashboard extends React.Component {
                         <label>Zip Code: <input type='number'
                                                 onChange={(e) => this.props.map.setZipcode(e.target.value)}
                                                 value={this.props.map.value}/></label>
-                        <button type='submit'>Go</button>
+                        <button className={'clear-submit-back-btn'} type='submit'>Go</button>
                     </form>
                     <div className={'breweries-map'}>
                         <div className={'breweries-list'}>
@@ -91,7 +91,7 @@ class Dashboard extends React.Component {
                             )}
                         </div>
                         <GoogleMapReact
-                            bootstrapURLKeys={{key: 'AIzaSyCG_FMdGssqTRG7tGSvu24UYFopSWQY_-g'}}
+                            bootstrapURLKeys={{key: config.API_KEY}}
                             defaultCenter={this.state.defaultCenter}
                             defaultZoom={this.state.zoom}
                             center={this.props.map.center}
