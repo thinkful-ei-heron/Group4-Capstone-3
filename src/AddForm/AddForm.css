@@ -10,7 +10,6 @@
 	background-repeat: repeat;
 	background-size: ;
 	margin-right: 0em;
-	padding: 49px;
 }
 
 .dashboard-top {
@@ -29,6 +28,7 @@
 	height: 2.3em;
 	text-align: left;
 }
+
 .add-form-page nav a:hover {
 	color: rgb(8, 184, 8);
 }
@@ -49,8 +49,7 @@
 	font-size: 25px;
 }
 
-.add-form-page input,
-textarea {
+.add-form-page input,textarea {
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -167,7 +166,30 @@ textarea {
 	top: 20px;
 }
 
-@media only screen and (max-width: 570px) {
+/*  */
+@media only screen and (max-width: 760px) {
+	.add-form-page nav button {
+		float: right;
+		color: white;
+		font-family: 'Merriweather', serif;
+		font-size: 20px;
+		border: none;
+		height: .3em;
+	}
+	.add-form-page nav a {
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.add-form-page nav button {
+		float: right;
+		color: white;
+		font-family: 'Merriweather', serif;
+		font-size: 20px;
+		border: none;
+		height: 1.3em;
+	}
 	.form-section {
 		padding: 10px;
 		display: flex;
@@ -289,5 +311,9 @@ textarea {
 		background-color: rgba(8, 8, 8, 0.774);
 		height: 2.3em;
 		text-align: left;
+	}
+
+	.beer-list-item {
+
 	}
 }
