@@ -19,7 +19,7 @@ export default class BreweryMarker extends Component {
             padding: 4
         };
         return (
-            <img src={KegMarker} style={greatPlaceStyle} alt={'Brewery Marker'}/>
+            <img onClick={()=> this.props.updateSelected(this.props.id)} src={KegMarker} style={greatPlaceStyle} alt={'Brewery Marker'}/>
         );
     }
 }

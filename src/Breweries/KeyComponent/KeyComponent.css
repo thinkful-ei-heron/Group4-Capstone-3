@@ -8,3 +8,6 @@
 	color: #00000077;
 	padding: 1em;
 }
+.key-component p {
+	margin: 0;
+}
