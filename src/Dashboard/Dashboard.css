@@ -27,6 +27,8 @@
 	background-color: black;
 	border: none;
 } */
+
+
 .dashboard-bottom li {
 	list-style: none;
 	color: white;
@@ -63,6 +65,13 @@
 	width: 10em;
 	cursor: pointer;
 	margin: 1em;
+	width: 25%;
+	background: white;
+	border: 2px solid rgb(71, 109, 53);
+	border-radius: 5px;
+	padding: 5px 15px 5px 15px;
+	color: rgb(122, 194, 125);
+	font-size: 15px;
 }
 .sort-select:hover {
 	border: rgb(9, 48, 9);
@@ -80,6 +89,15 @@
 	margin: 1em;
 	height: 2.4em;
 	width: 14em;
+	height: 3em;
+	width: 10em;
+	cursor: pointer;
+	width: 25%;
+	background: white;
+	border: 2px solid rgb(71, 109, 53);
+	border-radius: 5px;
+	color: rgb(122, 194, 125);
+	font-size: 15px;
 }
 .type-select {
 	margin-top: 4em;
@@ -87,18 +105,54 @@
 	width: 11em;
 	cursor: pointer;
 	margin: 2em;
+	width: 25%;
+	background: white;
+	border: 2px solid rgb(71, 109, 53);
+	border-radius: 5px;
+	padding: 5px 15px 5px 15px;
+	color: rgb(122, 194, 125);
+	font-size: 15px;
+	
 }
 .type-select:hover {
 	border: rgb(9, 48, 9);
 }
 
-
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 760px) {
+	.dashboard-page nav button {
+		float: right;
+		color: white;
+		font-family: 'Merriweather', serif;
+		font-size: 20px;
+		border: none;
+		height: .3em;
+	}
+	.dashboard-page nav a {
+		font-size: 20px;
+	}
+}
+@media only screen and (max-width: 488px) {
+	.beerList-item{
+		border: none;
+		border-radius: 5%;
+		margin: 3em;
+		padding: 10px 10px 30px 10px;
+		width: 35vh;
+		height: 45vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	
+	
+	.sort-select {
+		margin-left: 146px;
+	}
 
 	.dashboard-page input:checked ~ a{
 
 		margin-bottom: 0px;
-	
 	}
 	
 	.dashboard-page nav {
