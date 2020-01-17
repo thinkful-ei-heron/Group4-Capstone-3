@@ -1,8 +1,7 @@
 .landing-page-about {
 	display: inline-block;
 	justify-content: center;
-	/* margin-top: 10%; */
-	margin-bottom: 10%;
+	margin-bottom: 10%;;
 }
 .landing-page {
 	background-color: rgb(39, 40, 49);
@@ -13,18 +12,7 @@
 .parallax-banner-layer-0 > * {
 	opacity: 1;
 }
-.landing-page h1 {
-	color: white;
-	font-family: 'Merriweather', serif;
-	position: absolute;
-	text-align: center;
-	height: 75%;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	font-size: 4em;
-}
+
 .landing-page nav {
 	position: absolute;
 	right: 0;
@@ -33,9 +21,11 @@
 .landing-page nav a {
 	color: white;
 	padding: 5px;
-	font-size: 20px;
+	font-size: 30px;
 	text-decoration: none;
 	font-family: 'Merriweather', serif;
+	font-weight: bold;
+	margin-right: 10px;
 }
 .landing-page nav a:hover {
 	/* color: rgb(9, 162, 250); */
@@ -52,36 +42,45 @@
 	margin-left: 10%;
 	margin-bottom: 10%;
 }
-/* .landing-page-about img {
-	height: 27em;
-	width: 20em;
-	border-radius: 3%;
-} */
-.deerbear-img {
-	height: 27em;
-	width: 20em;
+.landing-page-about img {
+	height: 29em;
+	width: 25em;
 	border-radius: 3%;
 }
+.deerbear-img {
+    height: 24em;
+    width: 22em;
+    border-radius: 3%;
+    margin-bottom: 40px;
+}
 .landing-page-about figcaption {
-	color: white;
+	color: white; 
 	font-family: 'Merriweather', serif;
+	font-size: 20px;
 }
 .landing-page-about h2 {
 	color: white;
 	font-family: 'Merriweather', serif;
-	font-size: 3em;
+	font-size: 90px;
 }
-.landing-page-about p {
-	color: white;
-	font-size: 1.2em;
+.para-1 {
+	color: tomato;
+    font-size: 40px;
 	font-family: 'Merriweather', serif;
+	
 }
-.landing-page-about div {
-	float: right;
-	width: 44%;
-	margin-top: 10%;
-	margin-bottom: 10%;
-	margin-right: 9em;
+
+.para-2 {
+	color: white;
+    font-size: 22px;
+    font-family: 'Merriweather', serif;
+    padding-top: 134px;
+    padding-right: 60px;
+}
+.about-desc {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 .map-img {
 	width: 60em;
@@ -93,19 +92,61 @@
 	margin-bottom: 2em;
 }
 .logo {
-	height: 12vh;
-	width: 12vh;
-	position: absolute;
+	width: 160px;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 230px;
+	left: 70px;
 }
-.header-logo {
-	margin-left: auto;
-	margin-top: 15vh;
-	margin-right: 48vh;
+.landing-page h1 {
+    font-size: 120px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Merriweather', serif;
+    position: relative;
 }
-.header-logo h1 {
-	position: relative;
-	top: 18px;
-	left: 246px;
+
+@media only screen and (max-width: 760px) {
+	.logo {
+		width: 120px;
+		z-index: 2;
+		display: flex;
+		flex-direction: row;
+		position: relative;
+		top: 170px;
+		left: 30px;
+	}
+	.landing-page h1 {
+		font-size: 90px;
+		font-weight: bold;
+		color: white;
+		font-family: 'Merriweather', serif;
+		position: relative;
+	}
+	.para-1{
+		font-size: 22px;
+		color: rgb(199, 162, 41)
+	}
+	.para-2 {
+		font-size: 17px;
+	}
+	.about-desc {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		
+	}
 }
-@media only screen and (max-width: 660px) {
+
+
+@media only screen and (max-width: 480px) {
+
+	.header-logo-h1 {
+		display: flex;
+		flex-direction: column;
+	}
+
+	
 }
