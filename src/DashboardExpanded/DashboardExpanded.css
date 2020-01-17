@@ -19,3 +19,37 @@
 	margin: 1rem auto;
 	display: block;
 }
+
+.edit-beer-form fieldset {
+	width: 50%;
+	margin-top: 20px;
+	border-radius: 10px;
+	border: 2px solid rgba(60, 131, 64, 0.858);
+	padding: 20px;
+	box-shadow: inset 0px 0px 15px rgb(243, 230, 230);
+	-moz-box-shadow: inset 0px 0px 15px rgb(236, 217, 217);
+	-webkit-box-shadow: inset 0px 0px 15px rgb(215, 209, 209);
+	background-color: rgba(255, 255, 255, 0.66);
+	z-index: 1;
+}
+
+.edit-beer-form legend {
+	color: rgb(21, 53, 30);
+	border-top: 2px solid rgb(73, 159, 70);
+	border-left: 2px solid rgb(73, 159, 70);
+	border-right: 2px solid rgb(95, 155, 100);
+	border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	background: rgba(226, 240, 227, 0.653);
+	padding: 0px 8px 3px 8px;
+	box-shadow: -0px -1px 2px #f1f1f1;
+	-moz-box-shadow: -0px -1px 2px #f1f1f1;
+	-webkit-box-shadow: -0px -1px 2px #f1f1f1;
+	font-weight: normal;
+	font-size: 20px;
+}
+
+.edit-buttons {
+	margin-top: 15%;
+}

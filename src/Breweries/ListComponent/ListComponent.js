@@ -22,8 +22,8 @@ export default class KeyComponent extends Component {
                 </h4>
                 <p>{this.props.place.vicinity}
                     {/*<button onClick={() =>  this.copyToClipboard(this.props.place.vicinity)}>Copy</button>*/}
-                    <button onClick={() => window.open('https://google.com/maps?q=' + this.props.place.vicinity)}>Go</button>
                 </p>
+                <button onClick={() => window.open('https://google.com/maps?q=' + this.props.place.vicinity)}>Go</button>
                 <div className={'list-component-rating'}>
                     <img src={rating} alt={'Star Rating'}/>
                     <div
