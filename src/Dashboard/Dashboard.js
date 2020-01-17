@@ -5,6 +5,7 @@ import UserContext from '../contexts/UserContext';
 import DashboardExpanded from '../DashboardExpanded/DashboardExpanded';
 import Utils from '../Utils/Utils'
 import Header from '../Header/Header'
+import Charts from '../Charts/Charts'
 import './Dashboard.css'
 
 class Dashboard extends React.Component {
@@ -123,6 +124,9 @@ class Dashboard extends React.Component {
                                 this.toggleSort(this.state.beerList)}>{this.state.sort}</button>
                             {this.renderBeerList()}
                         </div>
+                    </section>
+                    <section>
+                        <Charts />
                     </section>
                 </main>
             </>
