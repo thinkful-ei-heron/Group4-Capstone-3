@@ -19,7 +19,7 @@ export default class BarMarker extends Component {
             padding: 4
         };
         return (
-            <img src={BarIcon} style={greatPlaceStyle} alt={'Bar Marker'}/>
+            <img onClick={()=> this.props.updateSelected(this.props.id)} src={BarIcon} style={greatPlaceStyle} alt={'Bar Marker'}/>
         );
     }
 }

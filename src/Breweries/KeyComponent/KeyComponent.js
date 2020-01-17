@@ -7,8 +7,8 @@ export default class KeyComponent extends Component {
         return (
             <div className={'key-component'}>
                 <p>Key</p>
-                <div><span> Bar:</span> <img src={Bar} style={{height:'50px'}} alt={'Bar'}/></div>
-                <div><span> Brewery:</span> <img src={Brewery} style={{width:'50px'}} alt={'Brewery'}/></div>
+                <div><span> Bar:</span> <img src={Bar} style={{height:'32px' }} alt={'Bar'}/></div>
+                <div><span> Brewery:</span> <img src={Brewery} style={{width:'32px'}} alt={'Brewery'}/></div>
             </div>
         );
     }

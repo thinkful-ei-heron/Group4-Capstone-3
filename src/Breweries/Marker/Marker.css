@@ -9,3 +9,25 @@
     border-radius: 10px;
     box-shadow: 2px 2px 7px 2px rgba(0,0,0,0.44);
 }
+.info-marker > button {
+    position: absolute;
+    right: 5px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.info-marker a > button {
+    background: rgb(63, 62, 63);
+    border: 1px solid rgb(27, 10, 18);
+    padding: 4px 4px 4px 4px;
+    color: rgb(122, 194, 125);
+    box-shadow: inset -1px -1px 3px rgb(65, 63, 64);
+    -moz-box-shadow: inset -1px -1px 3px rgb(100, 96, 98);
+    -webkit-box-shadow: inset -1px -1px 3px rgb(105, 101, 103);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}

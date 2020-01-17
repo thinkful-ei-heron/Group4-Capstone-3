@@ -30,11 +30,12 @@ class Dashboard extends React.Component {
             nearByBreweries: [],
             list: [],
             value: '',
-            dropDown: 8047,
-            selectedMarker: {lat: null, lng: null, name: '', vicinity: ''}
+            selectedMarker: {lat: null, lng: null, name: '', vicinity: '', id: ''}
         };
         this.handleInput = this.handleInput.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.updateSelected = this.updateSelected.bind(this);
+        this.resetSelected = this.resetSelected.bind(this);
     }
 
     handleInput(e) {
@@ -54,8 +55,23 @@ class Dashboard extends React.Component {
             });
             this.setState({center: {lat, lng}, nearByBars: res.bars, nearByBreweries: res.breweries, list: list});
         })
+        
     }
 
+    updateSelected(id) {
+        let NewPlace = this.state.list.find((place) => place.id === id);
+        this.setState({selectedMarker: {
+                lat: NewPlace.geometry.location.lat,
+                lng: NewPlace.geometry.location.lng,
+                name: NewPlace.name,
+                vicinity: NewPlace.vicinity,
+                id: NewPlace.id
+            }});
+
+    }
+    resetSelected(){
+        this.setState({selectedMarker: {lat: null, lng: null, name: '', vicinity: '', id: ''}});
+    }
     render() {
         return (
             <>
@@ -66,11 +82,10 @@ class Dashboard extends React.Component {
                                                 value={this.state.value}/></label>
                         <button type='submit'>Go</button>
                     </form>
-                    <div
-                        style={{height: '75vh', width: '95%', display: 'inline-flex', justifyContent: 'space-between'}}>
+                    <div className={'breweries-map'}>
                         <div className={'breweries-list'}>
                             {this.state.list.map((place, i) =>
-                                <div key={i} onClick={() => this.setState({
+                                <div key={i} className={(place.id===this.state.selectedMarker.id) ? 'breweries-list-active' : ''} onClick={() => this.setState({
                                     center: {
                                         lat: place.geometry.location.lat,
                                         lng: place.geometry.location.lng
@@ -79,9 +94,10 @@ class Dashboard extends React.Component {
                                         lat: place.geometry.location.lat,
                                         lng: place.geometry.location.lng,
                                         name: place.name,
-                                        vicinity: place.vicinity
+                                        vicinity: place.vicinity,
+                                        id: place.id
                                     }
-                                })}><ListComponent place={place}/></div>
+                                })}><ListComponent place={place} /></div>
                             )}
                         </div>
                         <GoogleMapReact
@@ -95,18 +111,23 @@ class Dashboard extends React.Component {
                                 lat={place.geometry.location.lat}
                                 lng={place.geometry.location.lng}
                                 text={place.name}
+                                id={place.id}
+                                updateSelected={this.updateSelected}
                             />)}
                             {this.state.nearByBreweries.map((place, i) => <BreweryMarker
                                 key={i}
                                 lat={place.geometry.location.lat}
                                 lng={place.geometry.location.lng}
                                 text={place.name}
+                                id={place.id}
+                                updateSelected={this.updateSelected}
                             />)}
                             {this.state.selectedMarker.name.length !== 0 ? <InfoMarker
                                 lat={this.state.selectedMarker.lat}
                                 lng={this.state.selectedMarker.lng}
                                 name={this.state.selectedMarker.name}
                                 vicinity={this.state.selectedMarker.vicinity}
+                                resetSelected={this.resetSelected}
                             /> : ''}
                         </GoogleMapReact>
                         <KeyComponent/>

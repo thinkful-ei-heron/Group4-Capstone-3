@@ -5,15 +5,15 @@ import './ListComponent.css'
 
 export default class KeyComponent extends Component {
 
-    copyToClipboard(text) {
-        const dummy = document.createElement("textarea");
-        document.body.appendChild(dummy);
-        dummy.value = text;
-        dummy.select();
-        document.execCommand("copy");
-        document.body.removeChild(dummy);
-    }
- 
+    // copyToClipboard(text) {
+    //     const dummy = document.createElement("textarea");
+    //     document.body.appendChild(dummy);
+    //     dummy.value = text;
+    //     dummy.select();
+    //     document.execCommand("copy");
+    //     document.body.removeChild(dummy);
+    // }
+
     render() {
         return (
             <>
@@ -21,7 +21,7 @@ export default class KeyComponent extends Component {
                     isOpen={(this.props.place.opening_hours) ? (this.props.place.opening_hours.open_now) : null}/>{this.props.place.name}
                 </h4>
                 <p>{this.props.place.vicinity}
-                    <button onClick={() =>  this.copyToClipboard(this.props.place.vicinity)}>Copy</button>
+                    {/*<button onClick={() =>  this.copyToClipboard(this.props.place.vicinity)}>Copy</button>*/}
                     <button onClick={() => window.open('https://google.com/maps?q=' + this.props.place.vicinity)}>Go</button>
                 </p>
                 <div className={'list-component-rating'}>

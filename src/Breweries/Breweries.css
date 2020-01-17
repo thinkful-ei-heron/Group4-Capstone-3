@@ -5,6 +5,15 @@
 	background-color: white;
 	z-index: 1;
 }
+.breweries-list-active h4 {
+	color: rgb(122, 194, 125);
+}
+.breweries-map{
+	height: 75vh;
+	width: 95%;
+	display: inline-flex;
+	justifyContent: space-between;
+}
 .breweries-page {
 	background-image: url('../images/wall6.jpg');
 }
@@ -16,7 +25,7 @@
 
 @media only screen and (max-width: 570px) {
 	.breweries-page input:checked ~ a {
-		margin-bottom: 0px;
+		margin-bottom: 0;
 	}
 
 	.breweries-page nav {
@@ -24,7 +33,7 @@
 	}
 	.breweries-page .header-component a {
 		font: 10px;
-		margin: 0px;
+		margin: 0;
 	}
 	.breweries-page nav input {
 		display: inline-block;
