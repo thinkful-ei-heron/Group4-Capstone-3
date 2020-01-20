@@ -268,6 +268,47 @@
 	}
 }
 
+@media only screen and (min-width: 1020px) {
+	.journal-item-button-small {
+		margin: 2rem 1.8rem;
+		width: 30rem;
+	}
+	.journal-item-button-small h4 {
+		font-size: xx-large;
+		margin: 4rem 2rem 2rem 2rem;
+	}
+	.journal-item-button-small .rating-img {
+		height: 6rem;
+		margin: auto auto 2rem auto;
+	}
+	.journal-item-button-small .beer-date {
+		font-size: large;
+		margin-bottom: 4rem;
+	}
+	.journal-item-button-large {
+		margin: 2.8rem 4rem;
+		width: 40rem;
+	}
+	.journal-item-button-large .beer-color-img {
+		margin-top: 1.8rem;
+		margin-bottom: 1.6rem;
+		height: 10rem;
+		width: 10rem;
+	}
+	.journal-item-button-large h4 {
+		font-size: xx-large;
+	}
+	.journal-item-button-large .rating-img {
+		height: 6rem;
+		margin-bottom: 1.8rem;
+		margin-top: 2.6rem;
+	}
+	.journal-item-button-list {
+		margin: 1rem auto;
+		width: 88vw;
+	}
+}
+
 
 @media only screen and (max-width: 570px) {
 
