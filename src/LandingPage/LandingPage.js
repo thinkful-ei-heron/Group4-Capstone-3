@@ -30,9 +30,10 @@ class LandingPage extends React.Component {
 				<section className={'landing-page-about'}>
 					<img className="logo" src={logo} alt="logo" />
 					<h2>About</h2>
-					<p className="para-1">A place to save your favorite beers.</p>
 
-					<div className="about-desc">
+				
+					<h3 className="para-1">A place to save your favorite beers.</h3>
+
 						<figure>
 							<img
 								className="deerbear-img"
@@ -52,7 +53,6 @@ class LandingPage extends React.Component {
 							don’t fret because you’ll be able to remember it with DearBeer and enjoy it once again.
 							Cheers, and if your cup is full may it be again.
 						</p>
-					</div>
 
 					<figure>
 						<img
