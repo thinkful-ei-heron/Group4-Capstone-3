@@ -55,6 +55,7 @@ class LandingPage extends React.Component {
 						</p>
 
 					<figure>
+						<h2>Map</h2>
 						<img
 							className="map-img"
 							src={require('../assets/img/map.png')}

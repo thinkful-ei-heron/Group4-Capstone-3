@@ -10,13 +10,14 @@
 	left: 4vw;
 }
 .breweries-list-active h4 {
-	color: rgb(122, 194, 125);
+	color: rgb(8,184,8);
+	text-shadow: 1px 1px 1px #000000;
 }
 .breweries-map{
 	height: 75vh;
 	width: 95%;
 	display: inline-flex;
-	justifyContent: space-between;
+	justify-content: space-between;
 }
 .breweries-page {
 	background-image: url('../images/wall6.jpg');
@@ -42,124 +43,4 @@
 	}.breweries-page {
 		 height: 105vh;
 	 }
-}
-@media only screen and (max-width: 570px) {
-
-	.breweries-page input:checked ~ a {
-		margin-bottom: 0;
-	}
-
-	.breweries-page nav {
-		background-color: transparent;
-	}
-	.breweries-page .header-component a {
-		font: 10px;
-		margin: 0;
-	}
-	.breweries-page nav input {
-		display: inline-block;
-		width: 60px;
-		height: 50px;
-		position: absolute;
-		top: 123px;
-		left: 2px;
-		cursor: pointer;
-		opacity: 0;
-		-webkit-touch-callout: none;
-	}
-	.breweries-page nav span {
-		display: block;
-		width: 33px;
-		height: 4px;
-		margin-bottom: 5px;
-		position: relative;
-		background: white;
-		border-radius: 3px;
-		z-index: 1;
-		transform-origin: 4px 0px;
-		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-			background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
-	}
-
-	.breweries-page a {
-		padding-top: 0px;
-		margin-left: 0px;
-		display: block;
-	}
-	.breweries-page nav span:first-child {
-		transform-origin: 0% 0%;
-	}
-
-	.breweries-page nav input:checked ~ .child-2 {
-		position: relative;
-		top: 15px;
-		transform-origin: 0% 100%;
-		transform: rotate(-20deg) translate(2px, -1px);
-	}
-
-	.breweries-page a.active {
-		border-bottom: none;
-	}
-
-	.breweries-page input:checked ~ span {
-		opacity: 1;
-		transform: rotate(45deg) translate(-2px, -1px);
-		background: white;
-	}
-
-	.breweries-page nav input:checked ~ .child-3 {
-		opacity: 0;
-		transform: rotate(0deg) scale(0.2, 0.2);
-	}
-
-	.breweries-page nav input:checked ~ .child-1 {
-		transform: rotate(20deg) translate(0, -1px);
-		position: relative;
-		top: 15px;
-	}
-
-	.breweries-page nav a,
-	a.active {
-		color: black;
-		font-weight: bold;
-		margin-left: 0px;
-		list-style-type: none;
-		-webkit-font-smoothing: antialiased;
-		transform-origin: 0% 0%;
-		transform: translate(-100%, 0);
-		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-		width: 200px;
-	}
-
-	.breweries-page nav input:checked ~ a {
-		transform: none;
-		display: flex;
-		position: relative;
-		top: 12px;
-		left: -7px;
-		margin-right: 10px;
-		background-color: rgba(226, 240, 227, 0.653);
-		border: 1px solid rgba(60, 131, 64, 0.858);
-		border-radius: 5px;
-		font-size: 15px;
-		margin-left: 12px;
-		padding: 3px;
-		z-index: 4;
-	}
-	.breweries-page .header-component nav button {
-		color: white;
-		display: block;
-		float: right;
-		position: relative;
-		top: -111px;
-		right: 148px;
-		font-weight: bold;
-		font-size: 20px;
-	}
-
-	.breweries-page nav {
-		background-color: rgba(8, 8, 8, 0.774);
-		height: 2.3em;
-		text-align: left;
-	}
 }

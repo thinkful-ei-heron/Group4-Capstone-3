@@ -11,12 +11,14 @@ export default class AddForm extends Component {
 
     static contextType = JournalContext;
 
-    state = {error: null, color: 1, rating: 0, typeList: ['Ale','Altbier','American Lager','Barley Wine','Belgian',
-            'Berliner Weisse','Bitter','Bock','Brown Ale', 'Brown Ale','Cider','Cream Ale', 'Doppelbock','Dunkel',
-            'Flanders Red Ale','German Pilser','Gose','Helles','Helles Bock','Honey', 'Imperial IPA','IPA',
-            'Irish Red Ale', 'Kolsch','Lager', 'Lambic', 'Mild Ale','Old Ale','Pale Ale', 'Pale Lager', 'Pilsner',
-            'Porter', 'Quadrupel','Rye','Saison', 'Schwarzbier', 'Scotch Ale', 'Seasonal Beer','Stout','Vienna Lager',
-            'Wittbier', 'Other']};
+    state = {
+        error: null, color: 1, rating: 0, typeList: ['Ale', 'Altbier', 'American Lager', 'Barley Wine', 'Belgian',
+            'Berliner Weisse', 'Bitter', 'Bock', 'Brown Ale', 'Brown Ale', 'Cider', 'Cream Ale', 'Doppelbock', 'Dunkel',
+            'Flanders Red Ale', 'German Pilser', 'Gose', 'Helles', 'Helles Bock', 'Honey', 'Imperial IPA', 'IPA',
+            'Irish Red Ale', 'Kolsch', 'Lager', 'Lambic', 'Mild Ale', 'Old Ale', 'Pale Ale', 'Pale Lager', 'Pilsner',
+            'Porter', 'Quadrupel', 'Rye', 'Saison', 'Schwarzbier', 'Scotch Ale', 'Seasonal Beer', 'Stout', 'Vienna Lager',
+            'Wittbier', 'Other']
+    };
 
     firstInput = React.createRef();
 
@@ -96,7 +98,7 @@ export default class AddForm extends Component {
                                 <label htmlFor='beer-entry-type'>Type</label><span className="required">*</span>
                                 <select id='beer-entry-type' value={this.context.type}
                                         onChange={(e) => this.context.setType(e.target.value)} required>
-                                    {this.state.typeList.map((type, i)=> <option key={i} value={type}>{type}</option>)}
+                                    {this.state.typeList.map((type, i) => <option key={i} value={type}>{type}</option>)}
                                 </select>
                             </div>
                             <div>
@@ -130,10 +132,14 @@ export default class AddForm extends Component {
                             <div>
                                 <img className='rating-img' src={Utils.getRatingImage(this.state.rating)}
                                      alt={'Rating icons'} height={'50px'}/>
-                                <label htmlFor='beer-entry-rating'>Rating</label><span className="required">*</span>
-                                <input type="range" min="0" max="9" value={this.context.rating}
-                                       onChange={(e) => {this.context.setRating(e.target.value); this.setState({rating: parseInt(e.target.value)})}} className="slider"
-                                       id="rating" step="1"/>
+                                <div>
+                                    <label htmlFor='beer-entry-rating'>Rating</label><span className="required">*</span>
+                                    <input type="range" min="0" max="9" value={this.context.rating}
+                                           onChange={(e) => {
+                                               this.context.setRating(e.target.value);
+                                               this.setState({rating: parseInt(e.target.value)})
+                                           }} className="slider"
+                                           id="rating" step="1"/></div>
                             </div>
 
                             <label className="desc-label" htmlFor='beer-entry-description'>Description</label><span
