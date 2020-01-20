@@ -1,13 +1,20 @@
-.landing-page-about {
-	display: inline-block;
-	justify-content: center;
+/* .landing-page-about {
+	display: flex;
+	flex-direction: column;
 	margin-bottom: 10%;
-}
-.landing-page {
+	align-items: center;
+	margin: 0px;
+	background-color: black;
+} */
+
+.landing-page-about {
 	background-color: rgb(39, 40, 49);
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
 }
 .parallax-banner-layer-0 {
-	opacity: 0.7;
+	opacity: 0.9;
 }
 .parallax-banner-layer-0 > * {
 	opacity: 1;
@@ -21,141 +28,162 @@
 .landing-page nav a {
 	color: white;
 	padding: 5px;
-	font-size: 1.5em;
+	font-size: 20px;
 	text-decoration: none;
 	font-family: 'Merriweather', serif;
 	font-weight: bold;
-	margin-right: 10px;
+	margin-right: 5px;
 }
 .landing-page nav a:hover {
-	/* color: rgb(9, 162, 250); */
-	color: rgb(250, 77, 9);
+	color:rgb(213, 94, 73);
 	cursor: pointer;
+	border-bottom: 3px solid rgb(213, 94, 73);
+	
+
 }
-.landing-page footer {
-	padding: 2em;
-	color: white;
-}
-.landing-page-about figure {
-	float: left;
-	margin-top: 13%;
-	margin-left: 10%;
-	margin-bottom: 10%;
-}
-/* .landing-page-about img {
-	height: 29em;
-	width: 25em;
-	border-radius: 3%;
-} */
-.deerbear-img {
-	height: 24em;
-	width: 22em;
-	border-radius: 3%;
-	margin-bottom: 40px;
-	margin-top: -15px;
-}
-.landing-page-about figcaption {
+.landing-page h1 {
+	font-size: 60px;
+	font-weight: bold;
 	color: white;
 	font-family: 'Merriweather', serif;
-	font-size: 20px;
-	/* margin-left: 5vh;
-	margin-right: 25vh; */
+	position: relative;
+	margin-top: 35vh;
+	text-align: center;
+}
+.logo {
+    width: 3.5em;
+    height: 3em;
+	margin-top: 1em;
+	align-self: center;
+	padding-bottom: 5px;
+	border-bottom: 3px solid rgb(213, 94, 73);
 }
 .landing-page-about h2 {
 	color: white;
 	font-family: 'Merriweather', serif;
-	font-size: 4em;
-	margin-top: 0;
-}
-.para-1 {
-	color: tomato;
-	font-size: 40px;
+	font-size: 55px;
+	margin-block-start:0px;
+	margin-block-end:0px;
+	border-right: 3px solid white;
+	border-left: 3px solid white;
+}	
+
+
+.landing-page-about h3 {
+	font-size: 20px;
+	color: rgb(213, 94, 73);
 	font-family: 'Merriweather', serif;
 }
-
 .para-2 {
 	color: white;
-	font-size: 22px;
+	font-size: 15px;
 	font-family: 'Merriweather', serif;
-	padding-top: 3em;
-	padding-right: 10vh;
-	padding-left: 10vh;
-	margin-top: 14vh;
-	line-height: 2em;
+	text-align: justify;
+	padding-bottom: 45px;
+	border-bottom: 3px solid rgb(213, 94, 73);
+
 }
-.about-desc {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+.deerbear-img {
+	text-align: center; 
+	width: 225px;
+
 }
-.map-img {
-	width: 60em;
-	height: 25em;
-	margin-right: 20%;
-	margin-left: 8%;
-	border-radius: 1%;
-	margin-top: -10em;
-	margin-bottom: 2em;
-}
-.map-desc {
-	color: white;
-	margin-right: 20vh;
-}
-.logo {
-	width: 9em;
-	height: 8em;
-	margin-top: 2em;
-	position: relative;
-	/* z-index: 2;
-	display: flex;
-	flex-direction: row;
-	top: 230px;
-	left: 70px; */
-}
-.landing-page h1 {
-	font-size: 6em;
-	font-weight: bold;
-	color: white;
-	font-family: 'Merriweather', serif;
-	position: relative;
-	margin-top: 15vh;
-	text-align: center;
+.landing-page figure {
+	text-align: center; 
 }
 
-@media only screen and (max-width: 760px) {
+.map-img {
+	width: 240px;
+	margin-top: 0px;
+	padding-top: 20px;
+}
+
+.landing-page-about figcaption {
+	color: white;
+	font-family: 'Merriweather', serif;
+	font-size: 15px;
+}
+
+.map-desc {
+	color: white;
+	text-align: justify;
+}
+
+.landing-page footer {
+	background-color:rgb(213, 94, 73);
+	padding: 2em;
+	color: black;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+
+@media only screen and (min-width: 460px) {
+	.map-img {
+		width: 350px;
+	}
+	.deerbear-img {
+		text-align: center; 
+		width: 250px;
+
+	}
+	.landing-page-about h2 {
+		font-size: 60px;
+
+	}
+
+	
+}
+
+@media only screen and (min-width: 720px) {
+	.landing-page-about{
+		padding: 100px;  
+	}
+	.map-img {
+		width: 500px;
+	}
+
+	.deerbear-img {
+		text-align: center; 
+		width: 350px;
+
+	}
+	.landing-page-about h2 {
+		color: white;
+		font-family: 'Merriweather', serif;
+		font-size: 70px;
+		margin-block-start: 0px;
+		margin-block-end: 0px;
+	}
+
 	.logo {
-		width: 120px;
-		z-index: 2;
-		display: flex;
-		flex-direction: row;
-		position: relative;
-		top: 170px;
-		left: 30px;
+		width: 6.5em;
+		height: 6em;
+		margin-top: 1em;
+		align-self: center;
 	}
 	.landing-page h1 {
-		font-size: 90px;
+		font-size: 120px;
 		font-weight: bold;
 		color: white;
 		font-family: 'Merriweather', serif;
 		position: relative;
+		margin-top: 30vh;
+		text-align: center;
+		z-index: 2;
 	}
-	.para-1 {
-		font-size: 22px;
-		color: rgb(199, 162, 41);
+	.map-desc, .para-2 {
+		font-size: 25px;
 	}
-	.para-2 {
-		font-size: 17px;
+	.landing-page-about h3{
+		font-size: 30px;
 	}
-	.about-desc {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-	}
-}
 
-@media only screen and (max-width: 480px) {
-	.header-logo-h1 {
-		display: flex;
-		flex-direction: column;
+	.landing-page-about h2 {
+		font-size: 85px;
+	}
+	.landing-page nav a {
+		font-size: 30px;
+		margin-right: 20px;
 	}
 }
