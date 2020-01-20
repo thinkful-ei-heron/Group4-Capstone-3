@@ -115,8 +115,8 @@ class Dashboard extends React.Component {
                     onClick={() => this.context.toggleExpanded(beerList.id)}
                     className='journal-item-button-small'>
                     <h4>{beerList.name}</h4>
-                    <img className='rating-img-small' src={Utils.getRatingImage(beerList.rating)} alt={'Rating icons'} height={'50px'}></img>
-                    <div className='beer-date-small'> {Utils.formattedDate(beerList.date_created)}</div>
+                    <img className='rating-img' src={Utils.getRatingImage(beerList.rating)} alt={'Rating icons'} height={'50px'}></img>
+                    <div className='beer-date'> {Utils.formattedDate(beerList.date_created)}</div>
                 </button>
             </div>)
         } else if (this.state.selectedOption === 'large-icons') {
@@ -126,7 +126,7 @@ class Dashboard extends React.Component {
             <div className= 'beerList-item' key={i}>
                 <button
                     onClick={() => this.context.toggleExpanded(beerList.id)}
-                    className='journal-item-button'>
+                    className='journal-item-button-large'>
                     <img className='beer-color-img'src={Utils.getImage(beerList.color)} alt='beer-color'></img>
                     <h4>{beerList.name}</h4>
                     <div className='beer-date'> {Utils.formattedDate(beerList.date_created)}</div>
@@ -142,8 +142,8 @@ class Dashboard extends React.Component {
                     onClick={() => this.context.toggleExpanded(beerList.id)}
                     className='journal-item-button-list'>
                     <h4>{beerList.name}</h4>
-                    <div className='beer-date-list'> {Utils.formattedDate(beerList.date_created)}</div>
-                    <img className='rating-img-list' src={Utils.getRatingImage(beerList.rating)} alt={'Rating icons'} height={'50px'}></img>
+                    <img className='rating-img' src={Utils.getRatingImage(beerList.rating)} alt={'Rating icons'} height={'50px'}></img>
+                    <div className='beer-date'> {Utils.formattedDate(beerList.date_created)}</div>
                 </button>
             </div>)
         } else if (this.state.selectedOption === 'details') {
@@ -154,10 +154,14 @@ class Dashboard extends React.Component {
                 <button
                     onClick={() => this.context.toggleExpanded(beerList.id)}
                     className='journal-item-button-details'>
-                    <img className='beer-color-img'src={Utils.getImage(beerList.color)} alt='beer-color'></img>
-                    <h4>{beerList.name}</h4>
-                    <div className='beer-date'> {Utils.formattedDate(beerList.date_created)}</div>
-                    <img className='rating-img' src={Utils.getRatingImage(beerList.rating)} alt={'Rating icons'} height={'50px'}></img>
+                            <img className='beer-color-img'src={Utils.getImage(beerList.color)} alt='beer-color'></img>
+                        <div className='details-column'>
+                            <h4>{beerList.name}</h4>
+                            <div className='beer-date'> {Utils.formattedDate(beerList.date_created)}</div>
+                            <img className='rating-img' src={Utils.getRatingImage(beerList.rating)} alt={'Rating icons'} height={'50px'}></img>
+                            <h5>{beerList.location}</h5>    
+                        </div>
+                    
                 </button>
             </div>)
         }

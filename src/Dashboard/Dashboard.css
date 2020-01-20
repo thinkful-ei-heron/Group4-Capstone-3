@@ -1,7 +1,6 @@
 .hidden {
 	display: none;
 }
-
 .radio-group img {
 	margin: 10px;
 	border-radius: 25%;
@@ -10,50 +9,126 @@
 .inactiveClass {
 	background-color: white;
 }
-
 .activeClass {
 	background-color: rgba(0, 0, 0, 0.418) !important;
-}
-
-.journal-item-button {
-	border: none;
-	border-radius: 5%;
-	margin: 1em;
-	padding: 10px;
-	width: 40vw;
-}
-
-.journal-item-button:hover {
-	cursor: pointer;
-	background-color: rgba(209, 240, 205, 0.884);
 }
 .journal-item-button-small {
 	border: none;
 	border-radius: 5%;
-	margin: 1em;
-	width: 26vw;
-	height: 20vh;
+	margin: 0.3em;
+	width: 30vw;
 }
-
 .journal-item-button-small:hover {
 	cursor: pointer;
 	background-color: rgba(209, 240, 205, 0.884);
+}
+.journal-item-button-small h4 {
+	font-size: medium;
+	margin-top: 2.8vh;
+}
+.journal-item-button-small .rating-img {
+	margin: 0 0 0.4rem 0;
+	height: 1.4rem;
+}
+.journal-item-button-small .beer-date {
+	font-size: 1em;
+	font-family: 'Merriweather', serif;
+	margin-bottom: 1rem;
+	margin-top: 0.4rem;
+}
+.journal-item-button-large {
+	border: none;
+	border-radius: 5%;
+	margin: 0.5em;
+	padding: 10px;
+	width: 44vw;
+}
+.journal-item-button-large:hover {
+	cursor: pointer;
+	background-color: rgba(209, 240, 205, 0.884);
+}
+.journal-item-button-large h4 {
+	font-size: large;
+	margin: 0em auto 0.5em;
+}
+.journal-item-button-large .beer-date {
+	font-size: medium;
+	margin-bottom: 0.5rem;
+}
+.journal-item-button-large .beer-color-img {
+	height: 6em;
+	width: 6em;
+	padding: 1em;
+}
+.journal-item-button-large .rating-img {
+	margin: 0.5rem auto 0.5rem;
+	height: 2rem;
 }
 .journal-item-button-list {
 	border: none;
 	border-radius: 5%;
 	margin: 0.4em;
-	padding: 0px 10px 5px;
-	width: 90vw;
+	width: 94vw;
 	display: flex;
-}
-.journal-item-button-list h4 {
-	font-size: large;
-	margin-left: 10px;
+	min-height: 2.5rem;
 }
 .journal-item-button-list:hover {
 	cursor: pointer;
 	background-color: rgba(209, 240, 205, 0.884);
+}
+.journal-item-button-list .rating-img {
+	margin: auto 1rem auto auto;
+	height: 20px;
+}
+.journal-item-button-list .beer-date {
+	font-family: 'Merriweather', serif;
+	margin:auto 0.4rem auto auto;
+}
+.journal-item-button-list h4 {
+	text-align: left;
+	font-size: large;
+	margin: auto 0.2rem;
+	max-width: 10rem;
+	min-width: 6rem;
+}
+.journal-item-button-details {
+	border: none;
+	border-radius: 5%;
+	margin: 0.4em;
+	width: 94vw;
+	display: flex;
+	flex-direction: row;
+	min-height: 2.5rem;
+}
+.journal-item-button-details:hover {
+	cursor: pointer;
+	background-color: rgba(209, 240, 205, 0.884);
+}
+.journal-item-button-details .beer-color-img {
+	margin: auto 0rem;
+	height: 6rem;
+	width: 6rem;
+	border-right: 1px solid rgba(0, 0, 0, 0.37);
+}
+.journal-item-button-details h4 {
+	font-size: larger;
+	margin: 0.6rem auto;
+}
+.journal-item-button-details .beer-date {
+	flex-direction: column;
+	margin-bottom: 0.6rem;
+}
+.journal-item-button-details .rating-img {
+	margin: auto;
+	height: 2rem;
+}
+.journal-item-button-details h5 {
+	margin: 1rem;
+}
+.details-column {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 }
 .dashboard-page {
 	background: rgba(8, 8, 8, 0.952);
@@ -65,7 +140,6 @@
 	background-position: center; */
 	min-height: 100vh;
 }
-
 /* .dashboard-bottom button {
 	color: white;
 	background-color: black;
@@ -97,19 +171,6 @@
 	width: 8em;
 	padding: 1em;
 }
-.rating-img {
-	margin: 1rem auto;
-	display: block;
-}
-.rating-img-small {
-	margin: 0rem 0 0 0;
-	height: 30px;
-	margin-bottom: 10px;
-}
-.rating-img-list {
-	margin: auto 1vw auto auto;
-	height: 20px;
-}
 .sort-select {
 	margin-top: 4em;
 	height: 3em;
@@ -120,22 +181,8 @@
 .sort-select:hover {
 	border: rgb(9, 48, 9);
 }
-.journal-item-button h4 {
-	font-size: 2em;
-	font-family: 'Merriweather', serif;
-}
 .beer-date {
-	font-size: 1.5em;
 	font-family: 'Merriweather', serif;
-}
-.beer-date-small {
-	font-size: 1em;
-	font-family: 'Merriweather', serif;
-}
-.beer-date-list {
-	font-size: 1em;
-	font-family: 'Merriweather', serif;
-	margin:auto 1vw auto auto;
 }
 .search-bar {
 	margin: 1em;
