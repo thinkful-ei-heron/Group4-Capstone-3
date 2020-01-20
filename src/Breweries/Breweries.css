@@ -1,9 +1,13 @@
 .breweries-list {
-	width: 30%;
+	width: 90vw;
 	height: 75vh;
+	display: block;
 	overflow-y: scroll;
 	background-color: white;
 	z-index: 1;
+	position: absolute;
+	top: 130%;
+	left: 4vw;
 }
 .breweries-list-active h4 {
 	color: rgb(122, 194, 125);
@@ -16,14 +20,31 @@
 }
 .breweries-page {
 	background-image: url('../images/wall6.jpg');
+	height: 210vh;
 }
 .breweries-page form {
 	margin: 1em;
 	color: white;
 	font-family: 'Merriweather', serif;
 }
+.breweries-page form > label > input {
+	width: 6rem;
+}
+@media (min-width: 480px){
 
+}
+@media (min-width: 767px) {
+	.breweries-list {
+		width: 30%;
+		position: relative;
+		top: unset;
+		left: unset;
+	}.breweries-page {
+		 height: 105vh;
+	 }
+}
 @media only screen and (max-width: 570px) {
+
 	.breweries-page input:checked ~ a {
 		margin-bottom: 0;
 	}

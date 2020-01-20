@@ -9,7 +9,8 @@ import LargeIcon from '../assets/radio/large-icon.png'
 import ListIcon from '../assets/radio/list-icon.png'
 import SmallIcon from '../assets/radio/small-icon.png'
 import './Dashboard.css'
-
+import SortDropdown from './SortDropdown/SortDropdown';
+import TypeDropdown from './TypeDropdown/TypeDropdown';
 class Dashboard extends React.Component {
 
     static contextType = UserContext;
@@ -27,48 +28,9 @@ class Dashboard extends React.Component {
         this.handleSearch = this.handleSearch.bind(this)
     }
 
-    sortSelect = event => {
-        const sortMethod = event.target
-        if(sortMethod.value === 'Youngest') {
-            this.setState({
-              beerList: this.state.beerList.sort((a, b) => new Date(a.date_created) - new Date(b.date_created))  
-            })
-        } else if(sortMethod.value === 'Oldest') {
-            this.setState({
-               beerList: this.state.beerList.sort((a, b) => new Date(b.date_created) - new Date(a.date_created)) 
-            })
-        } else if (sortMethod.value === 'Rating ASC') {
-            this.setState({
-                beerList: this.state.beerList.sort((a, b) => a.rating - b.rating)
-            })
-        } else if (sortMethod.value === 'Rating DESC') {
-            this.setState({
-                beerList: this.state.beerList.sort((a, b) => b.rating - a.rating)
-            })
-        } else if (sortMethod.value === 'Heaviness ASC') {
-            this.setState({
-                beerList: this.state.beerList.sort((a, b) => a.heaviness - b.heaviness)
-            })
-        } else if (sortMethod.value === 'Heaviness DESC') {
-            this.setState({
-                beerList: this.state.beerList.sort((a, b) => b.heaviness - a.heaviness)
-            })
-        }
-    }
-    // Filters by type of beer
-    filterType = event => {
-        const filter = event.target;
-        if(filter.value) {
-            if(filter.value === 'None') {
-                this.setState({beerList: this.context.beerList});
-            } else {
-            this.setState({
-                beerList: this.context.beerList.filter(obj => 
-                    {return obj.type===filter.value})
-            })
-        }
-        }
-    }
+    sortBeerList = (beerList) => {
+        this.setState({beerList})
+    };
     // Name
     handleSearch = event => {
         let currentList = [];
@@ -199,62 +161,10 @@ class Dashboard extends React.Component {
                             <label htmlFor="details"><img src={DetailsIcon} alt='detailed view' height='20px' width='20px' id='details-img' className='inactiveClass'/></label>
 
                         </span>
-                            {(this.context.beerList.length !== 0 ) ? 
-                            <select className='sort-select'
-                                onChange={this.sortSelect}>
-                                <option value='none'>Sort By</option>
-                                <option value='Youngest'>Youngest</option>
-                                <option value='Oldest'>Oldest</option>
-                                <option value='Rating ASC'>Rating ASC</option>
-                                <option value='Rating DESC'>Rating DESC</option>
-                                <option value='Heaviness ASC'>Heaviness ASC</option>
-                                <option value='Heaviness DESC'>Heaviness DESC</option>
-                            </select> : ''}
                             {(this.context.beerList.length !== 0) ?
-                            <select className='type-select' onChange={this.filterType}>
-                                <option value='None'>Search beer type</option>
-                                <option value='Ale'>Ale</option>
-                                <option value='Altbier'>Altbier</option>
-                                <option value='American Lager'>American Lager</option>
-                                <option value='Barley Wine'>Barley Wine</option>
-                                <option value='Belgian'>Belgian</option>
-                                <option value='Berliner Weisse'>Berliner Weisse</option>
-                                <option value='Bitter'>Bitter</option>
-                                <option value='Bock'>Bock</option>
-                                <option value='Brown Ale'>Brown Ale</option>
-                                <option value='Cider'>Cider</option>
-                                <option value='Cream Ale'>Cream Ale</option>
-                                <option value='Doppelbock'>Doppelbock</option>
-                                <option value='Dunkel'>Dunkel</option>
-                                <option value='Flanders Red Ale'>Flanders Red Ale</option>
-                                <option value='German Pilser'>German Pilser</option>
-                                <option value='Gose'>Gose</option>
-                                <option value='Helles'>Helles</option>
-                                <option value='Helles Bock'>Helles Bock</option>
-                                <option value='Honey'>Honey</option>
-                                <option value='Imperial IPA'>Imperial IPA</option>
-                                <option value='IPA'>IPA</option>
-                                <option value='Irish Red Ale'>Irish Red Ale</option>
-                                <option value='Kolsch'>Kolsch</option>
-                                <option value='Lager'>Lager</option>
-                                <option value='Lambic'>Lambic</option>
-                                <option value='Mild ale'>Mild ale</option>
-                                <option value='Old Ale'>Old Ale</option>
-                                <option value='Pale Ale'>Pale Ale</option>
-                                <option value='Pale Lager'>Pale Lager</option>
-                                <option value='Pilsner'>Pilsner</option>
-                                <option value='Porter'>Porter</option>
-                                <option value='Quadrupel'>Quadrupel</option>
-                                <option value='Rye'>Rye</option>
-                                <option value='Saison'>Saison</option>
-                                <option value='Schwarzbier'>Schwarzbier</option>
-                                <option value='Scotch Ale'>Scotch Ale</option>
-                                <option value='Seasonal Beer'>Seasonal Beer</option>
-                                <option value='Stout'>Stout</option>
-                                <option value='Vienna lager'>Vienna lager</option>
-                                <option value='Wittbier'>Wittbier</option>
-                                <option value='Other'>Other</option>
-                            </select> : ''}
+                                <SortDropdown beerList={this.state.beerList} sortBeerList={this.sortBeerList}/> : ''}
+                            {(this.context.beerList.length !== 0) ?
+                                <TypeDropdown beerList={this.state.beerList} sortBeerList={this.sortBeerList}/> : ''}
                             <input className='search-bar' type='text' placeholder='Search by name...' onChange={this.handleSearch}/>
                             <br></br>
                             {(this.context.beerList.length === 0 ) ?  <h2>ADD SOME BEERS YOU FILTHY ANIMAL</h2> : ''}

@@ -8,7 +8,7 @@ const JournalContext = React.createContext({
   rating: 0,
   abv: 0,
   heaviness: 0,
-  color: 0,
+  color: 1,
   image: 0,
   setName: ()=>{},
   setLoc: ()=> {},
@@ -35,7 +35,7 @@ export class JournalProvider extends Component {
       rating: 0,
       apv: 0,
       heaviness: 0,
-      color: 0,
+      color: 1,
       image: 0
     };
   }
@@ -61,7 +61,7 @@ export class JournalProvider extends Component {
       rating: 0,
       abv: 0,
       heaviness: 0,
-      color: 0,
+      color: 1,
       image: 0
     })
   };
