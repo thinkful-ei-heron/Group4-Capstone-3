@@ -226,39 +226,6 @@
 	border: rgb(9, 48, 9);
 }
 
-<<<<<<< HEAD
-@media only screen and (max-width: 760px) {
-	.dashboard-page nav button {
-		float: right;
-		color: white;
-		font-family: 'Merriweather', serif;
-		font-size: 20px;
-		border: none;
-		height: .3em;
-	}
-	.dashboard-page nav a {
-		font-size: 20px;
-	}
-}
-@media only screen and (max-width: 488px) {
-	.beerList-item{
-		border: none;
-		border-radius: 5%;
-		margin: 3em;
-		padding: 10px 10px 30px 10px;
-		width: 35vh;
-		height: 45vh;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-	}
-	
-	
-	.sort-select {
-		margin-left: 146px;
-	}
-=======
 @media only screen and (min-width: 760px) {
 	.journal-item-button-small {
 		margin: 0.6rem;
@@ -370,7 +337,6 @@
 
 
 @media only screen and (max-width: 570px) {
->>>>>>> c2fb904f75e0f8d5bc44a3e01b5a83be07187b46
 
 	.dashboard-page input:checked ~ a{
 

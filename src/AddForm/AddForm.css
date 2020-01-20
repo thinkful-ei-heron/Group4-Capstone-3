@@ -14,13 +14,8 @@
 .add-form-page form {
 	background-image: url("../images/wall6.jpg");
 	background-repeat: repeat;
-<<<<<<< HEAD
-	background-size: ;
 	margin-right: 0em;
-=======
-	margin-right: 0;
 	padding: 1px;
->>>>>>> c2fb904f75e0f8d5bc44a3e01b5a83be07187b46
 }
 .add-form-page section.header-component {
 	margin: 0;
@@ -51,13 +46,9 @@
 	color: white;
 	font-size: 25px;
 }
-<<<<<<< HEAD
 
-.add-form-page input,textarea {
-=======
-.add-form-page input,
+
 textarea {
->>>>>>> c2fb904f75e0f8d5bc44a3e01b5a83be07187b46
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -174,10 +165,8 @@ textarea {
 	position: relative;
 	top: 20px;
 }
-@media (min-width: 480px){
 
-<<<<<<< HEAD
-/*  */
+
 @media only screen and (max-width: 760px) {
 	.add-form-page nav button {
 		float: right;
@@ -201,7 +190,6 @@ textarea {
 		border: none;
 		height: 1.3em;
 	}
-=======
 }
 @media (min-width: 767px) {
 	.form-section {
@@ -216,7 +204,6 @@ textarea {
 	}
 }
 @media only screen and (max-width: 570px) {
->>>>>>> c2fb904f75e0f8d5bc44a3e01b5a83be07187b46
 	.form-section {
 		padding: 10px;
 		/*display: flex;*/
