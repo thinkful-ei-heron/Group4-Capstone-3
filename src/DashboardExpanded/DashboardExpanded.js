@@ -23,7 +23,6 @@ class DashboardExpanded extends React.Component {
 			color: 0
 		};
 	}
-
 	componentDidUpdate(prevProps, prevState, snapshot) {
 		if (prevProps !== this.props) {
 			this.setState({
@@ -40,7 +39,6 @@ class DashboardExpanded extends React.Component {
 			this.forceUpdate();
 		}
 	}
-
 	handleName = (e) => {
 		this.setState({ name: e.target.value });
 	};
