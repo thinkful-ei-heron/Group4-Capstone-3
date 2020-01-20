@@ -76,10 +76,10 @@
 	cursor: pointer;
 	background-color: rgba(209, 240, 205, 0.884);
 }
-.journal-item-button-list .rating-img {
+/* .journal-item-button-list .rating-img {
 	margin: auto 1rem auto auto;
 	height: 20px;
-}
+} */
 .journal-item-button-list .beer-date {
 	font-family: 'Merriweather', serif;
 	margin:auto 0.4rem auto auto;
@@ -198,6 +198,74 @@
 }
 .type-select:hover {
 	border: rgb(9, 48, 9);
+}
+
+@media only screen and (min-width: 760px) {
+	.journal-item-button-small {
+		margin: 0.6rem;
+	}
+	.journal-item-button-small h4 {
+		font-size: x-large;
+		margin: 2rem 1rem;
+	}
+	.journal-item-button-small .rating-img {
+		height: 2.6rem;
+	}
+	.journal-item-button-small .beer-date {
+		margin-bottom: 1.4rem;
+	}
+	.journal-item-button-large {
+		margin: 1rem;
+	}
+	.journal-item-button-large h4 {
+		font-size: x-large;
+		margin: 0.6rem 1rem;
+	}
+	.journal-item-button-large .beer-color-img {
+		height: 8rem;
+		width: 8rem;
+	}
+	.journal-item-button-large .beer-date {
+		margin-top: 1rem;
+	}
+	.journal-item-button-large .rating-img {
+		height: 4rem;
+		margin: 1rem;
+	}
+	.journal-item-button-list {
+		margin: 0.6rem auto;
+	}
+	.journal-item-button-list h4 {
+		font-size: x-large;
+		margin: 1rem;
+	}
+	/* .journal-item-button-list .rating-img {
+		height: 2.8rem;
+	} */
+	.journal-item-button-list .beer-date {
+		font-size: large;
+		margin: auto 1.6rem auto auto;
+	}
+	.journal-item-button-details {
+		margin: 0.6rem;
+	}
+	.journal-item-button-details h4 {
+		font-size: xx-large;
+	}
+	.journal-item-button-details .rating-img {
+		height: 4rem;
+	}
+	.journal-item-button-details .beer-date {
+		font-size: large;
+	}
+	.journal-item-button-details h5 {
+		font-size: large;
+	}
+	.journal-item-button-details .beer-color-img {
+		height: 10rem;
+		width: 10rem;
+		margin: 0.6rem;
+	}
 }
 
 
