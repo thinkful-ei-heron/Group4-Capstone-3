@@ -1,0 +1,13 @@
+.key-component {
+	display: block;
+	position: absolute;
+	bottom: 16px;
+	background-color: #ffffffcc;
+	left: 24.25%;
+	border-radius: 0 10px 10px 0;
+	color: #00000077;
+	padding: 1em;
+}
+.key-component p {
+	margin: 0;
+}

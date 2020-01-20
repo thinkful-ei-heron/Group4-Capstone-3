@@ -3,8 +3,8 @@ import BarIcon from '../../assets/markers/bar-marker.png';
 
 export default class BarMarker extends Component {
     render() {
-        const K_WIDTH = 20;
-        const K_HEIGHT = 50;
+        const K_WIDTH = 30;
+        const K_HEIGHT = 30;
         const greatPlaceStyle = {
             // initially any map object has left top corner at lat lng coordinates
             // it's on you to set object origin to 0,0 coordinates
@@ -19,7 +19,7 @@ export default class BarMarker extends Component {
             padding: 4
         };
         return (
-            <img src={BarIcon} style={greatPlaceStyle} alt={'Bar Marker'}/>
+            <img onClick={()=> this.props.updateSelected(this.props.id)} src={BarIcon} style={greatPlaceStyle} alt={'Bar Marker'}/>
         );
     }
 }

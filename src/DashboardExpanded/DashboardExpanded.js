@@ -1,6 +1,7 @@
 import React from 'react';
 import UserContext from '../contexts/UserContext';
 import Utils from '../Utils/Utils';
+import ReactTooltip from 'react-tooltip';
 import './DashboardExpanded.css';
 
 class DashboardExpanded extends React.Component {
@@ -83,7 +84,7 @@ class DashboardExpanded extends React.Component {
 
 	render() {
 		let x = this.state.isEditable ? (
-			<form
+			<form className ='edit-beer-form'
 				onSubmit={() =>
 					this.props.handleSubmit(this.props.journal.id, {
 						id: this.props.journal.id,
@@ -96,83 +97,111 @@ class DashboardExpanded extends React.Component {
 						abv: parseFloat(this.state.abv),
 						heaviness: parseInt(this.state.heaviness),
 						color: parseInt(this.state.color)
-					})}
-			>
-				<figure>
-					<img src={Utils.getImage(parseInt(this.state.color))} alt={'Beer'} width={'150px'} />
-					<figcaption>
-						ABV: <input type="number" value={this.state.abv} onChange={this.handleAbv} /> %
-					</figcaption>
-				</figure>
-				<section>
-					<label>
-						Name: <input type="text" value={this.state.name} onChange={this.handleName} />
-					</label>
-					<label>
-						Type: 
-						<select value={this.state.type} onChange={this.handleType}>
-							<option value='Ale'>Ale</option>
-							<option value='Altbier'>Altbier</option>
-							<option value='American Lager'>American Lager</option>
-							<option value='Barley Wine'>Barley Wine</option>
-							<option value='Belgian'>Belgian</option>
-							<option value='Berliner Weisse'>Berliner Weisse</option>
-							<option value='Bitter'>Bitter</option>
-							<option value='Bock'>Bock</option>
-							<option value='Brown Ale'>Brown Ale</option>
-							<option value='Cider'>Cider</option>
-							<option value='Cream Ale'>Cream Ale</option>
-							<option value='Doppelbock'>Doppelbock</option>
-							<option value='Dunkel'>Dunkel</option>
-							<option value='Flanders Red Ale'>Flanders Red Ale</option>
-							<option value='German Pilser'>German Pilser</option>
-							<option value='Gose'>Gose</option>
-							<option value='Helles'>Helles</option>
-							<option value='Helles Bock'>Helles Bock</option>
-							<option value='Honey'>Honey</option>
-							<option value='Imperial IPA'>Imperial IPA</option>
-							<option value='IPA'>IPA</option>
-							<option value='Irish Red Ale'>Irish Red Ale</option>
-							<option value='Kolsch'>Kolsch</option>
-							<option value='Lager'>Lager</option>
-							<option value='Lambic'>Lambic</option>
-							<option value='Mild ale'>Mild ale</option>
-							<option value='Old Ale'>Old Ale</option>
-							<option value='Pale Ale'>Pale Ale</option>
-							<option value='Pale Lager'>Pale Lager</option>
-							<option value='Pilsner'>Pilsner</option>
-							<option value='Porter'>Porter</option>
-							<option value='Quadrupel'>Quadrupel</option>
-							<option value='Rye'>Rye</option>
-							<option value='Saison'>Saison</option>
-							<option value='Schwarzbier'>Schwarzbier</option>
-							<option value='Scotch Ale'>Scotch Ale</option>
-							<option value='Seasonal Beer'>Seasonal Beer</option>
-							<option value='Stout'>Stout</option>
-							<option value='Vienna lager'>Vienna lager</option>
-							<option value='Wittbier'>Wittbier</option>
-							<option value='Other'>Other</option>
-						</select>
-					</label>
-					<label>
-						Date: <input type="date" value={this.state.date_created} onChange={this.handleDate} />
-					</label>
-					<label>
-						Location: <input type="text" value={this.state.location} onChange={this.handleLoc} />
-					</label>
+					})}>
+				<section className='form-section'>
+					<fieldset>
+						<legend>Beer Information</legend>
+						<figure>
+							<img src={Utils.getImage(parseInt(this.state.color))} alt={'Beer'} width={'150px'} />
+						</figure>
+						<div>
+							<label>
+								Date: <input type="date" value={this.state.date_created} onChange={this.handleDate} />
+							</label>
+						</div>
+						<div>
+							<label>
+								Location: <input type="text" value={this.state.location} onChange={this.handleLoc} />
+							</label>
+						</div>
+						<div>
+							<label>
+									Name: <input type="text" value={this.state.name} onChange={this.handleName} />
+							</label>
+						</div>
+						<div>
+						<label>
+								Type: 
+								<select value={this.state.type} onChange={this.handleType}>
+									<option value='Ale'>Ale</option>
+									<option value='Altbier'>Altbier</option>
+									<option value='American Lager'>American Lager</option>
+									<option value='Barley Wine'>Barley Wine</option>
+									<option value='Belgian'>Belgian</option>
+									<option value='Berliner Weisse'>Berliner Weisse</option>
+									<option value='Bitter'>Bitter</option>
+									<option value='Bock'>Bock</option>
+									<option value='Brown Ale'>Brown Ale</option>
+									<option value='Cider'>Cider</option>
+									<option value='Cream Ale'>Cream Ale</option>
+									<option value='Doppelbock'>Doppelbock</option>
+									<option value='Dunkel'>Dunkel</option>
+									<option value='Flanders Red Ale'>Flanders Red Ale</option>
+									<option value='German Pilser'>German Pilser</option>
+									<option value='Gose'>Gose</option>
+									<option value='Helles'>Helles</option>
+									<option value='Helles Bock'>Helles Bock</option>
+									<option value='Honey'>Honey</option>
+									<option value='Imperial IPA'>Imperial IPA</option>
+									<option value='IPA'>IPA</option>
+									<option value='Irish Red Ale'>Irish Red Ale</option>
+									<option value='Kolsch'>Kolsch</option>
+									<option value='Lager'>Lager</option>
+									<option value='Lambic'>Lambic</option>
+									<option value='Mild ale'>Mild ale</option>
+									<option value='Old Ale'>Old Ale</option>
+									<option value='Pale Ale'>Pale Ale</option>
+									<option value='Pale Lager'>Pale Lager</option>
+									<option value='Pilsner'>Pilsner</option>
+									<option value='Porter'>Porter</option>
+									<option value='Quadrupel'>Quadrupel</option>
+									<option value='Rye'>Rye</option>
+									<option value='Saison'>Saison</option>
+									<option value='Schwarzbier'>Schwarzbier</option>
+									<option value='Scotch Ale'>Scotch Ale</option>
+									<option value='Seasonal Beer'>Seasonal Beer</option>
+									<option value='Stout'>Stout</option>
+									<option value='Vienna lager'>Vienna lager</option>
+									<option value='Wittbier'>Wittbier</option>
+									<option value='Other'>Other</option>
+								</select>
+							</label>
+						</div>
+						<div>
+							<label data-tip='Alcohol By Volume'>
+							<ReactTooltip place="top" type="dark" effect="solid"/>
+								ABV: <input type="number" value={this.state.abv} onChange={this.handleAbv} /> %
+							</label>
+						</div>
+						<div>
+							<h3 data-tip='Color of beer'>Dark to Light</h3>
+							<input type="range" min="1" max="6" value={this.state.color} onChange={this.handleColor} />
+						</div>
+						<div>
+							<h3 data-tip='Strength of alcohol'>Heavy to Light</h3>
+							<input type="range" min="1" max="5" value={this.state.heaviness} onChange={this.handleHeaviness} />
+						</div>
+					</fieldset>
+					<fieldset className='lastfield'>
+						<legend>What I think about this beer!</legend>
+						<div>
+							<figure>
+								<figcaption>Rating</figcaption>
+								<img className='edit-rating-img' src={Utils.getRatingImage(parseInt(this.state.rating))} alt={'Rating icons'} height={'50px'} />
+								<input type="range" min="0" max="9" value={this.state.rating} onChange={this.handleRating} />
+							</figure>
+						</div>
+						<div>
+							<label>
+								Description <textarea value={this.state.description} onChange={this.handleDesc} />
+							</label>
+						</div>
+						<div className="edit-buttons">
+							<button className="clear-submit-back-btn" onClick={this.toggleIsEditable}>Cancel</button>
+							<button className="clear-submit-back-btn"type={'submit'}>Submit</button>
+						</div>
+					</fieldset>
 				</section>
-				<figure>
-					<figcaption>Rating</figcaption>
-					<img className='edit-rating-img' src={Utils.getRatingImage(parseInt(this.state.rating))} alt={'Rating icons'} height={'50px'} />
-					<input type="range" min="0" max="9" value={this.state.rating} onChange={this.handleRating} />
-				</figure>
-				<textarea value={this.state.description} onChange={this.handleDesc} />
-				<h3>Dark to Light</h3>
-				<input type="range" min="1" max="6" value={this.state.color} onChange={this.handleColor} />
-				<h3>Heavy to Light</h3>
-				<input type="range" min="1" max="5" value={this.state.heaviness} onChange={this.handleHeaviness} />
-				<button onClick={this.toggleIsEditable}>Cancel</button>
-				<button type={'submit'}>Submit</button>
 			</form>
 		) : (
             <>

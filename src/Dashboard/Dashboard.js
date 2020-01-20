@@ -59,10 +59,14 @@ class Dashboard extends React.Component {
     filterType = event => {
         const filter = event.target;
         if(filter.value) {
+            if(filter.value === 'None') {
+                this.setState({beerList: this.context.beerList});
+            } else {
             this.setState({
                 beerList: this.context.beerList.filter(obj => 
                     {return obj.type===filter.value})
             })
+        }
         }
     }
     // Name
@@ -191,7 +195,7 @@ class Dashboard extends React.Component {
                             <label htmlFor="details"><img src={DetailsIcon} alt='detailed view' height='20px' width='20px' id='details-img' className='inactiveClass'/></label>
 
                         </span>
-                            {(this.state.beerList.length !== 0 ) ? 
+                            {(this.context.beerList.length !== 0 ) ? 
                             <select className='sort-select'
                                 onChange={this.sortSelect}>
                                 <option value='none'>Sort By</option>
@@ -203,7 +207,8 @@ class Dashboard extends React.Component {
                                 <option value='Heaviness DESC'>Heaviness DESC</option>
                             </select> : ''}
                             {(this.context.beerList.length !== 0) ?
-                            <select onChange={this.filterType}>
+                            <select className='type-select' onChange={this.filterType}>
+                                <option value='None'>Search beer type</option>
                                 <option value='Ale'>Ale</option>
                                 <option value='Altbier'>Altbier</option>
                                 <option value='American Lager'>American Lager</option>
@@ -246,7 +251,7 @@ class Dashboard extends React.Component {
                                 <option value='Wittbier'>Wittbier</option>
                                 <option value='Other'>Other</option>
                             </select> : ''}
-                            <input type='text' placeholder='Search by name...' onChange={this.handleSearch}/>
+                            <input className='search-bar' type='text' placeholder='Search by name...' onChange={this.handleSearch}/>
                             <br></br>
                             {(this.context.beerList.length === 0 ) ?  <h2>ADD SOME BEERS YOU FILTHY ANIMAL</h2> : ''}
                             {this.renderBeerList()}

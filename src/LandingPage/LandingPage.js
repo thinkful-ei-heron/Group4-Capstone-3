@@ -22,17 +22,28 @@ class LandingPage extends React.Component {
 						<Link to={'/login'}>Login</Link>
 						<Link to={'/register'}>Register</Link>
 					</nav>
-					<div className="header-logo">
-						<img className="logo" src={logo} alt="logo" />
+					<div className="header-logo-h1">
 						<h1>DearBeer</h1>
 					</div>
 				</ParallaxBanner>
 
 				<section className={'landing-page-about'}>
-					<div>
-						<h2>About</h2>
-						<p>A place to save your favorite beers.</p>
-						<p>
+					<img className="logo" src={logo} alt="logo" />
+					<h2>About</h2>
+					<p className="para-1">A place to save your favorite beers.</p>
+
+					<div className="about-desc">
+						<figure>
+							<img
+								className="deerbear-img"
+								src={require('../assets/img/deerbear.png')}
+								alt={'The Deer Bear'}
+								width={'150px'}
+							/>
+							<figcaption>Henri le Biere</figcaption>
+						</figure>
+
+						<p className="para-2">
 							With the popularity of craft breweries increasing, sometimes it’s hard to remember what you
 							drank, where you drank it, and most importantly, if you liked it. DearBeer is here to help.
 							It allows users to save any beer they want by adding name, location, type, color, ABV,
@@ -42,9 +53,19 @@ class LandingPage extends React.Component {
 							Cheers, and if your cup is full may it be again.
 						</p>
 					</div>
+
 					<figure>
-						<img src={require('../assets/img/deerbear.png')} alt={'The Deer Bear'} width={'150px'} />
-						<figcaption>Henri le Biere</figcaption>
+						<img
+							className="map-img"
+							src={require('../assets/img/map.png')}
+							alt={'map of brews'}
+							width={'150px'}
+						/>
+						<p className="map-desc">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+							labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+							laboris nisi ut aliquip ex ea commodo consequat.
+						</p>
 					</figure>
 				</section>
 

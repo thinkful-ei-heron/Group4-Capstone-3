@@ -41,7 +41,8 @@ export class JournalProvider extends Component {
   }
   setDate = date_created => {this.setState({ date_created })};
   setName = name => {this.setState({ name })};
-  setLoc = location => {this.setState({ location })};
+  setLoc = location => {
+    this.setState({ location })};
   setDesc = description => {this.setState({ description })};
   setType = type => {this.setState({ type })};
   setRating = rating => {this.setState({ rating })};

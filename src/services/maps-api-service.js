@@ -2,14 +2,14 @@ import config from '../config'
 import TokenService from "./token-service";
 
 const MapsApiService = {
-    getArea(zipcode) {
+    getArea(obj) {
         return fetch(`${config.API_ENDPOINT}/maps`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
                 'authorization': `bearer ${TokenService.getAuthToken()}`,
             },
-            body: JSON.stringify({zipcode})
+            body: JSON.stringify(obj)
         })
             .then(res =>
                 (!res.ok)

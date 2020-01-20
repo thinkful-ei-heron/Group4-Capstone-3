@@ -1,11 +1,18 @@
-.add-form-page form {
-	background-image: url("../images/wall3.jpeg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	margin-right: 0em;
-	padding: 0px;
+.add-form-page h2 {
+	color: black;
 }
+.add-form-page nav input {
+	display: none;
+}
+
+.add-form-page form {
+	background-image: url("../images/wall6.jpg");
+	background-repeat: repeat;
+	background-size: ;
+	margin-right: 0em;
+	padding: 49px;
+}
+
 .dashboard-top {
 	background-image: url('../assets/img/hops5.jpg');
 	background-size: cover;
@@ -13,19 +20,12 @@
 	background-repeat: no-repeat;
 }
 
-.add-form-page nav a {
-	margin: 1em;
-	color: white;
-	font-size: 1.5em;
-	text-decoration: none;
-	font-family: 'Merriweather', serif;
-}
-.add-form-page nav a:hover {
-	color: green;
+.add-form-page section.header-component {
+	margin: 0px;
 }
 
 .add-form-page nav {
-	background-color: rgba(8, 8, 8, 0.774);
+	background-color: rgba(8, 8, 8);
 	height: 2.3em;
 	text-align: left;
 }
@@ -34,7 +34,6 @@
 }
 .add-form-page nav button {
 	float: right;
-	background-color: rgba(8, 8, 8, 0.041);
 	color: white;
 	font-family: 'Merriweather', serif;
 	font-size: 1.5em;
@@ -64,7 +63,7 @@ textarea {
 	-webkit-box-shadow: inset 1px 1px 4px rgb(110, 107, 108);
 	background: rgb(178, 220, 183);
 }
-.clear-submit-btn {
+.clear-submit-back-btn {
 	background: rgb(63, 62, 63);
 	border: 1px solid rgb(27, 10, 18);
 	padding: 5px 15px 5px 15px;
@@ -89,21 +88,22 @@ textarea {
 	box-shadow: inset 0px 0px 15px rgb(243, 230, 230);
 	-moz-box-shadow: inset 0px 0px 15px rgb(236, 217, 217);
 	-webkit-box-shadow: inset 0px 0px 15px rgb(215, 209, 209);
-	background-color: rgba(226, 240, 227, 0.653);
+	background-color: rgba(255, 255, 255, 0.66);
+	z-index: 1;
 }
 .unstyled::-webkit-inner-spin-button {
-    display: none;
-    -webkit-appearance: none;
+	display: none;
+	-webkit-appearance: none;
 }
 
 .add-form-page textarea {
-	width: 100%;
+	width: 90%;
 	height: 100px;
 }
 .form-section {
 	padding: 10px;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 }
 
@@ -115,7 +115,6 @@ textarea {
 	margin: 0px 0px 20px 15px;
 }
 
-#beer-entry-type,
 #beer-entry-abv,
 #beer-entry-location,
 #beer-entry-name,
@@ -125,6 +124,15 @@ textarea {
 	font-weight: bold;
 	font-size: 13px;
 	text-shadow: 1px 1px 1px #fff;
+}
+
+#beer-entry-type {
+	width: 90%;
+	background: rgb(63, 62, 63);
+	border: 1px solid rgb(27, 10, 18);
+	padding: 5px 15px 5px 15px;
+	color: rgb(122, 194, 125);
+	font-size: 15px;
 }
 
 .add-form-page legend {
@@ -159,11 +167,127 @@ textarea {
 	top: 20px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 570px) {
 	.form-section {
 		padding: 10px;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: center;
+	}
+	.add-form-page input:checked ~ a {
+		margin-bottom: 0px;
+	}
+
+	.add-form-page nav {
+		background-color: transparent;
+	}
+	.add-form-page .header-component a {
+		font: 10px;
+		margin: 0px;
+	}
+	.add-form-page nav input {
+		display: inline-block;
+		width: 60px;
+		height: 50px;
+		position: absolute;
+		top: 123px;
+		left: 2px;
+		cursor: pointer;
+		opacity: 0;
+		-webkit-touch-callout: none;
+	}
+	.add-form-page nav span {
+		display: block;
+		width: 33px;
+		height: 4px;
+		margin-bottom: 5px;
+		position: relative;
+		background: white;
+		border-radius: 3px;
+		z-index: 1;
+		transform-origin: 4px 0px;
+		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+			background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+	}
+
+	.add-form-page a {
+		padding-top: 0px;
+		margin-left: 0px;
+		display: block;
+	}
+	.add-form-page nav span:first-child {
+		transform-origin: 0% 0%;
+	}
+
+	.add-form-page nav input:checked ~ .child-2 {
+		position: relative;
+		top: 15px;
+		transform-origin: 0% 100%;
+		transform: rotate(-20deg) translate(2px, -1px);
+	}
+
+	.add-form-page a.active {
+		border-bottom: none;
+	}
+
+	.add-form-page input:checked ~ span {
+		opacity: 1;
+		transform: rotate(45deg) translate(-2px, -1px);
+		background: white;
+	}
+
+	.add-form-page nav input:checked ~ .child-3 {
+		opacity: 0;
+		transform: rotate(0deg) scale(0.2, 0.2);
+	}
+
+	.add-form-page nav input:checked ~ .child-1 {
+		transform: rotate(20deg) translate(0, -1px);
+		position: relative;
+		top: 15px;
+	}
+
+	.add-form-page nav a,
+	a.active {
+		color: black;
+		font-weight: bold;
+		margin-left: 0px;
+		list-style-type: none;
+		-webkit-font-smoothing: antialiased;
+		transform-origin: 0% 0%;
+		transform: translate(-100%, 0);
+		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+		width: 200px;
+	}
+
+	.add-form-page nav input:checked ~ a {
+		transform: none;
+		display: flex;
+		position: relative;
+		top: 12px;
+		left: -7px;
+		margin-right: 10px;
+		background-color: rgba(226, 240, 227, 0.653);
+		border: 1px solid rgba(60, 131, 64, 0.858);
+		border-radius: 5px;
+		font-size: 15px;
+		margin-left: 12px;
+		padding: 3px;
+	}
+	.add-form-page .header-component nav button {
+		color: white;
+		display: block;
+		float: right;
+		position: relative;
+		top: -111px;
+		right: 148px;
+		font-weight: bold;
+		font-size: 20px;
+	}
+
+	.add-form-page nav {
+		background-color: rgba(8, 8, 8, 0.774);
+		height: 2.3em;
+		text-align: left;
 	}
 }
