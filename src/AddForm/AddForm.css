@@ -1,3 +1,9 @@
+.dashboard-top {
+	background-image: url('../assets/img/hops5.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
 .add-form-page h2 {
 	color: black;
 }
@@ -8,19 +14,16 @@
 .add-form-page form {
 	background-image: url("../images/wall6.jpg");
 	background-repeat: repeat;
+<<<<<<< HEAD
 	background-size: ;
 	margin-right: 0em;
+=======
+	margin-right: 0;
+	padding: 1px;
+>>>>>>> c2fb904f75e0f8d5bc44a3e01b5a83be07187b46
 }
-
-.dashboard-top {
-	background-image: url('../assets/img/hops5.jpg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
 .add-form-page section.header-component {
-	margin: 0px;
+	margin: 0;
 }
 
 .add-form-page nav {
@@ -48,8 +51,13 @@
 	color: white;
 	font-size: 25px;
 }
+<<<<<<< HEAD
 
 .add-form-page input,textarea {
+=======
+.add-form-page input,
+textarea {
+>>>>>>> c2fb904f75e0f8d5bc44a3e01b5a83be07187b46
 	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -71,7 +79,6 @@
 	-moz-box-shadow: inset -1px -1px 3px rgb(100, 96, 98);
 	-webkit-box-shadow: inset -1px -1px 3px rgb(105, 101, 103);
 	border-radius: 3px;
-	border-radius: 3px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	font-weight: bold;
@@ -79,31 +86,48 @@
 }
 
 .add-form-page fieldset {
-	width: 50%;
+	width: 80vw;
 	margin-top: 20px;
+	margin-left: auto;
 	border-radius: 10px;
 	border: 2px solid rgba(60, 131, 64, 0.858);
-	padding: 20px;
+	padding: 1rem;
 	box-shadow: inset 0px 0px 15px rgb(243, 230, 230);
 	-moz-box-shadow: inset 0px 0px 15px rgb(236, 217, 217);
 	-webkit-box-shadow: inset 0px 0px 15px rgb(215, 209, 209);
 	background-color: rgba(255, 255, 255, 0.66);
 	z-index: 1;
+	margin-right: auto;
 }
-.unstyled::-webkit-inner-spin-button {
-	display: none;
-	-webkit-appearance: none;
-}
-
 .add-form-page textarea {
 	width: 90%;
 	height: 100px;
 }
+.add-form-page legend {
+	color: rgb(21, 53, 30);
+	border-top: 2px solid rgb(73, 159, 70);
+	border-left: 2px solid rgb(73, 159, 70);
+	border-right: 2px solid rgb(95, 155, 100);
+	border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	background-color: rgba(255, 255, 255, 0.66);
+	padding: 0 8px 3px 8px;
+	box-shadow: 0 -1px 2px #f1f1f1;
+	-moz-box-shadow: -0px -1px 2px #f1f1f1;
+	-webkit-box-shadow: 0 -1px 2px #f1f1f1;
+	font-weight: normal;
+	font-size: 1rem;
+	position: relative;
+	top: -14px;
+}
+.add-form-page div {
+	margin: 10px;
+}
+
+
 .form-section {
 	padding: 10px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
 }
 
 .form-section label {
@@ -111,7 +135,7 @@
 	font-weight: bold;
 	font-size: 15px;
 	text-shadow: 1px 1px 1px #fff;
-	margin: 0px 0px 20px 15px;
+	margin: 0 0 20px 15px;
 }
 
 #beer-entry-abv,
@@ -134,38 +158,25 @@
 	font-size: 15px;
 }
 
-.add-form-page legend {
-	color: rgb(21, 53, 30);
-	border-top: 2px solid rgb(73, 159, 70);
-	border-left: 2px solid rgb(73, 159, 70);
-	border-right: 2px solid rgb(95, 155, 100);
-	border-radius: 5px 5px 0px 0px;
-	-webkit-border-radius: 5px 5px 0px 0px;
-	-moz-border-radius: 5px 5px 0px 0px;
-	background: rgba(226, 240, 227, 0.653);
-	padding: 0px 8px 3px 8px;
-	box-shadow: -0px -1px 2px #f1f1f1;
-	-moz-box-shadow: -0px -1px 2px #f1f1f1;
-	-webkit-box-shadow: -0px -1px 2px #f1f1f1;
-	font-weight: normal;
-	font-size: 20px;
-}
 
 .required {
 	color: red;
 	font-weight: normal;
 	position: relative;
 }
-.add-form-page div {
-	margin: 10px;
-}
 
+.unstyled::-webkit-inner-spin-button {
+	display: none;
+	-webkit-appearance: none;
+}
 #beer-entry-description label,
 textarea {
 	position: relative;
 	top: 20px;
 }
+@media (min-width: 480px){
 
+<<<<<<< HEAD
 /*  */
 @media only screen and (max-width: 760px) {
 	.add-form-page nav button {
@@ -190,11 +201,27 @@ textarea {
 		border: none;
 		height: 1.3em;
 	}
+=======
+}
+@media (min-width: 767px) {
+	.form-section {
+		display: flex;
+		justify-content: space-evenly;
+	}
+	.add-form-page fieldset {
+		width: 40vw;
+		margin-top: 20px;
+		margin-left: unset;
+		margin-right: unset;
+	}
+}
+@media only screen and (max-width: 570px) {
+>>>>>>> c2fb904f75e0f8d5bc44a3e01b5a83be07187b46
 	.form-section {
 		padding: 10px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		/*display: flex;*/
+		/*flex-direction: column;*/
+		/*justify-content: center;*/
 	}
 	.add-form-page input:checked ~ a {
 		margin-bottom: 0px;
