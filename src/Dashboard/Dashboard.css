@@ -42,9 +42,14 @@
 .journal-item-button-list {
 	border: none;
 	border-radius: 5%;
-	margin: 1em;
-	padding: 10px 10px 30px 10px;
-	width: 80vw;
+	margin: 0.4em;
+	padding: 0px 10px 5px;
+	width: 90vw;
+	display: flex;
+}
+.journal-item-button-list h4 {
+	font-size: large;
+	margin-left: 10px;
 }
 .journal-item-button-list:hover {
 	cursor: pointer;
@@ -101,6 +106,10 @@
 	height: 30px;
 	margin-bottom: 10px;
 }
+.rating-img-list {
+	margin: auto 1vw auto auto;
+	height: 20px;
+}
 .sort-select {
 	margin-top: 4em;
 	height: 3em;
@@ -122,6 +131,11 @@
 .beer-date-small {
 	font-size: 1em;
 	font-family: 'Merriweather', serif;
+}
+.beer-date-list {
+	font-size: 1em;
+	font-family: 'Merriweather', serif;
+	margin:auto 1vw auto auto;
 }
 .search-bar {
 	margin: 1em;

@@ -142,8 +142,8 @@ class Dashboard extends React.Component {
                     onClick={() => this.context.toggleExpanded(beerList.id)}
                     className='journal-item-button-list'>
                     <h4>{beerList.name}</h4>
-                    <div className='beer-date'> {Utils.formattedDate(beerList.date_created)}</div>
-                    <img className='rating-img' src={Utils.getRatingImage(beerList.rating)} alt={'Rating icons'} height={'50px'}></img>
+                    <div className='beer-date-list'> {Utils.formattedDate(beerList.date_created)}</div>
+                    <img className='rating-img-list' src={Utils.getRatingImage(beerList.rating)} alt={'Rating icons'} height={'50px'}></img>
                 </button>
             </div>)
         } else if (this.state.selectedOption === 'details') {
