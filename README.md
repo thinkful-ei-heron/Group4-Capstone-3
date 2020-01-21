@@ -7,7 +7,7 @@ Username:  admin
 Password: pass
 
 
-# Technoligies Used
+# Technologies Used
 
 ### Client Side:  
 React | Javascript | Zeit |  HTML | CSS
@@ -16,8 +16,7 @@ React | Javascript | Zeit |  HTML | CSS
 Express.js | Node.js | PostgreSQL | Heroku
 
 # Introduction
-DeerBear is a functional user friendly application for avid beer drinkers and for those who aren't scared to try new beers!   
-
+DeerBear is a functional user friendly application for avid beer drinkers and aren't afraid to try new beers!   
 
 
 # Landing Page
@@ -60,8 +59,8 @@ $ npm install
 Launching
 Start the development server.
 
-$ npm run dev-server
-opens new browser window with the project.
+$ npm run start
+
 
 Testing
 Run tests
