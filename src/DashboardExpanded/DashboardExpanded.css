@@ -10,6 +10,10 @@
 	padding: 1rem 0 1.5rem 0;
 }
 
+.dashboard-expanded-section .beer-color {
+	border-radius: 10%;
+}
+
 .dashboard-expanded-section:hover {
 	background-color: rgba(209, 240, 205, 0.884);
 	cursor: pointer;

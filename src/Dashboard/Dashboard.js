@@ -11,6 +11,7 @@ import SmallIcon from '../assets/radio/small-icon.png'
 import './Dashboard.css'
 import SortDropdown from './SortDropdown/SortDropdown';
 import TypeDropdown from './TypeDropdown/TypeDropdown';
+import EmptyList from './EmptyList/EmptyList';
 class Dashboard extends React.Component {
 
     static contextType = UserContext;
@@ -167,7 +168,7 @@ class Dashboard extends React.Component {
                                 <TypeDropdown beerList={this.state.beerList} sortBeerList={this.sortBeerList}/> : ''}
                             <input className='search-bar' type='text' placeholder='Search by name...' onChange={this.handleSearch}/>
                             <br></br>
-                            {(this.context.beerList.length === 0 ) ?  <h2>ADD SOME BEERS YOU FILTHY ANIMAL</h2> : ''}
+                            {(this.context.beerList.length === 0 ) ?  <EmptyList />: ''}
                             {this.renderBeerList()}
                         </div>
                     </section>

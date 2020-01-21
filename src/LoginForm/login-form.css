@@ -1,28 +1,38 @@
+.LoginForm .alert{
+	height: 3em;
+	max-height: 3em;
+	min-height: 3em;
+}
 .login-page {
 	background-image: url("../images/beer3.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	justify-content: center;
 }
-
+.login {
+	background-color: rgba(0, 0, 0, 0.584);
+	padding: 40px 20px;
+	align-self: center;
+}
 .login-page h1 {
 	font-family: 'Merriweather', serif;
 	color: white;
-	font-size: 75px;
+	font-size: 3em;
+}
+.login-page h3 {
+	font-family: 'Roboto Slab', serif;
+	color: white;
+	font-size: 2em;
 }
 .login-header {
 	text-decoration: none;
 	cursor: pointer;
 }
 
-.login-page h3 {
-	font-family: 'Roboto Slab', serif;
-	color: white;
-	font-size: 40px;
-}
+
 
 .login-page input {
 	background-color: rgba(255, 255, 255, 0.66);
@@ -64,11 +74,7 @@
 	justify-content: space-evenly;
 	cursor: hover;
 }
-.login {
-	background-color: rgba(0, 0, 0, 0.584);
-	padding: 100px 75px;
-	align-self: center;
-}
+
 .new-user-btn {
 	border: none;
 	cursor: pointer;
@@ -79,21 +85,35 @@
 }
 /* @media only screen and (max-width: 1024px) {
 } */
-@media only screen and (max-width: 660px) {
+@media (min-width: 480px) {
 	.login {
-		background-color: rgba(0, 0, 0, 0.584);
-		padding: 76px 13px;
-		align-self: center;
+		padding: 60px 30px;
 	}
 	.login-page h1 {
-		font-family: 'Merriweather', serif;
-		color: white;
-		font-size: 65px;
-		margin: 0;
+		font-size: 4em;
 	}
 	.login-page h3 {
-		font-family: 'Roboto Slab', serif;
-		color: white;
-		font-size: 35px;
+		font-size: 3em;
+	}
+}
+@media (min-width: 767px) {
+	.login {
+		padding: 90px 50px;
+	}
+	.login-page h1 {
+		font-size: 5em;
+	}
+	.login-page h3 {
+		font-size: 4em;
+	}
+}
+@media (min-width: 480px) and (orientation: landscape) {
+	.login {
+		padding: 30px 20px;
+	}
+}
+@media (min-width: 767px) and (orientation: landscape) {
+	.login {
+		padding: 40px 30px;
 	}
 }
