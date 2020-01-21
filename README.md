@@ -25,16 +25,16 @@ Server side: Express.js, Node.js, PostgreSQL and Heroku.
 ### Screenshots
 
 ##### Landing Page
-![Landing page](./images/)
+![Landing page](./images/readme/landingpage.png)
 ##### Login Page
-![Login](./images/)
+![Login](./images/readme/)
 ##### Register Page
-![Register](./images/)
+![Register](./images/readme/)
 ##### Dashboard
-![Dashboard](./images/)
+![Dashboard](./images/readme/)
 ##### Expanded Dashboard
-![Expanded Dashboard](./images/)
+![Expanded Dashboard](./images/readme/)
 ##### Add Beer Form
-![Add Beer Form](./images/)
+![Add Beer Form](./images/readme/)
 ##### Breweries Map
 ![Breweries Map](./images/)
