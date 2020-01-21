@@ -208,7 +208,7 @@ class DashboardExpanded extends React.Component {
                 <div className='dashboard-expanded-section'>
                 <section onClick={() => this.props.toggleExpanded(this.state.journal.id)}>
                     <figure>
-                        <img src={Utils.getImage(this.state.journal.color)} alt={'Beer'} width={'150px'} />
+                        <img className='beer-color' src={Utils.getImage(this.state.journal.color)} alt={'Beer'} width={'150px'} />
                         <figcaption>ABV: {this.state.journal.abv} % </figcaption>
                     </figure>
                     <section>

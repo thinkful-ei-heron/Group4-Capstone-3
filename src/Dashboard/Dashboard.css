@@ -113,6 +113,7 @@
 	height: 6rem;
 	width: 6rem;
 	border-right: 1px solid rgba(0, 0, 0, 0.37);
+	border-radius: 0%;
 }
 .journal-item-button-details h4 {
 	font-size: larger;
@@ -176,6 +177,7 @@
 	height: 8em;
 	width: 8em;
 	padding: 1em;
+	border-radius: 10%;
 }
 .sort-select {
 	margin-top: 4em;
@@ -322,8 +324,8 @@
 		margin-bottom: -0.6rem;
 	}
 	.journal-item-button-small {
-		margin: 1rem 1rem;
-		width: 22rem;
+		margin: 1.6vw 1.6vw;
+		width: 28vw;
 	}
 	.journal-item-button-small h4 {
 		font-size: xx-large;
@@ -338,11 +340,11 @@
 		margin-bottom: 3rem;
 	}
 	.journal-item-button-large {
-		margin: 2rem 2rem;
-		width: 26.5rem;
+		margin: 2vw 3.6vw;
+		width: 40vw;
 	}
 	.journal-item-button-large .beer-color-img {
-		margin-top: 1.2rem;
+		margin-top: 2rem;
 		margin-bottom: 1.2rem;
 		height: 10rem;
 		width: 10rem;
@@ -352,11 +354,14 @@
 	}
 	.journal-item-button-large .rating-img {
 		height: 6rem;
-		margin-bottom: 1.6rem;
+		margin-bottom: 2.4rem;
 		margin-top: 2rem;
 	}
 	.journal-item-button-list {
 		margin: 1rem auto;
 		width: 88vw;
+	}
+	.journal-item-button-details .beer-color-img {
+		padding-right: 1.6rem;
 	}
 }
