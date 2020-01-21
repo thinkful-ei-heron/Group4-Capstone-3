@@ -47,8 +47,8 @@ export default class LoginForm extends Component {
 						<h1>DearBeer</h1>
 					</Link>
 					<h3>Login</h3>
-					<form onSubmit={this.handleSubmit}>
-						<div role="alert">{error && <p className="error">Something went wrong!</p>}</div>
+					<form className={'LoginForm'} onSubmit={this.handleSubmit}>
+						<div className={'alert'} role="alert">{error && <p className="error">Something went wrong!</p>}</div>
 						<section>
 							<div>
 								<label htmlFor="login-username">{/* Username */}</label>

@@ -51,7 +51,7 @@ class Register extends React.Component {
 					<h3>Register</h3>
 
 					<form className="RegistrationForm" onSubmit={this.handleSubmit}>
-						<div role="alert">{error && <p className="error">{error}</p>}</div>
+						<div  className="alert" role="alert">{error && <p className="error">{error}</p>}</div>
 						<div className="username">
 							<label htmlFor="RegistrationForm__username">{/* Username */}</label>
 							<input
