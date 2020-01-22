@@ -185,11 +185,11 @@
 }
 
 .tut-11 {
-    top: 1170px;
+    top: 1269px;
 }
 
 .tut-11:after {
-    margin-left: -134px;
+    margin-left: -92px;
 }
 
 .tut-11 ~ .add-form-page > form > .form-section > .lastfield > .btns-2 > a > button {
@@ -200,11 +200,11 @@
 }
 
 .tut-12 {
-    top: 1170px;
+    top: 1269px;
 }
 
 .tut-12:after {
-    margin-left: -40px;
+    margin-left: 10px;
 }
 
 .tut-12 ~ .add-form-page > form > .form-section > .lastfield > .btns-2 > button:nth-child(2) {
@@ -216,14 +216,10 @@
 }
 
 .tut-13 {
-    top: 1170px;
+    top: 1195px;
 }
 
-.tut-13:after {
-    margin-left: 45px;
-}
-
-.tut-13 ~ .add-form-page > form > .form-section > .lastfield > .btns-2 > button:nth-child(3) {
+.tut-13 ~ .add-form-page > form > .form-section > .lastfield  > .submit-btn {
     z-index: 5;
     position: relative;
 }
@@ -282,19 +278,20 @@
     }
 
     .tut-11 {
-        top: 500px;
+        top: 600px;
     }
     .tut-11:after{
-        right: 40%;
+        right: 33%;
     }
     .tut-12 {
-        top: 500px;
+        top: 600px;
+    }
+    .tut-12:after{
+        right: 22%;
     }
     .tut-13 {
-        top: 480px;
+        top: 500px;
     }
 
-    .tut-13:after{
-        right: 19%;
-    }
+
 }
