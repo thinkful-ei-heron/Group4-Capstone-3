@@ -1,5 +1,5 @@
 .dashboard-expanded-section {
-	width: 90vh;
+	width: 92vw;
 	background-color: buttonface;
 	color: Black;
 	border-radius: 5%;
@@ -10,20 +10,40 @@
 	padding: 1rem 0 1.5rem 0;
 }
 
+.dashboard-expanded-section figure {
+	margin: 1.2rem auto 0.8rem auto;
+}
+.expanded-beer-name {
+	font-size: 240%;
+	margin: 0% 0.6rem;
+}
+.dashboard-expanded-section .rating-img {
+	margin: 0.2rem auto 0.2rem auto;
+}
+.expanded-small-details {
+	font-variant: small-caps;
+}
+.expanded-small-details .expanded-type {
+	margin: 0rem auto 1.4rem auto;
+}
+.expanded-location {
+	margin: 0rem auto;
+}
+.expanded-date {
+	font-size: large;
+	margin: 0.2rem auto 0.2rem auto;
+}
 .dashboard-expanded-section .beer-color {
 	border-radius: 10%;
 }
-
 .dashboard-expanded-section:hover {
 	background-color: rgba(209, 240, 205, 0.884);
 	cursor: pointer;
 }
-
 .edit-rating-img {
 	margin: 1rem auto;
 	display: block;
 }
-
 .edit-beer-form fieldset {
 	width: 50%;
 	margin-top: 20px;
@@ -36,7 +56,6 @@
 	background-color: rgba(255, 255, 255, 0.66);
 	z-index: 1;
 }
-
 .edit-beer-form legend {
 	color: rgb(21, 53, 30);
 	border-top: 2px solid rgb(73, 159, 70);
@@ -56,4 +75,54 @@
 
 .edit-buttons {
 	margin-top: 15%;
+}
+.expanded-slider {
+	width: 60%;
+	max-width: 800px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1.5rem;
+  background: rgba(63, 62, 63, 0.452);
+  outline: none;
+  opacity: 1;
+  transition: opacity .2s;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.expanded-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+	width: 25%;
+	max-width: 4rem;
+  height: 1.5rem;
+  background: rgb(122, 194, 125);
+}
+
+.expanded-slider::-moz-range-thumb {
+	width: 25%;
+	max-width: 4rem;
+  height: 1.5rem;
+  background: rgb(122, 194, 125);
+}
+
+.expanded-sliders-section {
+	display: inline-flex;
+	flex-direction: row;
+	width: 100%;
+	margin: 0rem auto 0.2rem;
+	justify-content: center;
+}
+
+.expanded-sliders-section p {
+	margin: 0.1rem 1rem auto;
+}
+
+.expanded-description {
+	border: 1px solid black;
+	margin: 1rem 1.5rem;
+	padding: 0.8rem 1.4rem 1.4rem 1.4rem;
+}
+
+.expanded-slide-label {
+	margin: 0rem auto 0.2rem auto;
 }

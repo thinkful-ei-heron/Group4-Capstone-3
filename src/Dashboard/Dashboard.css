@@ -155,7 +155,7 @@
 .dashboard-bottom li {
 	list-style: none;
 	color: white;
-	padding: 2em;
+	margin-bottom: 0.2rem;
 }
 .darker {
 	/* padding: 4em; */
