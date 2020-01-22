@@ -131,10 +131,17 @@ textarea {
 	padding: 5px 15px 5px 15px;
 	color: rgb(122, 194, 125);
 	font-size: 15px;
+	-webkit-appearance: none;
 }
 
 .btns-2 {
-	margin-top: 3rem;
+	margin-top: 1rem !important;
+}
+.btns-2 > a > button:first-child {
+	color: #8d9efa !important;
+}
+.btns-2 > button:last-child {
+	color: #d7615b !important;
 }
 .clear-submit-back-btn {
 	background: rgb(63, 62, 63);
@@ -149,6 +156,9 @@ textarea {
 	-moz-border-radius: 3px;
 	font-weight: bold;
 	margin: 10px;
+}
+.submit-btn {
+	margin-top: 3rem;
 }
 .required {
 	color: red;
