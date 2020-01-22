@@ -9,7 +9,8 @@ import InfoMarker from './Marker/InfoMarker'
 import MapsApiService from '../services/maps-api-service'
 import ListComponent from './ListComponent/ListComponent'
 import KeyComponent from './KeyComponent/KeyComponent'
-import config  from '../config'
+import config from '../config'
+
 class Dashboard extends React.Component {
 
     static contextType = JournalContext;
@@ -50,10 +51,11 @@ class Dashboard extends React.Component {
             this.props.map.setList(list);
             this.props.map.setBars(res.bars);
             this.props.map.setBreweries(res.breweries);
-            this.props.map.setCenter( {lat, lng});
+            this.props.map.setCenter({lat, lng});
         })
     }
-    setActive(data){
+
+    setActive(data) {
         this.props.map.setCenter({lat: data.center.lat, lng: data.center.lng});
         this.props.map.setSelected(data.selectedMarker);
 
@@ -62,7 +64,7 @@ class Dashboard extends React.Component {
     render() {
         return (
             <>
-                <main className='breweries-page'>
+                <main className='breweries-page' style={{height: (this.props.map.list.length !== 0) ? '280vh' : 'unset'}}>
                     <Header location={this.props.location} header={'Breweries'}/>
                     <form onSubmit={this.handleSubmit}>
                         <label>Zip Code: <input type='number'
@@ -70,8 +72,9 @@ class Dashboard extends React.Component {
                                                 value={this.props.map.value}/></label>
                         <button className={'clear-submit-back-btn'} type='submit'>Go</button>
                     </form>
+                    <KeyComponent/>
                     <div className={'breweries-map'}>
-                        <div className={'breweries-list'}>
+                        {(this.props.map.list.length !== 0) ?<div className={'breweries-list'}>
                             {this.props.map.list.map((place, i) =>
                                 <div key={i}
                                      className={(place.id === this.props.map.selectedMarker.id) ? 'breweries-list-active' : ''}
@@ -89,39 +92,39 @@ class Dashboard extends React.Component {
                                          }
                                      })}><ListComponent place={place}/></div>
                             )}
-                        </div>
-                        <GoogleMapReact
-                            bootstrapURLKeys={{key: config.API_KEY}}
-                            defaultCenter={this.state.defaultCenter}
-                            defaultZoom={this.state.zoom}
-                            center={this.props.map.center}
-                        >
-                            {this.props.map.nearByBars.map((place, i) => <BarMarker
-                                key={i}
-                                lat={place.geometry.location.lat}
-                                lng={place.geometry.location.lng}
-                                text={place.name}
-                                id={place.id}
-                                updateSelected={this.props.map.updateSelected}
-                            />)}
-                            {this.props.map.nearByBreweries.map((place, i) => <BreweryMarker
-                                key={i}
-                                lat={place.geometry.location.lat}
-                                lng={place.geometry.location.lng}
-                                text={place.name}
-                                id={place.id}
-                                updateSelected={this.props.map.updateSelected}
-                            />)}
-                            {this.props.map.selectedMarker.name.length !== 0 ? <InfoMarker
-                                lat={this.props.map.selectedMarker.lat}
-                                lng={this.props.map.selectedMarker.lng}
-                                name={this.props.map.selectedMarker.name}
-                                vicinity={this.props.map.selectedMarker.vicinity}
-                                resetSelected={this.props.map.resetSelected}
-                            /> : ''}
-                        </GoogleMapReact>
-                        <KeyComponent/>
+                        </div> : ''}
+                            <GoogleMapReact
+                                bootstrapURLKeys={{key: config.API_KEY}}
+                                defaultCenter={this.state.defaultCenter}
+                                defaultZoom={this.state.zoom}
+                                center={this.props.map.center}
+                            >
+                                {this.props.map.nearByBars.map((place, i) => <BarMarker
+                                    key={i}
+                                    lat={place.geometry.location.lat}
+                                    lng={place.geometry.location.lng}
+                                    text={place.name}
+                                    id={place.id}
+                                    updateSelected={this.props.map.updateSelected}
+                                />)}
+                                {this.props.map.nearByBreweries.map((place, i) => <BreweryMarker
+                                    key={i}
+                                    lat={place.geometry.location.lat}
+                                    lng={place.geometry.location.lng}
+                                    text={place.name}
+                                    id={place.id}
+                                    updateSelected={this.props.map.updateSelected}
+                                />)}
+                                {this.props.map.selectedMarker.name.length !== 0 ? <InfoMarker
+                                    lat={this.props.map.selectedMarker.lat}
+                                    lng={this.props.map.selectedMarker.lng}
+                                    name={this.props.map.selectedMarker.name}
+                                    vicinity={this.props.map.selectedMarker.vicinity}
+                                    resetSelected={this.props.map.resetSelected}
+                                /> : ''}
+                            </GoogleMapReact>
                     </div>
+
                 </main>
             </>
         )
