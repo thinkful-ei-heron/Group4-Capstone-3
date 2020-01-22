@@ -1,0 +1,300 @@
+.tutorial-addform {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #00000077;
+    z-index: 2;
+}
+
+.tutorial-addform .buttons {
+    position: fixed;
+    width: 100vw;
+    bottom: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 3;
+}
+
+.tutorial-addform .buttons > a, .tutorial-addform .buttons > button {
+    background: rgb(63, 62, 63);
+    border: 1px solid rgb(27, 10, 18);
+    padding: 5px 15px 5px 15px;
+    color: rgb(122, 194, 125);
+    box-shadow: inset -1px -1px 3px rgb(65, 63, 64);
+    -moz-box-shadow: inset -1px -1px 3px rgb(100, 96, 98);
+    -webkit-box-shadow: inset -1px -1px 3px rgb(105, 101, 103);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    font-weight: bold;
+    margin: 0 10px 0 10px;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+}
+
+.tutorial-addform .buttons > span {
+    color: white;
+
+}
+
+.tut {
+    z-index: 3;
+    position: absolute;
+    width: 100vw;
+}
+
+.tut:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 40px solid transparent;
+    border-top-color: #ffffffcc;
+    border-bottom: 0;
+    margin-left: -36px;
+    margin-bottom: -24px;
+}
+
+.tut > p {
+    background-color: #ffffffcc;
+    border-radius: 15px;
+    padding: 16px;
+    text-align: justify;
+    margin: 16px;
+
+}
+
+.tut-1 {
+    top: 216px;
+    border: none !important;
+}
+
+.tut-1:after {
+    border: none !important;
+}
+
+.tut-2 {
+    top: 380px;
+}
+
+.tut-2 ~ .add-form-page > form > .form-section > fieldset > *:nth-child(3) > input, .tut-2 ~ .add-form-page > form > .form-section > fieldset > *:nth-child(3) > label {
+    z-index: 5;
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.tut-3 {
+    top: 470px;
+}
+
+.tut-3 ~ .add-form-page > form > .form-section > fieldset > *:nth-child(4) > input, .tut-3 ~ .add-form-page > form > .form-section > fieldset > *:nth-child(4) > label {
+    z-index: 5;
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.tut-4 {
+    top: 530px;
+}
+
+.tut-4 ~ .add-form-page > form > .form-section > fieldset > *:nth-child(5) > input, .tut-4 ~ .add-form-page > form > .form-section > fieldset > *:nth-child(5) > label {
+    z-index: 5;
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.tut-5 {
+    top: 580px;
+}
+
+.tut-5 ~ .add-form-page > form > .form-section > fieldset > *:nth-child(6) > select, .tut-5 ~ .add-form-page > form > .form-section > fieldset > *:nth-child(6) > label {
+    z-index: 5;
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.tut-6 {
+    top: 640px;
+}
+
+.tut-6 ~ .add-form-page > form > .form-section > fieldset > *:nth-child(7) > input, .tut-6 ~ .add-form-page > form > .form-section > fieldset > *:nth-child(7) > label {
+    z-index: 5;
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.tut-7 {
+    top: 278px;
+}
+
+.tut-7 ~ .add-form-page > form > .form-section > fieldset > figure > img {
+    position: relative;
+    z-index: 2;
+}
+
+.tut-7 ~ .add-form-page > form > .form-section > fieldset > *:nth-child(8) > input, .tut-7 ~ .add-form-page > form > .form-section > fieldset > *:nth-child(8) > label {
+    z-index: 5;
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.tut-8 {
+    top: 750px;
+}
+
+.tut-8 ~ .add-form-page > form > .form-section > fieldset > *:nth-child(9) > input, .tut-8 ~ .add-form-page > form > .form-section > fieldset > *:nth-child(9) > label {
+    z-index: 5;
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.tut-9 {
+    top: 915px;
+}
+
+.tut-9 ~ .add-form-page > form > .form-section > .lastfield > *:nth-child(2) > img, .tut-9 ~ .add-form-page > form > .form-section > .lastfield > *:nth-child(2) > div > label,
+.tut-9 ~ .add-form-page > form > .form-section > .lastfield > *:nth-child(2) > div > input {
+    z-index: 5;
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.tut-10 {
+    top: 1030px;
+}
+
+.tut-10 ~ .add-form-page > form > .form-section > .lastfield > label, .tut-10 ~ .add-form-page > form > .form-section > .lastfield > textarea {
+    z-index: 5;
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.tut-11 {
+    top: 1170px;
+}
+
+.tut-11:after {
+    margin-left: -134px;
+}
+
+.tut-11 ~ .add-form-page > form > .form-section > .lastfield > .btns-2 > a > button {
+    z-index: 5;
+    position: relative;
+    color: red;
+    text-shadow: 1px 1px 1px black;
+}
+
+.tut-12 {
+    top: 1170px;
+}
+
+.tut-12:after {
+    margin-left: -40px;
+}
+
+.tut-12 ~ .add-form-page > form > .form-section > .lastfield > .btns-2 > button:nth-child(2) {
+    z-index: 5;
+    position: relative;
+    color: red;
+    text-shadow: 1px 1px 1px black;
+
+}
+
+.tut-13 {
+    top: 1170px;
+}
+
+.tut-13:after {
+    margin-left: 45px;
+}
+
+.tut-13 ~ .add-form-page > form > .form-section > .lastfield > .btns-2 > button:nth-child(3) {
+    z-index: 5;
+    position: relative;
+}
+
+@media (min-width: 480px) {
+}
+
+@media (min-width: 767px) {
+    .tut p {
+        max-width: 480px;
+        width: 40vw;
+        margin-left: -24px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .tut-1 p{
+        margin: 0 auto !important;
+    }
+    .tut-2, .tut-3, .tut-4, .tut-5, .tut-6, .tut-7, .tut-8, .tut-9, .tut-10, .tut-11, .tut-12, .tut-12, .tut-13 {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .tut ~ .add-form-page > form > .form-section > fieldset {
+        z-index: unset;
+    }
+    .tut-2:after, .tut-3:after, .tut-4:after, .tut-5:after, .tut-6:after, .tut-7:after, .tut-8:after {
+        left: 26%;
+        margin-bottom: -40px;
+    }
+
+    .tut-9, .tut-10, .tut-11, .tut-12, .tut-13 {
+        margin-left: 48px;
+    }
+
+    .tut-2 .right, .tut-3 .right, .tut-4 .right, .tut-5 .right, .tut-6 .right, .tut-7 .right, .tut-8 .right {
+        width: 40vw;
+        padding: 10px;
+    }
+
+    .tut-9 .left, .tut-10 .left, .tut-11 .left, .tut-12 .left, .tut-13 .left {
+        width: 40vw;
+    }
+
+    .tut-9:after, .tut-10:after, .tut-11:after, .tut-12:after, .tut-13:after {
+        right: 28%;
+        left: unset;
+        margin-bottom: -40px;
+    }
+
+    .tut-9 {
+        top: 230px;
+    }
+
+    .tut-10 {
+        top: 330px;
+    }
+
+    .tut-11 {
+        top: 500px;
+    }
+    .tut-11:after{
+        right: 40%;
+    }
+    .tut-12 {
+        top: 500px;
+    }
+    .tut-13 {
+        top: 480px;
+    }
+
+    .tut-13:after{
+        right: 19%;
+    }
+}

@@ -7,6 +7,7 @@ import LandingPage from './LandingPage/LandingPage';
 import './App.css';
 import LoginForm from './LoginForm/login-form';
 import AddForm from './AddForm/AddForm';
+import Tutorial from './AddForm/Tutorial/Tutorial';
 import Breweries from './Breweries/Breweries';
 import Dashboard from './Dashboard/Dashboard';
 
@@ -18,6 +19,7 @@ export default class App extends Component {
 		return (
 			<div className="App">
 				{hasError && <p>There was an error! Oh no!</p>}
+                <PrivateOnlyRoute exact path={'/add/tutorial'} component={Tutorial} />
 				<Switch>
 					<PrivateOnlyRoute path={'/breweries'} component={Breweries} />
 					<PrivateOnlyRoute path={'/home'} component={Dashboard} />

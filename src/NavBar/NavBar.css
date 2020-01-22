@@ -98,7 +98,7 @@
 
 
 .navbar-component input:checked ~ .child-1 {
-    transform: rotate(20deg) translate(0, -1px);
+    transform: rotate(20deg) translate(0, -2.25px);
     position: relative;
     top: 15px;
 }
