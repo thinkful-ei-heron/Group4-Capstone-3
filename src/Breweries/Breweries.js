@@ -67,7 +67,7 @@ class Dashboard extends React.Component {
                 <main className='breweries-page' style={{height: (this.props.map.list.length !== 0) ? '280vh' : 'unset'}}>
                     <Header location={this.props.location} header={'Breweries'}/>
                     <form onSubmit={this.handleSubmit}>
-                        <label>Zip Code: <input type='number'
+                        <label>US Zip Code: <input type='number'
                                                 onChange={(e) => this.props.map.setZipcode(e.target.value)}
                                                 value={this.props.map.value}/></label>
                         <button className={'clear-submit-back-btn'} type='submit'>Go</button>
