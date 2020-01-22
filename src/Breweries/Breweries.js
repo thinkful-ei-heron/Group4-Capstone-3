@@ -27,6 +27,7 @@ class Dashboard extends React.Component {
                 lng: -105.3716684
             },
             zoom: 11,
+            error: null,
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -52,8 +53,11 @@ class Dashboard extends React.Component {
             this.props.map.setBars(res.bars);
             this.props.map.setBreweries(res.breweries);
             this.props.map.setCenter({lat, lng});
-        })
+            this.setState({error: null})
+        }).catch(e => this.setState({error: e.error}))
     }
+
+
 
     setActive(data) {
         this.props.map.setCenter({lat: data.center.lat, lng: data.center.lng});
@@ -72,6 +76,7 @@ class Dashboard extends React.Component {
                                                 value={this.props.map.value}/></label>
                         <button className={'clear-submit-back-btn'} type='submit'>Go</button>
                     </form>
+                    <div className={'alert'} role='alert'><p className='error'>{this.state.error}</p></div>
                     <KeyComponent/>
                     <div className={'breweries-map'}>
                         {(this.props.map.list.length !== 0) ?<div className={'breweries-list'}>
