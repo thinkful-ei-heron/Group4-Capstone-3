@@ -18,7 +18,7 @@
 	margin: 0% 0.6rem;
 }
 .dashboard-expanded-section .rating-img {
-	margin: 0.2rem auto 0.2rem auto;
+	margin: 0.4rem auto 0.2rem auto;
 }
 .expanded-small-details {
 	font-variant: small-caps;
@@ -95,14 +95,14 @@
 	width: 25%;
 	max-width: 4rem;
   height: 1.5rem;
-  background: rgb(122, 194, 125);
+  background: rgba(60, 131, 64, 0.858);
 }
 
 .expanded-slider::-moz-range-thumb {
 	width: 25%;
 	max-width: 4rem;
   height: 1.5rem;
-  background: rgb(122, 194, 125);
+  background: rgba(60, 131, 64, 0.858);
 }
 
 .expanded-sliders-section {
@@ -114,15 +114,28 @@
 }
 
 .expanded-sliders-section p {
-	margin: 0.1rem 1rem auto;
+	margin: 0.1rem 0.4rem auto;
 }
 
 .expanded-description {
-	border: 1px solid black;
-	margin: 1rem 1.5rem;
+	border: 2px ridge rgba(0, 0, 0, 0.568);
+	margin: 1rem 1.5rem 1.2rem 1.5rem;
 	padding: 0.8rem 1.4rem 1.4rem 1.4rem;
 }
 
 .expanded-slide-label {
 	margin: 0rem auto 0.2rem auto;
+}
+
+@media only screen and (min-width: 760px) {
+	.expanded-description {
+		margin: 1rem auto 1.2rem auto;
+		max-width: 600px;
+	}
+	.expanded-sliders-section {
+		max-width: 900px;
+	}
+	.dashboard-expanded-section {
+		max-width: 942px;
+	}
 }
