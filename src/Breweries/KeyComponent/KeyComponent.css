@@ -1,31 +1,25 @@
 .key-component {
-	display: block;
-	position: absolute;
+	display: inline-flex;
+	width: 80vw;
+	justify-content: space-evenly;
 	background-color: #ffffffcc;
-	bottom: -42px;
-	left: 2.5%;
-	border-radius: 0 10px 10px 0;
+	border-radius: 10px;
 	color: #00000077;
 	padding: 1em;
+	margin-bottom: 1rem;
 }
 .key-component p {
 	margin: 0;
 }
 @media (min-width: 480px) and (max-width: 570px){
 	.key-component {
-		bottom: -42px;
-		left: 3%;
 	}
 }
 @media (min-width: 570px) and (max-width: 767px){
 	.key-component {
-		bottom: -12px;
-		left: 2.5%;
 	}
 }
 @media (min-width: 767px) {
 	.key-component {
-		bottom: -12px;
-		left: 24.25%;
 	}
 }

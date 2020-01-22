@@ -1,0 +1,19 @@
+.empty-list h2{
+    color: white;
+    text-shadow: 2px 2px 2px #000, 3px 3px 6px #000000;
+}
+.empty-list a {
+    background: rgb(63, 62, 63);
+    border: 1px solid rgb(27, 10, 18);
+    padding: 5px 15px 5px 15px;
+    color: rgb(122, 194, 125);
+    box-shadow: inset -1px -1px 3px rgb(65, 63, 64);
+    -moz-box-shadow: inset -1px -1px 3px rgb(100, 96, 98);
+    -webkit-box-shadow: inset -1px -1px 3px rgb(105, 101, 103);
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    font-weight: bold;
+    margin: 0 10px 0 10px;
+    text-decoration: none;
+}

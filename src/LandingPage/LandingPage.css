@@ -6,7 +6,12 @@
 	margin: 0px;
 	background-color: black;
 } */
-
+.header-logo-h1 {
+	margin: 0 auto;
+	display: flex;
+	width: fit-content;
+	height: 50vh;
+}
 .landing-page-about {
 	background-color: rgb(39, 40, 49);
 	padding: 30px;
@@ -47,7 +52,7 @@
 	color: white;
 	font-family: 'Merriweather', serif;
 	position: relative;
-	margin-top: 35vh;
+	margin: auto 0;
 	text-align: center;
 }
 .logo {
@@ -172,7 +177,6 @@
 		color: white;
 		font-family: 'Merriweather', serif;
 		position: relative;
-		margin-top: 30vh;
 		text-align: center;
 		z-index: 2;
 	}

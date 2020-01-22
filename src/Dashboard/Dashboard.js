@@ -166,8 +166,9 @@ class Dashboard extends React.Component {
                                 <SortDropdown beerList={this.state.beerList} sortBeerList={this.sortBeerList}/> : ''}
                             {(this.context.beerList.length !== 0) ?
                                 <TypeDropdown beerList={this.state.beerList} sortBeerList={this.sortBeerList}/> : ''}
-                            <input className='search-bar' type='text' placeholder='Search by name...' onChange={this.handleSearch}/>
-                            <br></br>
+                            {(this.context.beerList.length !== 0) ?
+                                <input className='search-bar' type='text' placeholder='Search by name...' onChange={this.handleSearch}/> : ''}
+                            <br/>
                             {(this.context.beerList.length === 0 ) ?  <EmptyList />: ''}
                             {this.renderBeerList()}
                         </div>
