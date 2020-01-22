@@ -156,6 +156,7 @@ textarea {
 	-moz-border-radius: 3px;
 	font-weight: bold;
 	margin: 10px;
+	min-width: 5rem;
 }
 .submit-btn {
 	margin-top: 3rem;
