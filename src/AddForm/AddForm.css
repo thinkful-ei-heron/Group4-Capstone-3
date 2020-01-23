@@ -103,6 +103,7 @@ textarea {
 
 .form-section {
 	padding: 10px;
+	justify-content: center;
 }
 
 .form-section label {
