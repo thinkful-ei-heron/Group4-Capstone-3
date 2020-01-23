@@ -161,6 +161,7 @@ textarea {
 .clear-submit-back-btn:hover {
 	background: rgb(43, 42, 43);
 	cursor: pointer;
+	color: white;
 }
 .submit-btn {
 	margin-top: 3rem;

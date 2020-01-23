@@ -150,6 +150,7 @@
 	/* background-repeat: repeat-y;
 	background-position: center; */
 	min-height: 100vh;
+	padding: 1rem;
 }
 /* .dashboard-bottom button {
 	color: white;

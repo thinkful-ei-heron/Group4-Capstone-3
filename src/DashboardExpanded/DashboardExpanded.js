@@ -235,17 +235,17 @@ class DashboardExpanded extends React.Component {
 											<h3 className='expanded-slide-label'>Color</h3>
 										</div>
 										<section className='expanded-sliders-section'>
-											<p>Light</p>
-											<input type="range" min="1" max="6" value={this.state.journal.color} readOnly className='expanded-slider'/>
 											<p>Dark</p>
+											<input type="range" min="1" max="6" value={this.state.journal.color} readOnly className='expanded-slider'/>
+											<p>Light</p>
 										</section>
 										<div>
 											<h3 className='expanded-slide-label'>Flavor</h3>
 										</div>
 										<section className='expanded-sliders-section'>
-											<p>Light</p>
-											<input type="range" min="1" max="5" value={this.state.journal.heaviness} readOnly className='expanded-slider'/>
 											<p>Heavy</p>
+											<input type="range" min="1" max="5" value={this.state.journal.heaviness} readOnly className='expanded-slider'/>
+											<p>Light</p>
 										</section>
 										<figure>
 											<img className='rating-img' src={Utils.getRatingImage(this.state.journal.rating)} alt={'Rating icons'} height={'50px'} />
