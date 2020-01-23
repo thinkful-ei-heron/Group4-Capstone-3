@@ -1,5 +1,5 @@
 export default {
-	API_ENDPOINT: 'http://localhost:8000/api', //'https://fathomless-caverns-68014.herokuapp.com',
-	JWT_SECRET: 'kingpendata',
-	API_KEY: 'AIzaSyCG_FMdGssqTRG7tGSvu24UYFopSWQY_-g'
+	API_ENDPOINT: process.env.API_ENDPOINT,
+	JWT_SECRET: process.env.JWT_SECRET,
+	API_KEY: process.env.API_KEY
 };
