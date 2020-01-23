@@ -13,8 +13,14 @@
 .inactiveClass {
 	background-color: white;
 }
+.inactiveClass:hover {
+	cursor: pointer;
+}
 .activeClass {
 	background-color: rgba(60, 131, 64, 0.858) !important;
+}
+.activeClass:hover {
+	cursor: pointer;
 }
 .journal-item-button-small {
 	border: none;
@@ -144,6 +150,7 @@
 	/* background-repeat: repeat-y;
 	background-position: center; */
 	min-height: 100vh;
+	padding: 1rem;
 }
 /* .dashboard-bottom button {
 	color: white;
@@ -155,7 +162,7 @@
 .dashboard-bottom li {
 	list-style: none;
 	color: white;
-	padding: 2em;
+	margin-bottom: 0.2rem;
 }
 .darker {
 	/* padding: 4em; */

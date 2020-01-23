@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Form Component Displays LoginForm when rendered 1`] = `
+<div
+  className="login-page"
+>
+  <div
+    className="login"
+  >
+    <Link
+      className="login-header"
+      to="/"
+    >
+      <h1>
+        DearBeer
+      </h1>
+    </Link>
+    <h3>
+      Login
+    </h3>
+    <form
+      className="LoginForm"
+      onSubmit={[Function]}
+    >
+      <div
+        className="alert"
+        role="alert"
+      />
+      <section>
+        <div>
+          <label
+            htmlFor="login-username"
+          />
+          <input
+            id="login-username"
+            name="username"
+            placeholder="Username"
+            required={true}
+            type="text"
+          />
+        </div>
+        <div>
+          <label
+            htmlFor="login-password"
+          />
+          <input
+            id="login-password"
+            name="password"
+            placeholder="Password"
+            required={true}
+            type="password"
+          />
+        </div>
+        <div>
+          <button
+            className="submit-btn"
+            type="submit"
+          >
+            Submit
+          </button>
+          <div
+            className="other-btns"
+          >
+            <Link
+              to="/register"
+            >
+              <button
+                className="new-user-btn"
+              >
+                New user?
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </form>
+  </div>
+</div>
+`;

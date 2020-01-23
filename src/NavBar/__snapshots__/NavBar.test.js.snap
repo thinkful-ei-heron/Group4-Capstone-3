@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar component Displays NavBar when rendered 1`] = `
+<nav
+  className="navbar-component"
+>
+  <input
+    type="checkbox"
+  />
+  <span
+    className="child-1"
+  />
+  <span
+    className="child-2"
+  />
+  <span
+    className="child-3"
+  />
+  <Link
+    className=""
+    key="0"
+    to="/home"
+  >
+    Home
+  </Link>
+  <Link
+    className=""
+    key="1"
+    to="/breweries"
+  >
+    Breweries
+  </Link>
+  <Link
+    className=""
+    key="2"
+    to="/add"
+  >
+    Add Beer
+  </Link>
+  <Link
+    onClick={[Function]}
+    to="/"
+  >
+    Logout
+  </Link>
+</nav>
+`;

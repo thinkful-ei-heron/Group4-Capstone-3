@@ -1,7 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme'
 import toJson from 'enzyme-to-json'
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
 import AddForm from './AddForm'
+import {ParallaxProvider} from 'react-scroll-parallax';
+
+Enzyme.configure({ adapter: new Adapter() });
 
 describe(`AddForm component`, () => {
     const props = {
@@ -11,11 +17,11 @@ describe(`AddForm component`, () => {
       }
 
   it('renders the complete form', () => {
-    const wrapper = shallow(<AddForm />)
+    const wrapper = shallow(<ParallaxProvider><AddForm /></ParallaxProvider>)
     expect(toJson(wrapper)).toMatchSnapshot()
   })
 
-  it('renders the EmmaForm given props', () => {
+  it('renders the Form given props', () => {
     const wrapper = shallow(<AddForm {...props} />)
     expect(toJson(wrapper)).toMatchSnapshot()
   })

@@ -1,5 +1,5 @@
 .dashboard-expanded-section {
-	width: 90vh;
+	width: 92vw;
 	background-color: buttonface;
 	color: Black;
 	border-radius: 5%;
@@ -9,21 +9,48 @@
 	height: fit-content;
 	padding: 1rem 0 1.5rem 0;
 }
+.lastfield label {
+	display: block;
+	margin-bottom: -10px !important;
+	margin-right: auto !important;
+	margin-left: auto !important;
+	text-align: center;
+}
 
+.dashboard-expanded-section figure {
+	margin: 1.2rem auto 0.8rem auto;
+}
+.expanded-beer-name {
+	font-size: 240%;
+	margin: 0% 0.6rem;
+}
+.dashboard-expanded-section .rating-img {
+	margin: 0.4rem auto 0.2rem auto;
+}
+.expanded-small-details {
+	font-variant: small-caps;
+}
+.expanded-small-details .expanded-type {
+	margin: 0rem auto 1.4rem auto;
+}
+.expanded-location {
+	margin: 0rem auto;
+}
+.expanded-date {
+	font-size: large;
+	margin: 0.2rem auto 0.2rem auto;
+}
 .dashboard-expanded-section .beer-color {
 	border-radius: 10%;
 }
-
 .dashboard-expanded-section:hover {
 	background-color: rgba(209, 240, 205, 0.884);
 	cursor: pointer;
 }
-
 .edit-rating-img {
 	margin: 1rem auto;
 	display: block;
 }
-
 .edit-beer-form fieldset {
 	width: 50%;
 	margin-top: 20px;
@@ -35,8 +62,9 @@
 	-webkit-box-shadow: inset 0px 0px 15px rgb(215, 209, 209);
 	background-color: rgba(255, 255, 255, 0.66);
 	z-index: 1;
+	margin-left: auto;
+	margin-right: auto;
 }
-
 .edit-beer-form legend {
 	color: rgb(21, 53, 30);
 	border-top: 2px solid rgb(73, 159, 70);
@@ -56,4 +84,66 @@
 
 .edit-buttons {
 	margin-top: 15%;
+}
+.expanded-slider {
+	width: 60%;
+	max-width: 800px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1.5rem;
+  background: rgba(63, 62, 63, 0.452);
+  outline: none;
+  opacity: 1;
+  transition: opacity .2s;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.expanded-slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+	width: 25%;
+	max-width: 4rem;
+  height: 1.5rem;
+  background: rgba(60, 131, 64, 0.858);
+}
+
+.expanded-slider::-moz-range-thumb {
+	width: 25%;
+	max-width: 4rem;
+  height: 1.5rem;
+  background: rgba(60, 131, 64, 0.858);
+}
+
+.expanded-sliders-section {
+	display: inline-flex;
+	flex-direction: row;
+	width: 100%;
+	margin: 0rem auto 0.2rem;
+	justify-content: center;
+}
+
+.expanded-sliders-section p {
+	margin: 0.1rem 0.4rem auto;
+}
+
+.expanded-description {
+	border: 2px ridge rgba(0, 0, 0, 0.568);
+	margin: 1rem 1.5rem 1.2rem 1.5rem;
+	padding: 0.8rem 1.4rem 1.4rem 1.4rem;
+}
+
+.expanded-slide-label {
+	margin: 0rem auto 0.2rem auto;
+}
+@media only screen and (min-width: 760px) {
+	.expanded-description {
+		margin: 1rem auto 1.2rem auto;
+		max-width: 600px;
+	}
+	.expanded-sliders-section {
+		max-width: 900px;
+	}
+	.dashboard-expanded-section {
+		max-width: 942px;
+	}
 }

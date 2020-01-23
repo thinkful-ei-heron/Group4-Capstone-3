@@ -192,9 +192,10 @@ class DashboardExpanded extends React.Component {
 							</figure>
 						</div>
 						<div>
-							<label>
-								Description <textarea value={this.state.description} onChange={this.handleDesc} />
+							<label htmlFor='desc'>
+								Description
 							</label>
+							<textarea value={this.state.description} onChange={this.handleDesc} id='desc'/>
 						</div>
 						<div className="edit-buttons">
 							<button className="clear-submit-back-btn" onClick={this.toggleIsEditable}>Cancel</button>
@@ -212,32 +213,47 @@ class DashboardExpanded extends React.Component {
                         <figcaption>ABV: {this.state.journal.abv} % </figcaption>
                     </figure>
                     <section>
-												<h3>
-                            Name: <span>{this.state.journal.name}</span>
+												<h3 className='expanded-beer-name'>
+                            <span>{this.state.journal.name}</span>
                         </h3>
-												<h3>
-                            Type: <span>{this.state.journal.type}</span>
-                        </h3>
-                        <h3>
-                            Date: <span>{Utils.formattedDate(this.state.journal.date_created)}</span>
-                        </h3>
-                        <h3>
-                            Location: <span>{this.state.journal.location}</span>
-                        </h3>
+												<div className='expanded-small-details'>
+													<h3 className='expanded-location'>
+															<span>{this.state.journal.location}</span>
+													</h3>
+													<h3 className='expanded-type'>
+															<span>{this.state.journal.type}</span>
+													</h3>
+												</div>
                     </section>
+                    {/* <input type="range" min="0" max="9" value={this.state.journal.rating} readOnly /> */}
+										<fieldset className='expanded-description'>
+											<legend>
+												<span className='expanded-date'>{Utils.formattedDate(this.state.journal.date_created)}</span>
+											</legend>
+											{this.state.journal.description}
+										</fieldset>
+										<div>
+											<h3 className='expanded-slide-label'>Color</h3>
+										</div>
+										<section className='expanded-sliders-section'>
+											<p>Dark</p>
+											<input type="range" min="1" max="6" value={this.state.journal.color} readOnly className='expanded-slider'/>
+											<p>Light</p>
+										</section>
+										<div>
+											<h3 className='expanded-slide-label'>Flavor</h3>
+										</div>
+										<section className='expanded-sliders-section'>
+											<p>Heavy</p>
+											<input type="range" min="1" max="5" value={this.state.journal.heaviness} readOnly className='expanded-slider'/>
+											<p>Light</p>
+										</section>
 										<figure>
-											<figcaption>Rating</figcaption>
 											<img className='rating-img' src={Utils.getRatingImage(this.state.journal.rating)} alt={'Rating icons'} height={'50px'} />
 										</figure>
-                    {/* <input type="range" min="0" max="9" value={this.state.journal.rating} readOnly /> */}
-                    <p className='expanded-description'>{this.state.journal.description}</p>
-                    <h3>Dark to Light</h3>
-                    <input type="range" min="1" max="6" value={this.state.journal.color} readOnly />
-                    <h3>Heavy to Light</h3>
-                    <input type="range" min="1" max="5" value={this.state.journal.heaviness} readOnly />
                 </section>
-                <button onClick={() => this.props.handleDelete(this.state.journal.id)}>Delete</button>
-                <button onClick={this.toggleIsEditable}>Edit</button>
+								<button className='clear-submit-back-btn'onClick={this.toggleIsEditable}>Edit</button>
+                <button className='clear-submit-back-btn'onClick={() => this.props.handleDelete(this.state.journal.id)}>Delete</button>
                 </div>
             </>
 		);
