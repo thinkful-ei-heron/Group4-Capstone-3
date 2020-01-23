@@ -13,8 +13,14 @@
 .inactiveClass {
 	background-color: white;
 }
+.inactiveClass:hover {
+	cursor: pointer;
+}
 .activeClass {
 	background-color: rgba(60, 131, 64, 0.858) !important;
+}
+.activeClass:hover {
+	cursor: pointer;
 }
 .journal-item-button-small {
 	border: none;
