@@ -192,9 +192,10 @@ class DashboardExpanded extends React.Component {
 							</figure>
 						</div>
 						<div>
-							<label>
-								Description <textarea value={this.state.description} onChange={this.handleDesc} />
+							<label htmlFor='desc'>
+								Description
 							</label>
+							<textarea value={this.state.description} onChange={this.handleDesc} id='desc'/>
 						</div>
 						<div className="edit-buttons">
 							<button className="clear-submit-back-btn" onClick={this.toggleIsEditable}>Cancel</button>
