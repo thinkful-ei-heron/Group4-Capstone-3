@@ -26,7 +26,7 @@
 	border: none;
 	border-radius: 5%;
 	margin: 0.3em;
-	width: 30vw;
+	width: 28vw;
 }
 .journal-item-button-small:hover {
 	cursor: pointer;
@@ -51,7 +51,7 @@
 	border-radius: 5%;
 	margin: 0.5em;
 	padding: 10px;
-	width: 44vw;
+	width: 42vw;
 }
 .journal-item-button-large:hover {
 	cursor: pointer;
@@ -77,8 +77,8 @@
 .journal-item-button-list {
 	border: none;
 	border-radius: 10px;
-	margin: 0.4em;
-	width: 94vw;
+	margin: 0.4em auto;
+	width: 92vw;
 	display: flex;
 	min-height: 2.5rem;
 }
