@@ -24,3 +24,5 @@ yarn-error.log*
 .idea/workspace.xml
 *.xml
 .idea/Group4-Capstone-3.iml
+
+.env
