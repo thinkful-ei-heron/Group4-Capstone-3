@@ -2,9 +2,9 @@
 [DearBeer.now.sh](https://dearbeer.now.sh)
 
 ### Demo
-Username:  admin
+Username: Demo
 
-Password: pass
+Password: Test12345!
 
 
 # Technologies Used
