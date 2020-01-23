@@ -16,7 +16,6 @@ export default class CircleIndicator extends Component {
     };
 
     render() {
-        console.log((this.props.isOpen !== null), this.props.isOpen, !this.props.isOpen)
         return (
             <div title={'Green = Open, Red = Closed, Gray = No Data'}
                 className={this.getClassName()}/>

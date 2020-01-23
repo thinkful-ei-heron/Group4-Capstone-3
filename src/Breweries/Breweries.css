@@ -1,46 +1,73 @@
 .breweries-list {
-	width: 90vw;
-	height: 75vh;
-	display: block;
-	overflow-y: scroll;
-	background-color: white;
-	z-index: 1;
-	position: absolute;
-	top: 130%;
-	left: 4vw;
+    width: 90vw;
+    height: 75vh;
+    display: block;
+    overflow-y: scroll;
+    background-color: white;
+    z-index: 1;
+    position: relative;
+    margin-right: -767px;
+    margin-top: 77vh;
+    margin-left: 10px;
+    border-radius: 10px;
 }
+
 .breweries-list-active h4 {
-	color: rgb(8,184,8);
-	text-shadow: 1px 1px 1px #000000;
+    color: rgb(8, 184, 8);
+    text-shadow: 1px 1px 1px #000000;
 }
-.breweries-map{
-	height: 75vh;
-	width: 95%;
-	display: inline-flex;
-	justify-content: space-between;
-}
-.breweries-page {
-	background-image: url('../images/wall6.jpg');
-	height: 210vh;
-}
-.breweries-page form {
-	margin: 1em;
-	color: white;
-	font-family: 'Merriweather', serif;
-}
-.breweries-page form > label > input {
-	width: 6rem;
-}
-@media (min-width: 480px){
+
+.breweries-map {
+    height: 75vh;
+    width: 95%;
+    display: inline-flex;
+    justify-content: space-between;
 
 }
+
+.breweries-map-wrapper {
+    display: contents;
+}
+
+.breweries-page {
+    background-image: url('../images/wall6.jpg');
+    min-height: 100vh;
+}
+
+.breweries-page form {
+    margin: 1em;
+    color: white;
+    font-family: 'Merriweather', serif;
+}
+
+.breweries-page form > label > input {
+    width: 6rem;
+}
+
+@media (min-height: 480px) {
+    .breweries-page {
+        height: 240vh !important;
+    }
+}
+@media (min-height: 767px) {
+    .breweries-page {
+        min-height: 100vh;
+        height: 205vh !important;
+    }
+}
+
 @media (min-width: 767px) {
-	.breweries-list {
-		width: 30%;
-		position: relative;
-		top: unset;
-		left: unset;
-	}.breweries-page {
-		 height: 105vh;
-	 }
+    .breweries-list {
+        width: 30%;
+        position: relative;
+        top: unset;
+        bottom: unset;
+        left: unset;
+        margin: 0;
+    }
+
+    .breweries-page {
+        min-height: 100vh;
+        height: unset !important;
+    }
 }

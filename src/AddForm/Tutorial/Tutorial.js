@@ -1,4 +1,4 @@
-import React, {Component, useRef} from "react";
+import React, {Component} from "react";
 import './Tutorial.css'
 import {Link} from "react-router-dom";
 

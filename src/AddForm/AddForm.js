@@ -146,19 +146,17 @@ export default class AddForm extends Component {
                             className="required">*</span>
                             <textarea id='beer-entry-description' value={this.context.description}
                                       onChange={(e) => this.context.setDesc(e.target.value)} required/>
+                            <button className="clear-submit-back-btn submit-btn" type="submit">
+                                Submit
+                            </button>
                             <div className="btns-2">
-                                <Link to="/home">
-                                    <button className="clear-submit-back-btn" type="button">
-                                        Back
-                                    </button>
-                                </Link>
+                                <Link to="/home"><button className="clear-submit-back-btn" type="button">Back</button></Link>
                                 <button className="clear-submit-back-btn" type="button" onClick={this.context.resetAll}>
                                     Clear
                                 </button>
-                                <button className="clear-submit-back-btn" type="submit">
-                                    Submit
-                                </button>
+
                             </div>
+
                         </fieldset>
                     </section>
                 </form>
