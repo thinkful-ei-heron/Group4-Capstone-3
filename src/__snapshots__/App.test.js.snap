@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component Displays App when rendered 1`] = `
+<div
+  className="App"
+>
+  <PrivateRoute
+    component={[Function]}
+    exact={true}
+    path="/add/tutorial"
+  />
+  <Switch>
+    <PrivateRoute
+      component={[Function]}
+      path="/breweries"
+    />
+    <PrivateRoute
+      component={[Function]}
+      path="/home"
+    />
+    <PrivateRoute
+      component={[Function]}
+      path="/add"
+    />
+    <PublicOnlyRoute
+      component={[Function]}
+      path="/register"
+    />
+    <PublicOnlyRoute
+      component={[Function]}
+      path="/login"
+    />
+    <PublicOnlyRoute
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+  </Switch>
+</div>
+`;
