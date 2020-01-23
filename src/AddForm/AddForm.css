@@ -158,6 +158,10 @@ textarea {
 	margin: 10px;
 	min-width: 5rem;
 }
+.clear-submit-back-btn:hover {
+	background: rgb(43, 42, 43);
+	cursor: pointer;
+}
 .submit-btn {
 	margin-top: 3rem;
 }
