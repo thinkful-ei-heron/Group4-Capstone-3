@@ -1,6 +1,8 @@
 # DearBeer 
 [DearBeer.now.sh](https://dearbeer.now.sh)
 
+#### Created by: Andrea Bender, Maria Danielson, Jonny Deates, Evan Vogts
+
 ### Demo
 Username:  admin
 
