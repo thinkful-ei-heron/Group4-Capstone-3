@@ -11,5 +11,6 @@
 			"src": ".*",
 			"dest": "/index.html"
 		}
-	]
+	],
+	"build": { "env": { "api_key": "@api_key" } }
 }
