@@ -1,4 +1,5 @@
 # DearBeer 
+#### Created by: Andrea Bender, Maria Danielson, Jonny Deates, Evan Vogts
 [DearBeer.now.sh](https://dearbeer.now.sh)
 
 ### Demo
