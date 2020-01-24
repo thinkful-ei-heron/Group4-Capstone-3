@@ -68,7 +68,6 @@ class LandingPage extends React.Component {
 							user is also able to click a place and add a beer to their list for that location.
 						</p>
 					</figure>
-					<h2>Demo</h2>
 					<iframe  src="https://www.youtube.com/embed/SMtgKzEvPPw" frameBorder="0"
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowFullScreen></iframe>
