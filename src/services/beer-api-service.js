@@ -3,16 +3,16 @@ import TokenService from "./token-service";
 
 const BeerApiService = {
     getAllBeers() {
-        return fetch(`${config.API_ENDPOINT}/journals`, {
-            headers: {
-                'authorization': `bearer ${TokenService.getAuthToken()}`,
-            },
-        })
-            .then(res =>
-                (!res.ok)
-                    ? res.json().then(e => Promise.reject(e))
-                    : res.json()
-            )
+            return fetch(`${config.API_ENDPOINT}/journals`, {
+                headers: {
+                    'authorization': `bearer ${TokenService.getAuthToken()}`,
+                },
+            })
+                .then(res =>
+                    (!res.ok)
+                        ? []
+                        : res.json()
+                )
     },
     getBeer(beerId) {
         return fetch(`${config.API_ENDPOINT}/journals/${beerId}`, {
