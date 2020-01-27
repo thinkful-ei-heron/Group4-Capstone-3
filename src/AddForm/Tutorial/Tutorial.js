@@ -10,7 +10,7 @@ class Tutorial extends Component {
             pages: [{
                 className: 'tut-1',
                 desc: 'Welcome to the DeerBeer Add Beer Page! This is where most of the action takes place. ' +
-                    'Creating and implementing your own beer is easy and simple to do! Click through the next, to follow the tutorial ' +
+                    'Creating and implementing your own beer is easy and simple to do! Click next, to follow the tutorial ' +
                     'or close to go ahead and get started!'
             },
                 {
