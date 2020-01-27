@@ -54,7 +54,7 @@ class Dashboard extends React.Component {
             this.props.map.setBreweries(res.breweries);
             this.props.map.setCenter({lat, lng});
             this.setState({error: null})
-        }).catch(e => this.setState({error: e.error}))
+        }).catch(e => this.setState({error: e.error}));
     }
 
 
