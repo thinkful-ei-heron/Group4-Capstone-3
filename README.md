@@ -4,9 +4,9 @@
 #### Created by: Andrea Bender, Maria Danielson, Jonny Deates, Evan Vogts
 
 ### Demo
-Username:  admin
+Username: Demo
 
-Password: pass
+Password: Test12345!
 
 
 # Technologies Used
