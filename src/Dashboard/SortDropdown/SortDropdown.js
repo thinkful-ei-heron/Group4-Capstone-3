@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './SortDropdown.css';
 class SortDropdown extends Component {
 
     constructor(props) {

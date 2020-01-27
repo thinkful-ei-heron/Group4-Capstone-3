@@ -1,11 +1,3 @@
-/* .landing-page-about {
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 10%;
-	align-items: center;
-	margin: 0px;
-	background-color: black;
-} */
 .header-logo-h1 {
 	margin: 0 auto;
 	display: flex;
@@ -154,8 +146,6 @@
 		border-left: 3px solid white;
 
 	}
-
-	
 }
 
 @media only screen and (min-width: 720px) {

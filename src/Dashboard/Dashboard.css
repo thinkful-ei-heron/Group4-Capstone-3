@@ -86,10 +86,6 @@
 	cursor: pointer;
 	background-color: rgba(209, 240, 205, 0.884);
 }
-/* .journal-item-button-list .rating-img {
-	margin: auto 1rem auto auto;
-	height: 20px;
-} */
 .journal-item-button-list .beer-date {
 	font-family: 'Merriweather', serif;
 	margin:auto 0.4rem auto auto;
@@ -147,26 +143,15 @@
 }
 .dashboard-bottom {
 	background-image: url('../images/wall6.jpg');
-	/* background-repeat: repeat-y;
-	background-position: center; */
 	min-height: 100vh;
 	padding: 1rem;
 }
-/* .dashboard-bottom button {
-	color: white;
-	background-color: black;
-	border: none;
-} */
-
-
 .dashboard-bottom li {
 	list-style: none;
 	color: white;
 	margin-bottom: 0.2rem;
 }
 .darker {
-	/* padding: 4em; */
-	/* background-color: #00000055; */
 	height: max-content;
 	min-height: 100vh;
 }
@@ -283,9 +268,6 @@
 		font-size: x-large;
 		margin: 1rem;
 	}
-	/* .journal-item-button-list .rating-img {
-		height: 2.8rem;
-	} */
 	.journal-item-button-list .beer-date {
 		font-size: large;
 		margin: auto 1.6rem auto auto;

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './TypeDropdown.css';
 import UserContext from '../../contexts/UserContext';
 
 class TypeDropdown extends Component {

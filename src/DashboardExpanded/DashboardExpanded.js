@@ -225,7 +225,6 @@ class DashboardExpanded extends React.Component {
 													</h3>
 												</div>
                     </section>
-                    {/* <input type="range" min="0" max="9" value={this.state.journal.rating} readOnly /> */}
 										<fieldset className='expanded-description'>
 											<legend>
 												<span className='expanded-date'>{Utils.formattedDate(this.state.journal.date_created)}</span>

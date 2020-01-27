@@ -15,7 +15,9 @@ it('renders without crashing', () => {
   const div = document.createElement('div')
   ReactDOM.render(
     <BrowserRouter>
- <ParallaxProvider><App /></ParallaxProvider> 
+      <ParallaxProvider>
+        <App />
+      </ParallaxProvider> 
     </BrowserRouter>,
     div)
   ReactDOM.unmountComponentAtNode(div)

@@ -36,11 +36,6 @@ export default class AddForm extends Component {
 
     handleSubmit = ev => {
         ev.preventDefault();
-        //const checkedValues = this.context.checkValues();
-
-        // if(!checkedValues.bool)
-        //     this.setState({error: checkedValues.error});
-        // else {
         BeerApiService.postBeer({
             name: this.context.name,
             date_created: this.context.date_created,
