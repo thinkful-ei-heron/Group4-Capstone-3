@@ -4,9 +4,6 @@ import rating from '../../assets/rating/star-rating.png'
 import './ListComponent.css'
 
 export default class KeyComponent extends Component {
-
-    
-
     render() {
         return (
             <>

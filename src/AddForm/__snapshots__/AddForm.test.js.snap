@@ -1,0 +1,521 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddForm component renders the Form given props 1`] = `
+<div
+  className="add-form-page"
+>
+  <Header
+    header="Add Beer"
+  />
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      role="alert"
+    />
+    <section
+      className="form-section"
+    >
+      <fieldset>
+        <legend>
+          Beer Information
+        </legend>
+        <figure>
+          <img
+            alt="Beer"
+            src="light.jpg"
+            width="150px"
+          />
+        </figure>
+        <div>
+          <label
+            htmlFor="beer-entry-date"
+          >
+            Date
+          </label>
+          <input
+            className="unstyled"
+            id="beer-entry-date"
+            onChange={[Function]}
+            type="date"
+          />
+        </div>
+        <div>
+          <label
+            htmlFor="beer-entry-location"
+          >
+            Location
+          </label>
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <input
+            id="beer-entry-location"
+            onChange={[Function]}
+            required={true}
+            type="text"
+          />
+        </div>
+        <div>
+          <label
+            htmlFor="beer-entry-name"
+          >
+            Name
+          </label>
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <input
+            id="beer-entry-name"
+            onChange={[Function]}
+            required={true}
+            type="text"
+          />
+        </div>
+        <div>
+          <label
+            htmlFor="beer-entry-type"
+          >
+            Type
+          </label>
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <select
+            id="beer-entry-type"
+            onChange={[Function]}
+            required={true}
+          >
+            <option
+              key="0"
+              value="Ale"
+            >
+              Ale
+            </option>
+            <option
+              key="1"
+              value="Altbier"
+            >
+              Altbier
+            </option>
+            <option
+              key="2"
+              value="American Lager"
+            >
+              American Lager
+            </option>
+            <option
+              key="3"
+              value="Barley Wine"
+            >
+              Barley Wine
+            </option>
+            <option
+              key="4"
+              value="Belgian"
+            >
+              Belgian
+            </option>
+            <option
+              key="5"
+              value="Berliner Weisse"
+            >
+              Berliner Weisse
+            </option>
+            <option
+              key="6"
+              value="Bitter"
+            >
+              Bitter
+            </option>
+            <option
+              key="7"
+              value="Bock"
+            >
+              Bock
+            </option>
+            <option
+              key="8"
+              value="Brown Ale"
+            >
+              Brown Ale
+            </option>
+            <option
+              key="9"
+              value="Brown Ale"
+            >
+              Brown Ale
+            </option>
+            <option
+              key="10"
+              value="Cider"
+            >
+              Cider
+            </option>
+            <option
+              key="11"
+              value="Cream Ale"
+            >
+              Cream Ale
+            </option>
+            <option
+              key="12"
+              value="Doppelbock"
+            >
+              Doppelbock
+            </option>
+            <option
+              key="13"
+              value="Dunkel"
+            >
+              Dunkel
+            </option>
+            <option
+              key="14"
+              value="Flanders Red Ale"
+            >
+              Flanders Red Ale
+            </option>
+            <option
+              key="15"
+              value="German Pilser"
+            >
+              German Pilser
+            </option>
+            <option
+              key="16"
+              value="Gose"
+            >
+              Gose
+            </option>
+            <option
+              key="17"
+              value="Helles"
+            >
+              Helles
+            </option>
+            <option
+              key="18"
+              value="Helles Bock"
+            >
+              Helles Bock
+            </option>
+            <option
+              key="19"
+              value="Honey"
+            >
+              Honey
+            </option>
+            <option
+              key="20"
+              value="Imperial IPA"
+            >
+              Imperial IPA
+            </option>
+            <option
+              key="21"
+              value="IPA"
+            >
+              IPA
+            </option>
+            <option
+              key="22"
+              value="Irish Red Ale"
+            >
+              Irish Red Ale
+            </option>
+            <option
+              key="23"
+              value="Kolsch"
+            >
+              Kolsch
+            </option>
+            <option
+              key="24"
+              value="Lager"
+            >
+              Lager
+            </option>
+            <option
+              key="25"
+              value="Lambic"
+            >
+              Lambic
+            </option>
+            <option
+              key="26"
+              value="Mild Ale"
+            >
+              Mild Ale
+            </option>
+            <option
+              key="27"
+              value="Old Ale"
+            >
+              Old Ale
+            </option>
+            <option
+              key="28"
+              value="Pale Ale"
+            >
+              Pale Ale
+            </option>
+            <option
+              key="29"
+              value="Pale Lager"
+            >
+              Pale Lager
+            </option>
+            <option
+              key="30"
+              value="Pilsner"
+            >
+              Pilsner
+            </option>
+            <option
+              key="31"
+              value="Porter"
+            >
+              Porter
+            </option>
+            <option
+              key="32"
+              value="Quadrupel"
+            >
+              Quadrupel
+            </option>
+            <option
+              key="33"
+              value="Rye"
+            >
+              Rye
+            </option>
+            <option
+              key="34"
+              value="Saison"
+            >
+              Saison
+            </option>
+            <option
+              key="35"
+              value="Schwarzbier"
+            >
+              Schwarzbier
+            </option>
+            <option
+              key="36"
+              value="Scotch Ale"
+            >
+              Scotch Ale
+            </option>
+            <option
+              key="37"
+              value="Seasonal Beer"
+            >
+              Seasonal Beer
+            </option>
+            <option
+              key="38"
+              value="Stout"
+            >
+              Stout
+            </option>
+            <option
+              key="39"
+              value="Vienna Lager"
+            >
+              Vienna Lager
+            </option>
+            <option
+              key="40"
+              value="Wittbier"
+            >
+              Wittbier
+            </option>
+            <option
+              key="41"
+              value="Other"
+            >
+              Other
+            </option>
+          </select>
+        </div>
+        <div>
+          <label
+            data-tip="Alcohol By Volume"
+            htmlFor="beer-entry-abv"
+          >
+            ABV
+          </label>
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <ReactTooltip
+            clickable={false}
+            effect="solid"
+            insecure={true}
+            place="top"
+            resizeHide={true}
+            type="dark"
+            wrapper="div"
+          />
+          <input
+            id="beer-entry-abv"
+            onChange={[Function]}
+            required={true}
+            type="number"
+          />
+        </div>
+        <div>
+          <label
+            data-tip="Color of beer"
+            htmlFor="beer-entry-color"
+          >
+            Dark to Light
+          </label>
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <input
+            id="beer-entry-color"
+            max="6"
+            min="1"
+            onChange={[Function]}
+            step="1"
+            type="range"
+          />
+        </div>
+        <div>
+          <label
+            data-tip="Strength of alcohol"
+            htmlFor="beer-entry-heaviness"
+          >
+            Heavy to Light
+          </label>
+          <span
+            className="required"
+          >
+            *
+          </span>
+          <input
+            className="slider"
+            id="heaviness"
+            max="5"
+            min="1"
+            onChange={[Function]}
+            step="1"
+            type="range"
+          />
+        </div>
+      </fieldset>
+      <fieldset
+        className="lastfield"
+      >
+        <legend>
+          What I think about this beer!
+        </legend>
+        <div>
+          <img
+            alt="Rating icons"
+            className="rating-img"
+            height="50px"
+            src="half.png"
+          />
+          <div>
+            <label
+              htmlFor="beer-entry-rating"
+            >
+              Rating
+            </label>
+            <span
+              className="required"
+            >
+              *
+            </span>
+            <input
+              className="slider"
+              id="rating"
+              max="9"
+              min="0"
+              onChange={[Function]}
+              step="1"
+              type="range"
+            />
+          </div>
+        </div>
+        <label
+          className="desc-label"
+          htmlFor="beer-entry-description"
+        >
+          Description
+        </label>
+        <span
+          className="required"
+        >
+          *
+        </span>
+        <textarea
+          id="beer-entry-description"
+          onChange={[Function]}
+          required={true}
+        />
+        <button
+          className="clear-submit-back-btn submit-btn"
+          type="submit"
+        >
+          Submit
+        </button>
+        <div
+          className="btns-2"
+        >
+          <Link
+            to="/home"
+          >
+            <button
+              className="clear-submit-back-btn"
+              type="button"
+            >
+              Back
+            </button>
+          </Link>
+          <button
+            className="clear-submit-back-btn"
+            type="button"
+          >
+            Clear
+          </button>
+        </div>
+      </fieldset>
+    </section>
+  </form>
+</div>
+`;
+
+exports[`AddForm component renders the complete form 1`] = `
+<ContextProvider
+  value={
+    ParallaxController {
+      "createElement": [Function],
+      "destroy": [Function],
+      "getElements": [Function],
+      "removeElementById": [Function],
+      "resetElementStyles": [Function],
+      "update": [Function],
+      "updateElementPropsById": [Function],
+      "updateScrollContainer": [Function],
+    }
+  }
+>
+  <AddForm />
+</ContextProvider>
+`;

@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breweries component Displays Breweries when rendered 1`] = `
+<Fragment>
+  <main
+    className="breweries-page"
+    style={
+      Object {
+        "height": "unset",
+      }
+    }
+  >
+    <Header
+      header="Breweries"
+      location={
+        Object {
+          "pathname": "",
+        }
+      }
+    />
+    <form
+      onSubmit={[Function]}
+    >
+      <label>
+        US Zip Code: 
+        <input
+          onChange={[Function]}
+          type="number"
+        />
+      </label>
+      <button
+        className="clear-submit-back-btn"
+        type="submit"
+      >
+        Go
+      </button>
+    </form>
+    <div
+      className="alert"
+      role="alert"
+    >
+      <p
+        className="error"
+      />
+    </div>
+    <KeyComponent />
+    <div
+      className="breweries-map"
+    >
+      <GoogleMap
+        bootstrapURLKeys={
+          Object {
+            "key": "AIzaSyCG_FMdGssqTRG7tGSvu24UYFopSWQY_-g",
+          }
+        }
+        debounced={true}
+        defaultCenter={
+          Object {
+            "lat": 40.038629,
+            "lng": -105.3716684,
+          }
+        }
+        defaultZoom={11}
+        distanceToMouse={[Function]}
+        googleMapLoader={[Function]}
+        heatmap={Object {}}
+        heatmapLibrary={false}
+        hoverDistance={30}
+        layerTypes={Array []}
+        options={[Function]}
+        shouldUnregisterMapOnUnmount={true}
+        style={
+          Object {
+            "height": "100%",
+            "margin": 0,
+            "padding": 0,
+            "position": "relative",
+            "width": "100%",
+          }
+        }
+        yesIWantToUseGoogleMapApiInternals={false}
+      />
+    </div>
+  </main>
+</Fragment>
+`;

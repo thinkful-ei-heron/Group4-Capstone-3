@@ -1,30 +1,28 @@
+  
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom';
-import App from './App'
 import { shallow } from 'enzyme'
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json'
-import {ParallaxProvider} from 'react-scroll-parallax';
+
+import { BrowserRouter } from 'react-router-dom';
+import Header from './Header'
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe(`App component`, () => {
+describe(`Header component`, () => {
 it('renders without crashing', () => {
   const div = document.createElement('div')
   ReactDOM.render(
     <BrowserRouter>
-      <ParallaxProvider>
-        <App />
-      </ParallaxProvider> 
+      <Header location = {{pathname: ''}}/>
     </BrowserRouter>,
     div)
   ReactDOM.unmountComponentAtNode(div)
 })
-
-it('Displays App when rendered', () => {
-  const wrapper = shallow(<App />)
+it('Displays Header when rendered', () => {
+  const wrapper = shallow(<Header />)
   expect(toJson(wrapper)).toMatchSnapshot()
 })
 })

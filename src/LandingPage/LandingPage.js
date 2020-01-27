@@ -68,9 +68,23 @@ class LandingPage extends React.Component {
 							user is also able to click a place and add a beer to their list for that location.
 						</p>
 					</figure>
-					<iframe  src="https://www.youtube.com/embed/SMtgKzEvPPw" frameBorder="0"
-							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							allowFullScreen></iframe>
+					<iframe
+						src="https://www.youtube.com/embed/SMtgKzEvPPw"
+						frameBorder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowFullScreen
+					/>
+					<h2>Demo</h2>
+					<p className="demo-desc">
+						If you want to try the app without signing up, feel free to login using the following
+						information:
+					</p>
+					<div className="demo-user">
+						<h4>Username:</h4>
+						<p>Demo</p>
+						<h4>Password:</h4>
+						<p>Test12345!</p>
+					</div>
 				</section>
 
 				<footer> @Copyright 2020</footer>

@@ -1,30 +1,29 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter } from 'react-router-dom';
-import App from './App'
 import { shallow } from 'enzyme'
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json'
-import {ParallaxProvider} from 'react-scroll-parallax';
+import { BrowserRouter } from 'react-router-dom';
+import Breweries from './Breweries'
+
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe(`App component`, () => {
+describe(`Breweries component`, () => {
+
 it('renders without crashing', () => {
   const div = document.createElement('div')
   ReactDOM.render(
     <BrowserRouter>
-      <ParallaxProvider>
-        <App />
-      </ParallaxProvider> 
+      <Breweries map = { {list:[], nearByBars:[], nearByBreweries:[], selectedMarker:{name: ''}, }} location={{pathname: ''}} />)
     </BrowserRouter>,
     div)
   ReactDOM.unmountComponentAtNode(div)
 })
 
-it('Displays App when rendered', () => {
-  const wrapper = shallow(<App />)
+it('Displays Breweries when rendered', () => {
+  const wrapper = shallow(<Breweries map = { {list:[], nearByBars:[], nearByBreweries:[], selectedMarker:{name: ''}, }} location={{pathname: ''}} />)
   expect(toJson(wrapper)).toMatchSnapshot()
 })
 })

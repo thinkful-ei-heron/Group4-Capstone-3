@@ -39,7 +39,7 @@ export class UserProvider extends Component {
   };
 
   setBeerList = beerList => {
-    beerList.map( beerList => {return {...beerList, expanded: false}})
+    beerList.map( beerList => {return {...beerList, expanded: false}});
     this.setState({ beerList })
   };
 

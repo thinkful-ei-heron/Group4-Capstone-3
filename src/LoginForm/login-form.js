@@ -75,11 +75,6 @@ export default class LoginForm extends Component {
 									Submit
 								</button>
 								<div className="other-btns">
-									{/* <Link to='/'>
-                    <button>
-                        Home
-                    </button>
-                </Link> */}
 									<Link to="/register">
 										<button className="new-user-btn">New user?</button>
 									</Link>

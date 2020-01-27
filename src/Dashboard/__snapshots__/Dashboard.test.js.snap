@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard component Displays Dashboard when rendered 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "beerList": Array [],
+      "clearError": [Function],
+      "error": null,
+      "processLogin": [Function],
+      "processLogout": [Function],
+      "setBeerList": [Function],
+      "setError": [Function],
+      "setUser": [Function],
+      "toggleExpanded": [Function],
+      "user": Object {},
+    }
+  }
+>
+  <Dashboard
+    location={
+      Object {
+        "pathname": "",
+      }
+    }
+  />
+</ContextProvider>
+`;

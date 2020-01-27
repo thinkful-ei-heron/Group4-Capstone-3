@@ -10,24 +10,24 @@ class Tutorial extends Component {
             pages: [{
                 className: 'tut-1',
                 desc: 'Welcome to the DeerBeer Add Beer Page! This is where most of the action takes place. ' +
-                    'Creating and implementing your own beer is easy and simple to do! Click next, to follow the tutorial ' +
-                    'or close to go ahead and get started!'
+                    'Click the next button to follow the tutorial.' +
+                    'or click close to go ahead and get started yourself!'
             },
                 {
                     className: 'tut-2',
-                    desc: 'This is the Date, here is where you should select the date that you had the beer on.'
+                    desc: 'Date - select when you had the beer. If you drank the beer today, feel free to leave it blank.'
                 },
-                {className: 'tut-3', desc: 'This is the Location that the beer was had at.'},
-                {className: 'tut-4', desc: 'This is the Name, what was the name of what you drank?'},
-                {className: 'tut-5', desc: 'The Specific Type of beer you had, if not shown, select Other.'},
-                {className: 'tut-6', desc: 'The Alcohol By Volume of the beer.'},
-                {className: 'tut-7', desc: 'The Color Dark to Light of the beer.'},
-                {className: 'tut-8', desc: 'This is the Heaviness of the beer, or how strong the alcohol from the beer.'},
-                {className: 'tut-9', desc: 'What your personal Rating of the beer.'},
-                {className: 'tut-10', desc: 'This is the Description of what you think of the beer.'},
-                {className: 'tut-11', desc: 'This Button will take you to the home page.'},
-                {className: 'tut-12', desc: 'THIS BUTTON WILL CLEAR YOUR BEER!'},
-                {className: 'tut-13', desc: 'This button Submits the beer to your dashboard, and account.'},
+                {className: 'tut-3', desc: 'Location - add where you had the beer, or where the beer is brewed.'},
+                {className: 'tut-4', desc: 'Name - what was the name of the beer you drank?'},
+                {className: 'tut-5', desc: 'Type - select the type of beer you had, if not shown, select Other.'},
+                {className: 'tut-6', desc: 'ABV - the alcohol by volume of the beer.'},
+                {className: 'tut-7', desc: 'Color - use the slider to log the color of the beer from dark to light.'},
+                {className: 'tut-8', desc: 'Heaviness - use the slider to log how strong the flavor of alcohol is in the beer.'},
+                {className: 'tut-9', desc: 'Rating - how would you rate the beer?'},
+                {className: 'tut-10', desc: 'Description - here you can log any additional thoughts you have about the beer. Such as what flavors are present, or anything else memorable about the beer'},
+                {className: 'tut-11', desc: 'This button will take you back to the home page.'},
+                {className: 'tut-12', desc: 'This button will clear the form of everything, so you can start over'},
+                {className: 'tut-13', desc: 'Click here to submit your new beer. Cheers!'},
             ]
         };
         this.myRef = React.createRef()
