@@ -136,7 +136,6 @@ class Dashboard extends React.Component {
         document.getElementById('list-img').className = 'inactiveClass'
         document.getElementById('details-img').className = 'inactiveClass'
         document.getElementById(`${event.target.value}-img`).className = 'activeClass'
-        console.log(event.target.value)
     }
     render() {
         return (
