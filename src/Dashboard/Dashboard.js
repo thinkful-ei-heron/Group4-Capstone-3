@@ -49,18 +49,16 @@ class Dashboard extends React.Component {
         this.setState({
             beerList: newList
         });
-    }
+    };
     handleDelete(id) {
-        BeerApiService.deleteBeer(id)
+        BeerApiService.deleteBeer(id);
         this.setState({beerList: this.state.beerList.filter(beer => beer.id !== id)})
     }
     componentDidMount() {
-        this.context.clearError()
+        this.context.clearError();
         BeerApiService.getAllBeers()
             .then(this.context.setBeerList)
-            .then(() => this.setState({beerList: this.context.beerList})
-            )
-            .catch(this.context.setError)
+            .then(() => this.setState({beerList: this.context.beerList}))
     }
     handleSubmitEdit = (id, newJournal) => {
         let currentBeer = this.state.beerList.find((beer) => beer.id === id);
@@ -78,7 +76,7 @@ class Dashboard extends React.Component {
                     onClick={() => this.context.toggleExpanded(beerList.id)}
                     className='journal-item-button-small'>
                     <h4>{beerList.name}</h4>
-                    <img className='rating-img' src={Utils.getRatingImage(beerList.rating)} alt={'Rating icons'} height={'50px'}></img>
+                    <img className='rating-img' src={Utils.getRatingImage(beerList.rating)} alt={'Rating icons'} height={'50px'}/>
                     <div className='beer-date'> {Utils.formattedDate(beerList.date_created)}</div>
                 </button>
             </div>)
@@ -90,10 +88,10 @@ class Dashboard extends React.Component {
                 <button
                     onClick={() => this.context.toggleExpanded(beerList.id)}
                     className='journal-item-button-large'>
-                    <img className='beer-color-img'src={Utils.getImage(beerList.color)} alt='beer-color'></img>
+                    <img className='beer-color-img'src={Utils.getImage(beerList.color)} alt='beer-color'/>
                     <h4>{beerList.name}</h4>
                     <div className='beer-date'> {Utils.formattedDate(beerList.date_created)}</div>
-                    <img className='rating-img' src={Utils.getRatingImage(beerList.rating)} alt={'Rating icons'} height={'50px'}></img>
+                    <img className='rating-img' src={Utils.getRatingImage(beerList.rating)} alt={'Rating icons'} height={'50px'}/>
                 </button>
             </div>)
         } else if (this.state.selectedOption === 'list') {
@@ -117,11 +115,11 @@ class Dashboard extends React.Component {
                 <button
                     onClick={() => this.context.toggleExpanded(beerList.id)}
                     className='journal-item-button-details'>
-                            <img className='beer-color-img'src={Utils.getImage(beerList.color)} alt='beer-color'></img>
+                            <img className='beer-color-img'src={Utils.getImage(beerList.color)} alt='beer-color'/>
                         <div className='details-column'>
                             <h4>{beerList.name}</h4>
                             <div className='beer-date'> {Utils.formattedDate(beerList.date_created)}</div>
-                            <img className='rating-img' src={Utils.getRatingImage(beerList.rating)} alt={'Rating icons'} height={'50px'}></img>
+                            <img className='rating-img' src={Utils.getRatingImage(beerList.rating)} alt={'Rating icons'} height={'50px'}/>
                             <h5>{beerList.location}</h5>    
                         </div>
                     
